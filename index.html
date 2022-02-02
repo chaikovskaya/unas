@@ -9,7 +9,6 @@
 
     <title>Главная. Унас</title>
 
-    <link rel="stylesheet" href="./libs/line-awesome/css/line-awesome.min.css" />
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
     <link rel="stylesheet" href="./libs/Selectric/public/selectric.css" />
@@ -41,7 +40,7 @@
                                         <a class="mob-logo" href="/">
                                             <img class="mob-logo-img" src="./images/unas-logo.png" alt="" />
                                         </a>
-                                        <a href="javascript:;" class="mob-close JS-MobileMenu-Close"><i class="mob-close-icon las la-times"></i></a>
+                                        <a href="javascript:;" class="mob-close JS-MobileMenu-Close"><i class="mob-close-icon icon icon_cross"></i></a>
                                     </div>
                                     <div class="mob-nav">
                                         <ul class="mob-list">
@@ -51,7 +50,7 @@
                                                 </a>
                                                 <div class="mob-child JS-MobileMenu-Child">
                                                     <a class="mob-list-link mob-list-link_back JS-MobileMenu-Back" href="javascript:;">
-                                                        <i class="mob-back-icon icon icon_arrow-right_grey"></i>Назад
+                                                        <i class="mob-back-icon icon icon_arrow-left_grey"></i>Назад
                                                     </a>
                                                     <a class="mob-list-current" href="#">Каталог</a>
                                                     <ul class="mob-list mob-list-child">
@@ -276,147 +275,270 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="header-main-menu container">
                 <div class="catalog-menu JS-Dropdown" data-dropdown="{
-                        'classActive': 'catalog-menu_active',
-                        'classShow': 'catalog-menu-show'
-                    }">
+                    'classActive': 'catalog-menu_active',
+                    'classShow': 'catalog-menu-show'
+                }">
                     <a class="catalog-menu-switcher JS-Dropdown-Switcher" href="javascript:;">
                         <span class="catalog-menu-icon icon icon_catalog"></span>Каталог
                     </a>
                     <div class="catalog-menu-sub sub-menu JS-Dropdown-Menu">
                         <div class="sub-menu-container container">
+                            <div class="sub-menu-panel">
+                                <a class="header-logo" href="/">
+                                    <img class="header-logo-img" src="./images/unas-logo.png" alt="" />
+                                </a>
+                                <a class="sub-menu-switcher JS-Dropdown-Close" href="javascript:;">
+                                    Закрыть<span class="sub-menu-icon icon icon_cross"></span>
+                                </a>
+                            </div>
+                            <span class="sub-menu-title">Каталог</span>
                             <div class="sub-menu-box js-custom-scroll">
                                 <ul class="sub-menu-list">
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Куртки</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Горнолыжные куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Утеплённые куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Парки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Пуховики</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные жилеты</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Ветрозащитные куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивные ветровки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Водонепроницаемые куртки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Куртки Softshell</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Парадные куртки</a></li>
-                                            </ul>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/seeds.png" alt="" />
+                                                </span>ПОСАДОЧНЫЙ МЕТЕРИАЛ И СЕМЕНА
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Рассада</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Костюмы</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Зимние утеплённые костюмы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные костюмы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Гоночные костюмы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивные костюмы</a></li>
-                                            </ul>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/garden.png" alt="" />
+                                                </span>ТОВАРЫ ДЛЯ САДА
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Рассада</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Брюки</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Горнолыжные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Утеплённые брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Разминочные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Ветрозащитные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Водонепроницаемые брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Брюки Softshell</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Трикотажные брюки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Лёгкие летние брюки</a></li>
-                                            </ul>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/home.png" alt="" />
+                                                </span>ТОВАРЫ ДЛЯ ДОМА
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Рассада</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Толстовки</a>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/relaxation.png" alt="" />
+                                                </span>ТОВАРЫ ДЛЯ ОТДЫХА
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Лонгсливы</a>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/holiday.png" alt="" />
+                                                </span>ТОВАРЫ ДЛЯ ПРАЗДНИКА
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Рассада</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Футболки и Поло</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Футболки для бега</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Футболки для активных тренировок</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Футболки для повседневной носки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Рубашки-поло</a></li>
-                                            </ul>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/animal.png" alt="" />
+                                                </span>ТОВАРЫ ДЛЯ ЖИВОТНЫХ
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Рассада</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="sub-menu-item">
                                         <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Майки</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Майки для бега</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Майки для активных тренировок</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивные топы</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Шорты</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шорты с компрессионным слоем</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шорты для бега и тренинга</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шорты для повседневной носки</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Тайтсы, лосины</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Короткие тайтсы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Длинные тайтсы / лосины</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Термобельё</a>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Аксессуары</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Шапки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Балаклавы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Повязки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Баффы</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Бейсболки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Варежки / Перчатки / Лобстеры</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Носки</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Сумки, рюкзаки, чехлы</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="sub-menu-item">
-                                        <div class="sub-menu-block">
-                                            <a class="sub-menu-link" href="#">Виды спорта</a>
-                                            <ul class="menu-category">
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Трейлраннинг</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Бег</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Аутдор</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Спортивный стиль</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Фитнес / Тренинг</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Горные лыжи</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Активный отдых</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Городской стиль</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Беговые лыжи</a></li>
-                                                <li class="menu-category-item"><a class="menu-category-link" href="#">Зимние тренировки</a></li>
-                                            </ul>
+                                            <a class="sub-menu-link" href="#">
+                                                <span class="sub-menu-img-wrapper">
+                                                    <img class="sub-menu-img" src="./images/header/catalog-icons/stationery.png" alt="" />
+                                                </span>КАНЦТОВАРЫ
+                                            </a>
+                                            <div class="menu-category-block JS-ShowMore" data-showmore="{
+                                                'amount': 7,
+                                                'classHide': 'menu-category-item_hide'
+                                            }">
+                                                <ul class="menu-category">
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Рассада</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Семена деревьев и курстарников</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Деревья и кустарники</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Лук севок и картофель семенной</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Луковичные и корневища цветов</a></li>
+                                                    <li class="menu-category-item JS-ShowMore-Item"><a class="menu-category-link" href="#">Мицелий грибов</a></li>
+                                                </ul>
+                                                <a class="menu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                                    <span class="show-more show-more_show">
+                                                        <span class="menu-category-show-more show-more-label">Ещё 4 категории</span>
+                                                    </span>
+                                                    <span class="show-more show-more_hide">
+                                                        <span class="menu-category-show-more show-more-label">Свернуть</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
@@ -426,6 +548,233 @@
                         </div>
                     </div>
                 </div>
+                <ul class="main-menu-list">
+                    <li class="main-menu-item">
+                        <a class="main-menu-link" href="#">Акции</a>
+                    </li>
+                    <li class="main-menu-item">
+                        <a class="main-menu-link" href="#">
+                            Клиентам<i class="main-menu-icon icon icon_arrow-bottom"></i>
+                        </a>
+                        <ul class="main-submenu">
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Информационная поддержка</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Оплата</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Способы оплаты</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Сотрудничество</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Получение товара</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Оформление заказа</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a class="main-menu-link" href="#">
+                            О компании<i class="main-menu-icon icon icon_arrow-bottom"></i>
+                        </a>
+                        <ul class="main-submenu">
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Информационная поддержка</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Оплата</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Способы оплаты</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Сотрудничество</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Получение товара</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Оформление заказа</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Вопросы</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Акции</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Частые вопросы</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Сотрудничество</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Собственное производство</a>
+                            </li>
+                            <li class="main-submenu-item">
+                                <a class="main-submenu-link" href="#">Доставка</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a class="main-menu-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="search JS-DropSearch" data-dropsearch="{
+                    'classActive': 'search_active',
+                    'classShow': 'search-show'
+                }">
+                    <form class="search-form">
+                        <div class="search-container js-search" data-search-dynamic="search_dynamic">
+                            <input class="search-input js-search-input JS-DropSearch-Switcher" type="text" placeholder="" />
+                            <button class="search-button" type="submit">
+                                <i class="search-icon icon icon_search-green"></i>
+                            </button>
+                            <a class="search-reset js-search-reset" href="javascript:;">
+                                <i class="search-reset-icon icon icon_cross"></i>
+                            </a>
+                        </div>
+                    </form>
+                    <!-- Результаты поиска -->
+                    <!--
+                                            <div class="search-popup">
+                                                <div class="search-popup-block js-custom-scroll">
+                                                    <div class="search-popup-container">
+                                                        <div class="search-popup-side">
+                                                            <ul class="search-menu">
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#"><span class="search-menu-label">Куртки</span> для мужчин</a>
+                                                                    <span class="search-menu-amount">100</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#"><span class="search-menu-label">Куртки</span> для женщин</a>
+                                                                    <span class="search-menu-amount">28</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#"><span class="search-menu-label">Куртки</span> для детей</a>
+                                                                    <span class="search-menu-amount">125</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#"><span class="search-menu-label">Куртки</span></a>
+                                                                    <span class="search-menu-amount">36</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#">Зимние мужские <span class="search-menu-label">Куртки</span></a>
+                                                                    <span class="search-menu-amount">14</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#"><span class="search-menu-label">Куртки</span> для бега</a>
+                                                                    <span class="search-menu-amount">36</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#"><span class="search-menu-label">Куртки</span> для мальчика</a>
+                                                                    <span class="search-menu-amount">147</span>
+                                                                </li>
+                                                                <li class="search-menu-item">
+                                                                    <a class="search-menu-link" href="#">Утепленная <span class="search-menu-label">Куртки</span></a>
+                                                                    <span class="search-menu-amount">36</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="search-popup-content">
+                                                            <span class="search-title">Рекомендуем</span>
+                                                            <ul class="search-products">
+                                                                <li class="search-products-item">
+                                                                    <a class="search-products-picture" href="#">
+                                                                        <img class="search-products-img" src="./images/products/search/search-img-1.jpg" alt="" />
+                                                                    </a>
+                                                                    <div class="search-products-block">
+                                                                        <a class="search-products-name" href="#">Куртка Nordski Pro Black с длинным рукавом NEW</a>
+                                                                        <div class="search-products-price">
+                                                                            <span class="price-old">6 300<span class="price-old-currency currency">i</span></span>
+                                                                            <span class="search-price-value">6 300<span class="search-price-currency currency">i</span></span>
+                                                                            <span class="discount">-20%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="search-products-item">
+                                                                    <a class="search-products-picture" href="#">
+                                                                        <img class="search-products-img" src="./images/products/search/search-img-2.jpg" alt="" />
+                                                                    </a>
+                                                                    <div class="search-products-block">
+                                                                        <a class="search-products-name" href="#">Куртка Nordski Pro Black с длинным рукавом NEW</a>
+                                                                        <div class="search-products-price">
+                                                                            <span class="price-old">6 300<span class="price-old-currency currency">i</span></span>
+                                                                            <span class="search-price-value">6 300<span class="search-price-currency currency">i</span></span>
+                                                                            <span class="discount">-20%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="search-products-item">
+                                                                    <a class="search-products-picture" href="#">
+                                                                        <img class="search-products-img" src="./images/products/search/search-img-3.jpg" alt="" />
+                                                                    </a>
+                                                                    <div class="search-products-block">
+                                                                        <a class="search-products-name" href="#">Куртка Nordski Pro Black с длинным рукавом NEW</a>
+                                                                        <div class="search-products-price">
+                                                                            <span class="price-old">6 300<span class="price-old-currency currency">i</span></span>
+                                                                            <span class="search-price-value">6 300<span class="search-price-currency currency">i</span></span>
+                                                                            <span class="discount">-20%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="search-products-item">
+                                                                    <a class="search-products-picture" href="#">
+                                                                        <img class="search-products-img" src="./images/products/search/search-img-3.jpg" alt="" />
+                                                                    </a>
+                                                                    <div class="search-products-block">
+                                                                        <a class="search-products-name" href="#">Куртка Nordski Pro Black с длинным рукавом NEW</a>
+                                                                        <div class="search-products-price">
+                                                                            <span class="price-old">6 300<span class="price-old-currency currency">i</span></span>
+                                                                            <span class="search-price-value">6 300<span class="search-price-currency currency">i</span></span>
+                                                                            <span class="discount">-20%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-popup-footer">
+                                                    <a class="link" href="#">Показать все товары</a>
+                                                </div>
+                                            </div>
+                                            -->
+                </div>
+                <ul class="user-links">
+                    <li class="user-links-item">
+                        <a class="user-links-element" href="#">
+                            <span class="user-links-icon icon icon_delivery"></span>
+                        </a>
+                    </li>
+                    <li class="user-links-item">
+                        <a class="user-links-element" href="#">
+                            <span class="user-links-icon icon icon_help"></span>
+                        </a>
+                    </li>
+                    <li class="user-links-item">
+                        <a class="user-links-element" href="#">
+                            <span class="user-links-icon icon icon_wishlist"></span>
+                            <span class="user-links-informer">2</span>
+                        </a>
+                    </li>
+                    <li class="user-links-item">
+                        <a class="user-links-element user-links-element_basket" href="#">
+                            <span class="user-links-icon icon icon_basket"></span>
+                            <span class="user-links-informer user-links-informer_simple">12</span>
+                            <div>
+                                <span class="user-links-label">
+                                    Корзина<span class="user-links-arrow-icon icon icon_arrow-bottom"></span>
+                                </span>
+                                <span class="user-links-price">7 680 <span class="user-links-currency currency">i</span></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </header>
 
@@ -439,6 +788,13 @@
         </main>
 
         <footer class="footer">
+            <div class="container">
+                <a class="header-logo" href="/">
+                    <img class="header-logo-img" src="./images/unas-logo.png" alt="" />
+                </a>
+                Свяжитесь с нами: Пн - Пт 9:00 - 20:00
+                
+            </div>
         </footer>
 
         <div class="decor-popup"></div>

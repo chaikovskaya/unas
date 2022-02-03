@@ -146,7 +146,7 @@
     }
     &-phone-icon {
         vertical-align: middle;
-        margin-right: 14px;
+        margin-right: 9px;
     }
     &-phone-switcher {
         display: inline-block;
@@ -675,6 +675,7 @@
         color: #fff;
         font-size: 16px;
         border-radius: 21px;
+        white-space: nowrap;
         &:hover {
             color: #fff;
         }
@@ -918,7 +919,7 @@
     &-input {
         width: 100%;
         height: 43px;
-        padding: 7px 25px 7px;
+        padding: 7px 45px 7px 25px;
         border-radius: 21px;
         background-color: #F4F7F7;
         font-size: 15px;
@@ -1086,10 +1087,13 @@
     align-items: center;
     &-item {
         margin-right: 26px;
+        line-height: 16px;
         &:last-child {
             margin-right: 0;
         }
     }
+    &-item_delivery {}
+    &-item_help {}
     &-item_simple {
         margin-right: 24px;
     }
@@ -1123,6 +1127,7 @@
     }
     &-element_basket {
         display: flex;
+        align-items: center;
     }
     &-element_basket &-icon {
         margin-right: 20px;
@@ -1133,6 +1138,7 @@
         font-size: 12px;
         line-height: 13px;
         color: #A5A5A5;
+        white-space: nowrap;
     }
     &-arrow-icon {
         margin-left: 12px;
@@ -1146,6 +1152,7 @@
     &-currency {
         font-size: 11px;
     }
+    &-basket {}
 }
 
 
@@ -1159,6 +1166,33 @@ and (max-width: $desktop) {
     .sub-menu {
         &-item {
             width: 33.3%;
+        }
+    }
+    .catalog-menu {
+        margin-right: 20px;
+        &-switcher {
+            padding-left: 21px;
+            padding-right: 21px;
+            min-width: 120px;
+            height: 37px;
+            line-height: 37px;
+            font-size: 14px;
+        }
+    }
+    .user-links {
+        &-item {
+            margin-right: 20px;
+        }
+    }
+    .main-menu {
+        &-item {
+            margin-right: 20px;
+        }
+        &-link {
+            font-size: 14px;
+        }
+        &-icon {
+            margin-top: 1px;
         }
     }
 }
@@ -1245,6 +1279,27 @@ and (max-width: $tablet){
     }
     .menu-category {
         margin-top: 5px;
+    }
+    .search {
+        display: none;
+    }
+    .user-links {
+        &-item_delivery {
+            display: none;
+        }
+        &-item_help {
+            display: none;
+        }
+        &-informer {
+            top: -11px;
+            left: 12px;
+        }
+        &-informer_simple {
+            top: -8px;
+        }
+        &-basket {
+            margin-top: -5px;
+        }
     }
 }
 

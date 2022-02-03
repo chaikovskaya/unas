@@ -410,8 +410,15 @@ function initTooltip() {
     });
 }
 
-function initFixSticky() {
-    var sticky = new Sticky('.js-fix-sticky', { });
+function initParallaxHeader() {
+    $(".js-parallax-banner").each(function(){
+        var scene = this;
+        var parallaxInstance = new Parallax(scene, {
+            relativeInput: true,
+            hoverOnly: true,
+            pointerEvents: true,
+        });
+    });
 }
 
 function initResizeWindow() {
@@ -452,5 +459,5 @@ $(document).ready(function () {
     initSliderRange();
     initQuantity();
     initTooltip();
-    initFixSticky();
+    initParallaxHeader();
 });

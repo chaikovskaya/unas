@@ -1,4 +1,128 @@
 
+.main-banner {
+    position: relative;
+    &-list {
+    }
+    &-item {
+        display: flex;
+        border-radius: 15px;
+        background-color: #F8F7F7;
+    }
+    &-description {
+        width: 45%;
+        padding-top: 67px;
+        padding-left: 90px;
+    }
+    &-img {
+        width: 55%;
+        border-radius: 0 15px 15px 0;
+    }
+    &-item_modified {
+        position: relative;
+    }
+    &-item_modified &-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='974' height='827' viewBox='0 0 974 827' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M992.423 186.188C1081.29 269.801 1228.44 337.764 1205.17 453.674C1181.68 570.663 1017.83 643.424 886.513 713.657C768.935 776.545 642.69 827.51 508.976 826.04C368.344 824.495 241.398 782.061 152.59 705.593C55.4662 621.966 -21.7864 514.163 7.01318 393.831C35.9191 273.054 164.206 176.04 297.433 100.397C423.564 28.7837 572.786 -25.4172 714.592 -7.91234C847.843 8.53656 909.943 108.583 992.423 186.188Z' fill='url(%23paint0_linear_881_1731)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_881_1731' x1='269.816' y1='116.206' x2='713.138' y2='833.02' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FF8008'/%3e%3cstop offset='1' stop-color='%23FFC837'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        background-position: 67px -163px;
+    }
+    &-pic {
+        display: block;
+    }
+    &-title {
+        margin-bottom: 20px;
+        font-weight: 800;
+        font-size: 42px;
+        line-height: 58px;
+        color: #0D0C0B;
+        text-transform: uppercase;
+    }
+    &-info {
+        margin-bottom: 44px;
+        max-width: 440px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 35px;
+        color: #2D2A1E;
+    }
+    &-info-label {
+        color: #59A750;
+        font-weight: 800;
+    }
+    &-layers {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    &-layers-1 {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        margin-top: 112px;
+        margin-left: -294px;
+        width: 324px;
+        height: 328px;
+        background: url(../images/main-banner/main-banner-layers-1.png) no-repeat 0 0;
+    }
+    &-layers-2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: auto !important;
+        margin-top: -15px;
+        margin-right: -144px;
+        width: 437px;
+        height: 436px;
+        background: url(../images/main-banner/main-banner-layers-2.png) no-repeat 0 0;
+    }
+    &-decor {}
+    &-panel {
+        position: absolute;
+        bottom: 76px;
+        left: 105px;
+    }
+}
+
+.counter {
+    display: flex;
+    align-items: baseline;
+    &-number {
+        font-size: 22px;
+        color: #59A750;
+        font-weight: 700;
+        text-transform: uppercase;
+        vertical-align: middle;
+        padding-right: 3px;
+    }
+    &-total-number {
+        color: #2D2A1E;
+        font-size: 18px;
+    }
+    &-number-value {
+        padding-right: 3px;
+    }
+}
+
+.basket {
+    &-delivery-indicator {
+        position: relative;
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        margin-right: 13px;
+    }
+    &-delivery-indicator-svg {
+        transform: rotate(-90deg);
+    }
+    &-delivery-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
 
 @media screen
 and (min-width: $desktop){

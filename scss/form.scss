@@ -181,28 +181,27 @@ label.form-error {
 
 .button {
     display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    padding-right: 25px;
-    padding-left: 25px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
+    height: 50px;
+    line-height: 50px;
+    padding-right: 33px;
+    padding-left: 33px;
+    font-weight: 600;
+    font-size: 15px;
     text-align: center;
+    color: #fff;
     text-transform: uppercase;
-    background-color: #014161;
+    background-color: #59A750;
     text-decoration: none;
     white-space: nowrap;
     border-width: 0;
     cursor: pointer;
+    border-radius: 25px;
     -webkit-appearance: none;
     &:hover {
         color: #fff;
-        background-color: #025077;
     }
     &:active {
         color: #fff;
-        background-color: #01344d;
     }
     &:disabled {
         opacity: 0.8;

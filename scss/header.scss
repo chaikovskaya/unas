@@ -636,30 +636,6 @@
     }
 }
 
-.counter {
-    display: flex;
-    align-items: flex-start;
-    margin-right: auto;
-    padding-right: 20px;
-    &-number {
-        font-size: 30px;
-        color: #1d1d1d;
-        font-weight: 700;
-        text-transform: uppercase;
-        vertical-align: middle;
-        padding-right: 3px;
-    }
-    &-total {
-        margin-top: -5px;
-        font-size: 15px;
-        color: #a1a1a1;
-        text-transform: uppercase;
-    }
-    &-total-number {
-        margin-left: 3px;
-    }
-}
-
 .catalog-menu {
     margin-right: 42px;
     &-switcher {

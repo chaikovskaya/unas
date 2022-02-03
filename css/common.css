@@ -1120,27 +1120,26 @@ label.form-error {
 
 .button {
   display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  padding-right: 25px;
-  padding-left: 25px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 33px;
+  padding-left: 33px;
+  font-weight: 600;
+  font-size: 15px;
   text-align: center;
+  color: #fff;
   text-transform: uppercase;
-  background-color: #014161;
+  background-color: #59A750;
   text-decoration: none;
   white-space: nowrap;
   border-width: 0;
   cursor: pointer;
+  border-radius: 25px;
   -webkit-appearance: none; }
   .button:hover {
-    color: #fff;
-    background-color: #025077; }
+    color: #fff; }
   .button:active {
-    color: #fff;
-    background-color: #01344d; }
+    color: #fff; }
   .button:disabled {
     opacity: 0.8;
     cursor: not-allowed; }
@@ -1976,26 +1975,6 @@ label.form-error {
 .mob-logo-img {
   display: block; }
 
-.counter {
-  display: flex;
-  align-items: flex-start;
-  margin-right: auto;
-  padding-right: 20px; }
-  .counter-number {
-    font-size: 30px;
-    color: #1d1d1d;
-    font-weight: 700;
-    text-transform: uppercase;
-    vertical-align: middle;
-    padding-right: 3px; }
-  .counter-total {
-    margin-top: -5px;
-    font-size: 15px;
-    color: #a1a1a1;
-    text-transform: uppercase; }
-  .counter-total-number {
-    margin-left: 3px; }
-
 .catalog-menu {
   margin-right: 42px; }
   .catalog-menu-switcher {
@@ -2725,3 +2704,104 @@ label.form-error {
       padding-bottom: 0;
       margin-bottom: 20px;
       border-bottom-width: 0; } }
+
+.main-banner {
+  position: relative; }
+  .main-banner-item {
+    display: flex;
+    border-radius: 15px;
+    background-color: #F8F7F7; }
+  .main-banner-description {
+    width: 45%;
+    padding-top: 67px;
+    padding-left: 90px; }
+  .main-banner-img {
+    width: 55%;
+    border-radius: 0 15px 15px 0; }
+  .main-banner-item_modified {
+    position: relative; }
+  .main-banner-item_modified .main-banner-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='974' height='827' viewBox='0 0 974 827' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M992.423 186.188C1081.29 269.801 1228.44 337.764 1205.17 453.674C1181.68 570.663 1017.83 643.424 886.513 713.657C768.935 776.545 642.69 827.51 508.976 826.04C368.344 824.495 241.398 782.061 152.59 705.593C55.4662 621.966 -21.7864 514.163 7.01318 393.831C35.9191 273.054 164.206 176.04 297.433 100.397C423.564 28.7837 572.786 -25.4172 714.592 -7.91234C847.843 8.53656 909.943 108.583 992.423 186.188Z' fill='url(%23paint0_linear_881_1731)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_881_1731' x1='269.816' y1='116.206' x2='713.138' y2='833.02' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FF8008'/%3e%3cstop offset='1' stop-color='%23FFC837'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-position: 67px -163px; }
+  .main-banner-pic {
+    display: block; }
+  .main-banner-title {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 58px;
+    color: #0D0C0B;
+    text-transform: uppercase; }
+  .main-banner-info {
+    margin-bottom: 44px;
+    max-width: 440px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 35px;
+    color: #2D2A1E; }
+  .main-banner-info-label {
+    color: #59A750;
+    font-weight: 800; }
+  .main-banner-layers {
+    position: relative;
+    width: 100%;
+    text-align: center; }
+  .main-banner-layers-1 {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    margin-top: 112px;
+    margin-left: -294px;
+    width: 324px;
+    height: 328px;
+    background: url(../images/main-banner/main-banner-layers-1.png) no-repeat 0 0; }
+  .main-banner-layers-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto !important;
+    margin-top: -15px;
+    margin-right: -144px;
+    width: 437px;
+    height: 436px;
+    background: url(../images/main-banner/main-banner-layers-2.png) no-repeat 0 0; }
+  .main-banner-panel {
+    position: absolute;
+    bottom: 76px;
+    left: 105px; }
+
+.counter {
+  display: flex;
+  align-items: baseline; }
+  .counter-number {
+    font-size: 22px;
+    color: #59A750;
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding-right: 3px; }
+  .counter-total-number {
+    color: #2D2A1E;
+    font-size: 18px; }
+  .counter-number-value {
+    padding-right: 3px; }
+
+.basket-delivery-indicator {
+  position: relative;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 13px; }
+
+.basket-delivery-indicator-svg {
+  transform: rotate(-90deg); }
+
+.basket-delivery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }

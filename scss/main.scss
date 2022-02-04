@@ -1,7 +1,14 @@
 
 .main-banner {
     position: relative;
+    margin-bottom: 40px;
+    .owl-stage {
+        display: flex;
+    }
     &-list {
+        overflow: hidden;
+        margin-right: -45px;
+        padding-right: 45px;
     }
     &-item {
         display: flex;
@@ -9,12 +16,13 @@
         background-color: #F8F7F7;
     }
     &-description {
-        width: 45%;
+        width: 49%;
         padding-top: 67px;
         padding-left: 90px;
+        padding-bottom: 120px;
     }
     &-img {
-        width: 55%;
+        width: 51%;
         border-radius: 0 15px 15px 0;
     }
     &-item_modified {
@@ -25,11 +33,16 @@
         align-items: center;
         justify-content: center;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='974' height='827' viewBox='0 0 974 827' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M992.423 186.188C1081.29 269.801 1228.44 337.764 1205.17 453.674C1181.68 570.663 1017.83 643.424 886.513 713.657C768.935 776.545 642.69 827.51 508.976 826.04C368.344 824.495 241.398 782.061 152.59 705.593C55.4662 621.966 -21.7864 514.163 7.01318 393.831C35.9191 273.054 164.206 176.04 297.433 100.397C423.564 28.7837 572.786 -25.4172 714.592 -7.91234C847.843 8.53656 909.943 108.583 992.423 186.188Z' fill='url(%23paint0_linear_881_1731)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_881_1731' x1='269.816' y1='116.206' x2='713.138' y2='833.02' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FF8008'/%3e%3cstop offset='1' stop-color='%23FFC837'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-        background-position: 67px -163px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1208' height='838' viewBox='0 0 1208 838' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M992.101 197.845C1080.96 281.457 1228.12 349.42 1204.85 465.33C1181.36 582.319 1017.5 655.08 886.191 725.314C768.613 788.202 642.368 839.166 508.653 837.697C368.022 836.151 241.076 793.717 152.268 717.249C55.144 633.622 -22.1086 525.82 6.69093 405.487C35.5968 284.71 163.884 187.696 297.111 112.053C423.242 40.44 572.464 -13.761 714.27 3.74391C847.521 20.1928 909.621 120.239 992.101 197.845Z' fill='url(%23paint0_linear_881_1731)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_881_1731' x1='269.494' y1='127.863' x2='712.816' y2='844.677' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FF8008'/%3e%3cstop offset='1' stop-color='%23FFC837'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        background-position: 67px calc(50% + 8px);
+    }
+    &-pic-wrapper {
+        display: inline-block;
+        overflow: hidden;
     }
     &-pic {
         display: block;
+        margin-bottom: -76px;
     }
     &-title {
         margin-bottom: 20px;
@@ -38,6 +51,7 @@
         line-height: 58px;
         color: #0D0C0B;
         text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
     &-info {
         margin-bottom: 44px;
@@ -46,6 +60,7 @@
         font-size: 22px;
         line-height: 35px;
         color: #2D2A1E;
+        letter-spacing: 0.08em;
     }
     &-info-label {
         color: #59A750;
@@ -54,7 +69,10 @@
     &-layers {
         position: relative;
         width: 100%;
+        height: 100%;
         text-align: center;
+        display: flex;
+        align-items: flex-end;
     }
     &-layers-1 {
         position: absolute !important;
@@ -65,6 +83,7 @@
         width: 324px;
         height: 328px;
         background: url(../images/main-banner/main-banner-layers-1.png) no-repeat 0 0;
+        background-size: 100% auto;
     }
     &-layers-2 {
         position: absolute;
@@ -72,15 +91,16 @@
         right: 0;
         left: auto !important;
         margin-top: -15px;
-        margin-right: -144px;
+        margin-right: -160px;
         width: 437px;
         height: 436px;
         background: url(../images/main-banner/main-banner-layers-2.png) no-repeat 0 0;
+        background-size: 100% auto;
     }
     &-decor {}
     &-panel {
         position: absolute;
-        bottom: 76px;
+        bottom: 70px;
         left: 105px;
     }
 }
@@ -105,33 +125,176 @@
     }
 }
 
-.basket {
-    &-delivery-indicator {
-        position: relative;
-        min-width: 50px;
-        width: 50px;
-        height: 50px;
-        margin-right: 13px;
+.category {
+    display: flex;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    &-item {
+        width: 33.3%;
+        padding-left: $gutter;
+        padding-right: $gutter;
     }
-    &-delivery-indicator-svg {
-        transform: rotate(-90deg);
-    }
-    &-delivery-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+}
+
+
+@media screen
+and (max-width: $large){
+    .main-banner {
+        &-layers-1 {
+            width: 199px;
+            height: 217px;
+            margin-top: 200px;
+            margin-left: -181px;
+        }
+        &-layers-2 {
+            width: 237px;
+            height: 236px;
+            margin-top: 45px;
+            margin-right: -168px;
+        }
     }
 }
 
 @media screen
-and (min-width: $desktop){
+and (max-width: $desktop){
+    .main-banner {
+        &-description {
+            padding-left: 35px;
+            padding-bottom: 90px;
+        }
+        &-panel {
+            left: 35px;
+            bottom: 30px;
+        }
+        &-title {
+            font-size: 30px;
+            line-height: 34px;
+        }
+        &-info {
+             font-size: 18px;
+            line-height: 28px;
+        }
+        &-layers-1 {
+            margin-top: 156px;
+        }
+        &-layers-2 {
+            margin-top: 45px;
+        }
+    }
 }
 
 @media screen
 and (max-width: $tablet){
+    .main-banner {
+        margin-bottom: 25px;
+        &-description {
+            width: 50%;
+            padding-top: 35px;
+            padding-left: 25px;
+            padding-bottom: 60px;
+        }
+        &-title {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        &-info {
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-panel {
+            left: 25px;
+            bottom: 20px;
+        }
+        &-layers-1 {
+            width: 138px;
+            height: 137px;
+            margin-top: 99px;
+            margin-left: -162px;
+            background-image: url(../images/main-banner/main-banner-layers-mob-1.png);
+        }
+        &-layers-2 {
+            width: 149px;
+            height: 149px;
+            margin-top: 45px;
+            margin-right: -60px;
+            background-image: url(../images/main-banner/main-banner-layers-mob-2.png);
+        }
+        &-img {
+            width: 50%;
+        }
+        &-item_modified &-img {
+            background-position: 32px calc(50% + 8px);
+        }
+        &-pic-wrapper {
+            width: 320px;
+            margin-left: -20px;
+        }
+        &-pic {
+            margin-bottom: -37px;
+        }
+    }
+    .counter {
+        &-number {
+            font-size: 18px;
+        }
+        &-total-number {
+            font-size: 14px;
+        }
+    }
 }
 
 @media screen
 and (max-width: $mobile){
+    .main-banner {
+        &-description {
+            width: 100%;
+            padding-right: 25px;
+            padding-bottom: 37px;
+        }
+        &-img {
+            width: 100%;
+            border-radius: 0 0 15px 15px;
+        }
+        &-item_modified &-img {
+            justify-content: flex-end;
+            background-position: calc(50% + 183px) 2px;
+            background-size: 536px auto;
+        }
+        &-pic-wrapper {
+            margin-left: auto;
+            border-radius: 0 0 15px 0;
+        }
+        &-pic {
+            margin-bottom: 0;
+            position: relative;
+            right: -30px;
+        }
+        &-list {
+            margin-bottom: 15px;
+        }
+        &-item {
+            flex-direction: column;
+        }
+        &-panel {
+            position: static;
+        }
+        &-layers {
+            justify-content: center;
+            max-width: 300px;
+        }
+        &-layers-1 {
+            width: 95px;
+            height: 90px;
+            margin-top: -38px;
+            margin-left: -32px;
+        }
+        &-layers-2 {
+            width: 95px;
+            height: 90px;
+            margin-top: -100px;
+            margin-right: -24px;
+        }
+    }
 }

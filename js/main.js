@@ -421,6 +421,85 @@ function initParallaxHeader() {
     });
 }
 
+function initIndicator(currentPercent) {
+    $('.js-indicator').each(function() {
+        var $element = $(this),
+            total = $element.data("indicator-total"),
+            percent = $element.data("indicator-percent") || currentPercent,
+            $value = $element.find('.js-indicator-value');
+
+        var res = (total * percent)/100;
+        if (res) {
+            $value.attr('stroke-dasharray', res + ',' + total);
+        }
+    });
+}
+
+function initSliderMainBanner() {
+    $(".js-slider-main-banner").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: isStart,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 300,
+            margin: 45,
+            items: 1,
+            responsive: {
+                0: {
+                },
+                720: {
+                    mouseDrag: true,
+                },
+                992: {
+                },
+            },
+            onInitialize : function(event) {
+                if (itemLength < 10) {
+                    itemLength =  '0' + itemLength;
+                }
+                $amountPages.html(itemLength);
+
+                /*
+                var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+                var res = (itemLength * index)/100;
+                console.log(res);
+                initIndicator();
+                */
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('changed.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
+        });
+    });
+}
+
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -460,4 +539,6 @@ $(document).ready(function () {
     initQuantity();
     initTooltip();
     initParallaxHeader();
+    initSliderMainBanner();
+    initIndicator();
 });

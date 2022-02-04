@@ -494,6 +494,8 @@
         vertical-align: middle;
     }
     &-list-icon {
+        width: 6px;
+        height: 9px;
         margin-left: auto;
         vertical-align: middle;
         font-size: 14px;
@@ -852,11 +854,12 @@
     position: absolute;
     top: 100%;
     left: -40px;
+    z-index: 2;
     min-width: 461px;
-    height: 353px;
+    max-height: 353px;
     margin-top: -1px;
     padding-top: 10px;
-    padding-bottom: 45px;
+    padding-bottom: 30px;
     background-color: #fff;
     border-radius: 0 15px 15px 15px;
     &-item {
@@ -1282,6 +1285,7 @@ and (max-width: $tablet){
 @media screen
 and (max-width: $mobile){
     .header {
+        margin-bottom: 22px;
         &-top {
             min-height: 59px;
             padding-bottom: 13px;

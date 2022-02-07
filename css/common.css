@@ -852,6 +852,10 @@ blockquote {
     margin-bottom: 35px;
     font-size: 20px; } }
 
+@media screen and (max-width: 720px) {
+  .title {
+    margin-bottom: 30px; } }
+
 /* Fancybox */
 .fancybox-bg {
   background-color: rgba(0, 0, 0, 0.5); }
@@ -3140,4 +3144,6 @@ label.form-error {
     margin-top: -100px;
     margin-right: -24px; }
   .category-list {
-    margin-right: 30px; } }
+    margin-right: 30px; }
+  .catalog-gallery-item {
+    padding-top: 0; } }

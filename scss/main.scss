@@ -519,4 +519,9 @@ and (max-width: $mobile){
             margin-right: 30px;
         }
     }
+    .catalog-gallery {
+        &-item {
+            padding-top: 0;
+        }
+    }
 }

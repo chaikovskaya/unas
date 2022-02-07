@@ -32,7 +32,7 @@ body {
 h1,
 .h1 {
     margin: 0 0 30px;
-	font: 700 35px/43px 'Nunito', sans-serif;
+	font: 700 36px/52px 'Nunito', sans-serif;
     color: #0D0C0B;
 }
 
@@ -379,12 +379,20 @@ blockquote {
 
 /* slider */
 .slider {
+	&-head {
+		position: relative;
+	}
 	&-panel {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 240px;
+	}
+	&-panel_simple {
+		position: absolute;
+		top: 0;
+		right: -9px;
 	}
 	&-nav {
 		display: flex;
@@ -760,7 +768,7 @@ blockquote {
 
 .title {
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 60px;
 }
 
 .button-up {
@@ -919,6 +927,11 @@ and (max-width: $desktop){
 
 @media screen
 and (max-width: $tablet){
+	h1,
+	.h1 {
+		font-size: 20px;
+		line-height: 29px;
+	}
 	.icon {
 		&_phone {
 			width: 20px;
@@ -967,9 +980,16 @@ and (max-width: $tablet){
 		&-panel {
 			width: 190px;
 		}
+		&-panel_simple {
+			display: none;
+		}
 		&-nav {
 			width: 80px;
 		}
+	}
+	.title {
+		margin-bottom: 35px;
+		font-size: 20px;
 	}
 }
 

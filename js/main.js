@@ -50,6 +50,19 @@ function initDropdown() {
     });
 }
 
+function initDropdownMarks() {
+    if (typeof(Dropdown) === 'undefined' || !jQuery.isFunction(Dropdown)) {
+        return false;
+    }
+
+    var common = {};
+
+    $('.JS-Dropdown-Marks').not('.JS-Dropdown-ready').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('dropdown'));
+        new Dropdown(this, jQuery.extend({}, common, local));
+    });
+}
+
 function initMobileMenu() {
     if (typeof(MobileMenu) === 'undefined' || !jQuery.isFunction(MobileMenu)) {
         return false;
@@ -524,6 +537,7 @@ function initSliderCategory() {
                     items: 1,
                     loop: itemLength > 1 ? true : false,
                     margin: 24,
+                    mouseDrag: true,
                 },
                 720: {
                     items: 2,
@@ -636,6 +650,81 @@ function initSliderCatalogGallery() {
     });
 }
 
+function initSliderProducts() {
+    $(".js-slider-products").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: isStart,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 300,
+            margin: 40,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: itemLength > 1 ? true : false,
+                    margin: 24,
+                },
+                720: {
+                    items: 2,
+                    loop: itemLength > 2 ? true : false,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+                992: {
+                    items: 3,
+                    loop: itemLength > 3 ? true : false,
+                },
+                1200: {
+                    items: 4,
+                    loop: itemLength > 4 ? true : false,
+                },
+                1640: {
+                    items: 5,
+                    loop: itemLength > 5 ? true : false,
+                },
+            },
+            onInitialized : function(event) {
+                var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+                initIndicator(index, itemLength);
+                if (itemLength < 10) {
+                    itemLength =  '0' + itemLength;
+                }
+                $amountPages.html(itemLength);
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('translated.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+            initIndicator(index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -654,6 +743,7 @@ $(document).ready(function () {
     });
 
     initDropdown();
+    initDropdownMarks();
     initMobileMenu();
     initScroll();
     initScrollUp();
@@ -678,4 +768,5 @@ $(document).ready(function () {
     initSliderMainBanner();
     initSliderCategory();
     initSliderCatalogGallery();
+    initSliderProducts();
 });

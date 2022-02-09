@@ -31,29 +31,33 @@ body {
 
 h1,
 .h1 {
-    margin: 0 0 30px;
+    margin-bottom: 30px;
 	font: 700 36px/52px 'Nunito', sans-serif;
     color: #0D0C0B;
+	text-transform: uppercase;
+	letter-spacing: 0.085em;
 }
 
 h2,
 .h2 {
-    margin-bottom: 18px;
-	font: 700 25px/30px 'Nunito', sans-serif;
-	color: #0D0C0B;
+    margin-bottom: 32px;
+	font: 800 22px/35px 'Nunito', sans-serif;
+	color: #333;
+	letter-spacing: 0.085em;
 }
 
 h3,
 .h3 {
     margin-bottom: 12px;
     font: 700 20px/25px 'Nunito', sans-serif;
-	color: #0D0C0B;
+	color: #333;
+	letter-spacing: 0.085em;
 }
 
 h4,
 .h4 {
     font: 700 16px/20px 'Nunito', sans-serif;
-	color: #0D0C0B;
+	color: #333;
 }
 
 a {
@@ -371,6 +375,10 @@ blockquote {
 	display: flex;
 }
 
+.owl-nav {
+	display: none;
+}
+
 .owl-nav.disabled {
 	display: none;
 }
@@ -416,12 +424,10 @@ blockquote {
 	}
 	&-button_disabled {
 		cursor: auto;
+		opacity: 0.4;
 	}
 	&-button_disabled:active {
 		border-color: #dcdcdc;
-	}
-	&-button_disabled &-button-icon {
-		color: #a9a9a9;
 	}
 	&-more {
 		margin-left: 17px;
@@ -436,10 +442,10 @@ blockquote {
 		width: 75px;
 		transform: rotate(-180deg);
 	}
-	&-button_prev:hover &-button-icon {
+	&-button_prev:hover:not(&-button_disabled) &-button-icon {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='11.241' height='1.4988' transform='matrix(0 -1 -1 0 7.4939 12.6968)' fill='%230D0C0B'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.18042 13.4154C7.59851 12.9764 7.59851 12.2647 7.18042 11.8257L7.18042 7.00004L7.18042 2.17441C7.59851 1.73542 7.59851 1.02368 7.18042 0.584692C6.76234 0.145704 6.08449 0.145704 5.66641 0.584692L0.313563 6.20518C-0.104521 6.64417 -0.104521 7.35591 0.313563 7.7949L5.66641 13.4154C6.08449 13.8544 6.76234 13.8544 7.18042 13.4154Z' fill='%2359A750'/%3e%3c/svg%3e ");
 	}
-	&-button_next:hover &-button-icon {
+	&-button_next:hover:not(&-button_disabled) &-button-icon {
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.2434 13.4149C0.82532 12.9759 0.82532 12.2642 1.2434 11.8252L1.2434 6.99955L1.2434 2.17392C0.82532 1.73493 0.82532 1.02319 1.2434 0.584204C1.66149 0.145216 2.33933 0.145216 2.75742 0.584204L8.11027 6.20469C8.52835 6.64368 8.52835 7.35542 8.11027 7.79441L2.75742 13.4149C2.33933 13.8539 1.66149 13.8539 1.2434 13.4149Z' fill='%2359A750'/%3e%3c/svg%3e ");
 	}
 }

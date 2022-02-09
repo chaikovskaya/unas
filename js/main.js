@@ -465,6 +465,20 @@ function initSliderMainBanner() {
 
         var isStart = itemLength > 1 ? true : false;
 
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
         $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
             loop: isStart,
             mouseDrag: isStart,
@@ -473,6 +487,7 @@ function initSliderMainBanner() {
             smartSpeed: 300,
             margin: 45,
             items: 1,
+            nav: true,
             responsive: {
                 0: {
                 },
@@ -489,6 +504,7 @@ function initSliderMainBanner() {
                     itemLength =  '0' + itemLength;
                 }
                 $amountPages.html(itemLength);
+                updateButtons();
             },
         }));
         if (!isStart) {
@@ -507,6 +523,7 @@ function initSliderMainBanner() {
                 index =  '0' + index;
             }
             $currentPage.html(index);
+            updateButtons();
         });
     });
 }
@@ -532,6 +549,7 @@ function initSliderCategory() {
             autoHeight: false,
             smartSpeed: 300,
             margin: 40,
+            nav: true,
             responsive: {
                 0: {
                     items: 1,
@@ -594,6 +612,20 @@ function initSliderCatalogGallery() {
 
         var isStart = itemLength > 1 ? true : false;
 
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
         $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
             loop: isStart,
             mouseDrag: isStart,
@@ -601,6 +633,7 @@ function initSliderCatalogGallery() {
             autoHeight: false,
             smartSpeed: 300,
             margin: 40,
+            nav: true,
             responsive: {
                 0: {
                     items: 1,
@@ -628,6 +661,7 @@ function initSliderCatalogGallery() {
                     itemLength =  '0' + itemLength;
                 }
                 $amountPages.html(itemLength);
+                updateButtons();
             },
         }));
         if (!isStart) {
@@ -646,6 +680,7 @@ function initSliderCatalogGallery() {
                 index =  '0' + index;
             }
             $currentPage.html(index);
+            updateButtons();
         });
     });
 }
@@ -664,6 +699,20 @@ function initSliderProducts() {
 
         var isStart = itemLength > 1 ? true : false;
 
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
         $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
             loop: isStart,
             mouseDrag: isStart,
@@ -671,6 +720,7 @@ function initSliderProducts() {
             autoHeight: false,
             smartSpeed: 300,
             margin: 40,
+            nav: true,
             responsive: {
                 0: {
                     items: 1,
@@ -703,6 +753,261 @@ function initSliderProducts() {
                     itemLength =  '0' + itemLength;
                 }
                 $amountPages.html(itemLength);
+
+                updateButtons();
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('translated.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+            initIndicator(index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
+
+            updateButtons();
+        });
+    });
+}
+
+function initSliderNew() {
+    $(".js-slider-new").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: isStart,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 300,
+            margin: 40,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: itemLength > 1 ? true : false,
+                    margin: 24,
+                },
+                720: {
+                    items: 2,
+                    loop: itemLength > 2 ? true : false,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+                992: {
+                    items: 3,
+                    loop: itemLength > 3 ? true : false,
+                },
+                1640: {
+                    autoWidth: true,
+                    items: 3,
+                    loop: itemLength > 3 ? true : false,
+                },
+            },
+            onInitialized : function(event) {
+                var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+                initIndicator(index, itemLength);
+                if (itemLength < 10) {
+                    itemLength =  '0' + itemLength;
+                }
+                $amountPages.html(itemLength);
+
+                updateButtons();
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('translated.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+            initIndicator(index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
+
+            updateButtons();
+        });
+    });
+}
+
+function initSliderOwnProducts() {
+    $(".js-slider-own-products").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: isStart,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 300,
+            margin: 40,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: itemLength > 1 ? true : false,
+                    margin: 24,
+                },
+                720: {
+                    items: 2,
+                    loop: itemLength > 2 ? true : false,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+                992: {
+                    items: 3,
+                    loop: itemLength > 3 ? true : false,
+                },
+                1200: {
+                    items: 4,
+                    loop: itemLength > 4 ? true : false,
+                },
+            },
+            onInitialized : function(event) {
+                var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+                initIndicator(index, itemLength);
+                if (itemLength < 10) {
+                    itemLength =  '0' + itemLength;
+                }
+                $amountPages.html(itemLength);
+
+                updateButtons();
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('translated.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+            initIndicator(index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
+
+            updateButtons();
+        });
+    });
+}
+
+function initSliderInstagram() {
+    $(".js-slider-instagram").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: false,
+            mouseDrag: false,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 300,
+            margin: 40,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: itemLength > 1 ? true : false,
+                    margin: 24,
+                    mouseDrag: true,
+                },
+                720: {
+                    items: 3,
+                    loop: itemLength > 3 ? true : false,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+                992: {
+                },
+                1200: {
+                    items: 4,
+                },
+            },
+            onInitialized : function(event) {
+                var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+                initIndicator(index, itemLength);
+                if (itemLength < 10) {
+                    itemLength =  '0' + itemLength;
+                }
+                $amountPages.html(itemLength);
             },
         }));
         if (!isStart) {
@@ -724,15 +1029,22 @@ function initSliderProducts() {
         });
     });
 }
+function reInitSliderInstagram() {
+    $(".js-slider-instagram .js-slider-list").trigger('destroy.owl.carousel');
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
         GLOBAL.widthWindow = 'isMobile';
+        reInitSliderInstagram();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
+        initSliderInstagram();
     } else {
         GLOBAL.widthWindow = '';
+        initSliderInstagram();
     }
 }
 
@@ -769,4 +1081,6 @@ $(document).ready(function () {
     initSliderCategory();
     initSliderCatalogGallery();
     initSliderProducts();
+    initSliderNew();
+    initSliderOwnProducts();
 });

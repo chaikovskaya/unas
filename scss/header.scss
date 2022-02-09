@@ -1283,6 +1283,9 @@ and (max-width: $tablet){
             margin-top: -5px;
         }
     }
+    .main-submenu {
+        max-height: none;
+    }
 }
 
 @media screen

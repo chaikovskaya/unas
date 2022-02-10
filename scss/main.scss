@@ -177,15 +177,6 @@
     &-more {
         margin-top: auto;
         margin-right: auto;
-        padding-bottom: 5px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height:  25px;
-        letter-spacing: 0.085em;
-        color: #333333;
-        text-decoration: none;
-        border-bottom: 1px solid #333333;
-        white-space: nowrap;
     }
 }
 
@@ -1109,9 +1100,9 @@ and (max-width: $mobile){
     padding: 25px 34px 25px 96px;
     border-radius: 15px;
     background-color: #DBF4DF;
-    min-height: 100px;
     &-info {
         position: relative;
+        margin-right: 40px;
         font-weight: 700;
         font-size: 24px;
         line-height: 35px;
@@ -1124,6 +1115,7 @@ and (max-width: $mobile){
         width: 112px;
         height: 82px;
         background: url("../images/subscribe/subscribe-decor-1.png") no-repeat 0 0;
+        background-size: 100% auto;
     }
     &-layer-2 {
         position: absolute;
@@ -1132,6 +1124,7 @@ and (max-width: $mobile){
         width: 73px;
         height: 90px;
         background: url("../images/subscribe/subscribe-decor-2.png") no-repeat 0 0;
+        background-size: 100% auto;
     }
     &-form {
         margin-left: auto;
@@ -1140,7 +1133,94 @@ and (max-width: $mobile){
         display: flex;
     }
     &-input {
+        width: 230px;
+        height: 50px;
         margin-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #fff;
+        font-size: 16px;
+        color: #828282;
+        border-radius: 25px;
+        text-align: center;
+        &::placeholder {
+            font-size: 16px; color: $colorPlaceholder;
+        }
+    }
+    &-button {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+.video {
+    margin-bottom: 120px;
+    &-list {
+        margin-right: 310px;
+    }
+    &-item {
+        display: flex;
+    }
+    &-pic {
+        width: 49%;
+        padding-right: $gutters;
+    }
+    &-description {
+        width: 51%;
+        max-width: 545px;
+    }
+    &-link {
+        position: relative;
+        display: block;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 159px;
+            height: 159px;
+            background: url("../images/video/video-play-bgr.png") no-repeat 0 0;
+            background-size: 100% auto;
+        }
+        &:hover {
+            box-shadow: 0px 4px 30px rgba(207, 201, 201, 0.4);
+        }
+    }
+    &-img {
+        display: block;
+        width: 100%;
+        border-radius: 15px;
+    }
+    &-panel {
+        display: flex;
+        align-items: center;
+        letter-spacing: normal;
+        margin-bottom: 24px;
+    }
+    &-icon {
+        margin-right: 25px;
+    }
+    &-info {
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    &-info-main {
+        text-transform: uppercase;
+        color: #0D0C0B;
+        font-size: 18px;
+        line-height: 31px
+    }
+    &-actions {
+        display: flex;
+        align-items: center;
+    }
+    &-actions-link {
+        margin-right: 60px;
+    }
+    &-button {
+        padding-left: 22px;
+        padding-right: 22px;
     }
 }
 
@@ -1152,6 +1232,26 @@ and (max-width: $large){
         }
         &-item_wide {
             width: auto;
+        }
+    }
+    .subscribe {
+        &-layer-2 {
+            display: none;
+        }
+    }
+}
+
+@media screen
+and (max-width: $desktop){
+    .subscribe {
+        &-info {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+    .video {
+        &-list {
+            margin-right: 130px;
         }
     }
 }
@@ -1173,11 +1273,78 @@ and (max-width: $tablet){
             line-height: 26px;
         }
     }
+    .subscribe {
+        padding: 20px 25px;
+        &-layer-1 {
+            width: 45px;
+            height: 32px;
+            top: 50%;
+            left: -51px;
+            transform: translateY(calc(-50% - 3px));
+        }
+        &-layer-2 {
+            display: none;
+        }
+        &-info {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-input {
+            width: 132px;
+            height: 37px;
+            margin-right: 16px;
+            line-height: 37px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 12px;
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+    }
+    .video {
+        margin-bottom: 70px;
+        &-list {
+            margin-right: 45px;
+        }
+        &-info {
+            margin-bottom: 26px;
+        }
+        &-info-main {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &-panel {
+            margin-bottom: 18px;
+            font-size: 20px;
+        }
+        &-pic {
+            width: 58%;
+            padding-right: 25px;
+        }
+        &-description {
+            width: 42%;
+        }
+        &-actions-link {
+            margin-right: 20px;
+        }
+        &-button {
+            display: none;
+        }
+        &-link {
+            &:after {
+                width: 94px;
+                height: 94px;
+            }
+        }
+    }
 }
 
 @media screen
 and (max-width: $mobile){
     .instagram {
+        margin-bottom: 40px;
         &-list {
             display: flex;
             flex-wrap: wrap;
@@ -1189,6 +1356,69 @@ and (max-width: $mobile){
             padding-right: 12px;
             padding-left: 12px;
             margin-bottom: 24px;
+        }
+    }
+    .subscribe {
+        position: relative;
+        flex-direction: column;
+        padding-top: 29px;
+        padding-bottom: 35px;
+        &-info {
+            position: static;
+            margin-right: 0;
+            margin-bottom: 16px;
+            font-size: 17px;
+            line-height: 25px;
+        }
+        &-layer-1 {
+            top: auto;
+            bottom: 0;
+            left: -25px;
+            transform: none;
+        }
+        &-layer-2 {
+            display: block;
+            top: -16px;
+            right: -5px;
+            width: 36px;
+            height: 46px;
+        }
+        &-field {
+            flex-direction: column;
+        }
+        &-form {
+            margin-left: 0;
+            width: 100%;
+        }
+        &-field {
+            width: 100%;
+        }
+        &-input {
+            width: 100%;
+            margin-bottom: 25px;
+            margin-right: 0;
+        }
+        &-button {
+            width: 100%;
+        }
+        &-info-label {
+            display: none;
+        }
+    }
+    .video {
+        &-list {
+            margin-right: 30px;
+        }
+        &-item {
+            flex-direction: column;
+        }
+        &-pic {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 23px;
+        }
+        &-description {
+            width: 100%;
         }
     }
 }

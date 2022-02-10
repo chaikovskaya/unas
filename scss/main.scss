@@ -1160,13 +1160,19 @@ and (max-width: $mobile){
     }
     &-item {
         display: flex;
+        min-height: 360px;
+        position: relative;
     }
     &-pic {
         width: 49%;
+        position: absolute;
+        top: 0;
+        left: 0;
         padding-right: $gutters;
     }
     &-description {
         width: 51%;
+        margin-left: 49%;
         max-width: 545px;
     }
     &-link {
@@ -1307,6 +1313,9 @@ and (max-width: $tablet){
         &-list {
             margin-right: 45px;
         }
+        &-item {
+            min-height: 260px;
+        }
         &-info {
             margin-bottom: 26px;
         }
@@ -1325,6 +1334,8 @@ and (max-width: $tablet){
         }
         &-description {
             width: 42%;
+            max-width: none;
+            margin-left: 58%;
         }
         &-actions-link {
             margin-right: 20px;
@@ -1411,14 +1422,132 @@ and (max-width: $mobile){
         }
         &-item {
             flex-direction: column;
+            min-height: auto;
         }
         &-pic {
+            position: static;
             width: 100%;
             padding-right: 0;
             margin-bottom: 23px;
         }
         &-description {
             width: 100%;
+            margin-left: 0;
+        }
+        &-panel {
+            margin-bottom: 27px;
+            justify-content: center;
         }
     }
 }
+
+
+.about {
+    margin-bottom: 215px;
+    &-gallery {
+    }
+    &-gallery-box {
+        position: relative;
+        display: inline-block;
+    }
+    &-container {
+        display: flex;
+    }
+    &-img {
+        width: 50%;
+    }
+    &-description {
+        width: 50%;
+    }
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 540px;
+        height: 540px;
+        padding: 34px;
+        border-radius: 50%;
+        background: url("../images/about/about-bgr.png") no-repeat center center;
+        border: 1px solid rgba(89, 167, 80, 0.57);
+    }
+    &-logo {
+        width: 359px;
+        height: 74px;
+        margin-top: 29px;
+    }
+    &-gallery-list {}
+    &-slider-panel {
+        margin-left: 520px;
+        margin-top: -85px;
+    }
+    .owl-stage {
+        width: auto!important;
+        transform: none!important;
+        transition: all 0s ease 0s;
+    }
+    .owl-item {
+        display: none;
+    }
+    .owl-item.active {
+        display: block;
+    }
+    &-gallery-item {
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 226px;
+        height: 226px;
+        border-radius: 50%;
+        border: 20px solid #fff;
+        box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.4);
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+            border-width: 14px;
+            transform: scale(1.65);
+        }
+    }
+    .owl-item.active {
+        position: absolute;
+        bottom: -83px;
+        left: 80px;
+        z-index: 1;
+    }
+    .owl-item.active + .owl-item.active {
+        bottom: auto;
+        top: 60px;
+        left: -66px;
+    }
+    .owl-item.active + .owl-item.active + .owl-item.active {
+        bottom: auto;
+        top: 10px;
+        left: auto;
+        right: -120px;
+    }
+    .owl-item.active &-gallery-item {
+        background-color: #FFE68A;
+    }
+    .owl-item.active + .owl-item.active &-gallery-item {
+        background-color: #FFB8C4;
+        width: 187px;
+        height: 187px;
+    }
+    .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item {
+        background-color: #DBF4DF;
+        width: 226px;
+        height: 226px;
+    }
+    .owl-item.active + .owl-item.active &-gallery-item:hover {
+        &:hover {
+            border-width: 14px;
+            transform: scale(1.9);
+        }
+    }
+    .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item:hover {
+        &:hover {
+            border-width: 14px;
+            transform: scale(1.65);
+        }
+    }
+}
+

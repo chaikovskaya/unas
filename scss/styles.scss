@@ -405,7 +405,7 @@ blockquote {
 		display: flex;
 		align-items: center;
 		position: relative;
-		min-width: 90px;
+		min-width: 100px;
 		width: 100px;
 	}
 	&-button {
@@ -681,14 +681,16 @@ blockquote {
 		background-size: 100% auto;
 	}
 	&_arrow-left {
-		width: 9px;
+		width: 8px;
 		height: 14px;
-		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='11.241' height='1.4988' transform='matrix(0 -1 -1 0 7.4939 12.6968)' fill='%230D0C0B'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.18042 13.4154C7.59851 12.9764 7.59851 12.2647 7.18042 11.8257L7.18042 7.00004L7.18042 2.17441C7.59851 1.73542 7.59851 1.02368 7.18042 0.584692C6.76234 0.145704 6.08449 0.145704 5.66641 0.584692L0.313563 6.20518C-0.104521 6.64417 -0.104521 7.35591 0.313563 7.7949L5.66641 13.4154C6.08449 13.8544 6.76234 13.8544 7.18042 13.4154Z' fill='%230D0C0B'/%3e%3c/svg%3e ");
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='11.241' height='1.4988' transform='matrix(0 -1 -1 0 7.4939 12.6968)' fill='%230D0C0B'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.18042 13.4154C7.59851 12.9764 7.59851 12.2647 7.18042 11.8257L7.18042 7.00004L7.18042 2.17441C7.59851 1.73542 7.59851 1.02368 7.18042 0.584692C6.76234 0.145704 6.08449 0.145704 5.66641 0.584692L0.313563 6.20518C-0.104521 6.64417 -0.104521 7.35591 0.313563 7.7949L5.66641 13.4154C6.08449 13.8544 6.76234 13.8544 7.18042 13.4154Z' fill='%230D0C0B'/%3e%3c/svg%3e");
+		background-size: 100% auto;
 	}
 	&_arrow-right {
 		width: 9px;
 		height: 14px;
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.2434 13.4149C0.82532 12.9759 0.82532 12.2642 1.2434 11.8252L1.2434 6.99955L1.2434 2.17392C0.82532 1.73493 0.82532 1.02319 1.2434 0.584204C1.66149 0.145216 2.33933 0.145216 2.75742 0.584204L8.11027 6.20469C8.52835 6.64368 8.52835 7.35542 8.11027 7.79441L2.75742 13.4149C2.33933 13.8539 1.66149 13.8539 1.2434 13.4149Z' fill='%232D2A1E'/%3e%3c/svg%3e ");
+		background-size: 100% auto;
 	}
 	&_arrow-left_grey {
 		width: 5px;
@@ -1013,6 +1015,14 @@ and (max-width: $tablet){
 			width: 21px;
 			height: 21px;
 		}
+		&_arrow-left {
+			width: 5px;
+			height: 12px;
+		}
+		&_arrow-right {
+			width: 6px;
+			height: 12px;
+		}
 		&_delivery {
 			width: 25px;
 			height: 19px;
@@ -1048,13 +1058,20 @@ and (max-width: $tablet){
 	}
 	.slider {
 		&-panel {
-			width: 190px;
+			width: 120px;
 		}
 		&-panel_simple {
 			display: none;
 		}
 		&-nav {
-			width: 80px;
+			min-width: 64px;
+			width: 64px;
+		}
+		&-indicator {
+			width: 32px;
+		}
+		&-button {
+			width: 24px;
 		}
 	}
 	.title {

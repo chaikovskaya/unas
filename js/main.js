@@ -226,42 +226,36 @@ function initPopup() {
     });
 }
 
-function openPopupProfile($element) {
-    if (typeof($element) == 'undefined') {
-        $element = $('.js-popup-profile');
-    }
-
-    $.fancybox.open({
-        src  : $element.data('src'),
-        type : 'ajax',
-        toolbar  : false,
-        smallBtn : true,
-        afterShow: function (data) {
-            initValidate(data.$refs.container.find('.js-form-validate'));
-            initFieldText();
-            initForm();
-            initMask();
-            initPopupRegistration();
-        },
-        btnTpl: {
-            smallBtn:
-                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
-                "</button>"
-        },
-        lang: "ru",
-        i18n: {
-            ru: {
-                CLOSE: "Закрыть",
-            },
-        }
-    });
-}
-
 function initPopupProfile() {
-    $(".js-open-profile").on('click', function() {
-        $.fancybox.close();
-        openPopupProfile($(".js-open-profile"));
+    $('.js-popup-profile').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+                    initValidate();
+                    initMask();
+                    //initPopupRegistration();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
     });
 }
 
@@ -817,19 +811,27 @@ function initSliderNew() {
             nav: true,
             responsive: {
                 0: {
+                    autoWidth: true,
                     items: 1,
                     loop: itemLength > 1 ? true : false,
                     margin: 24,
                 },
                 720: {
+                    autoWidth: true,
                     items: 2,
                     loop: itemLength > 2 ? true : false,
                     mouseDrag: true,
                     margin: 24,
                 },
                 992: {
-                    items: 3,
-                    loop: itemLength > 3 ? true : false,
+                    autoWidth: false,
+                    items: 2,
+                    loop: itemLength > 2 ? true : false,
+                },
+                1200: {
+                    autoWidth: false,
+                    items: 2,
+                    loop: itemLength > 2 ? true : false,
                 },
                 1640: {
                     autoWidth: true,
@@ -1190,7 +1192,7 @@ function initSliderAbout() {
         $next.click(function(){
             $list.trigger("next.owl.carousel");
         });
-        $list.on('translated.owl.carousel', function(event) {
+        $list.on('next.owl.carousel prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
             initIndicator(index, itemLength);
             if (index < 10) {

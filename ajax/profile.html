@@ -1,0 +1,46 @@
+
+<div id="popup-profile" class="profile-form mob-form JS-PopupForm" data-popupform="{
+        'classActive': 'open',
+        'classShow': 'mob-form-show',
+        'classElementActive': 'mob-form_active'
+    }">
+    <div class="profile-form-block mob-form-block JS-MobileMenu-Dropdown">
+        <form class="mob-form-element js-form-validate" action="/">
+            <div class="mob-form-close-panel mob-form-container">
+                <span class="mob-form-close-title">ДОБРО ПОЖАЛОВАТЬ!</span>
+                <a href="javascript:;" class="mob-form-close JS-MobileMenu-Close">Закрыть<i class="mob-form-close-icon icon icon_cross_light"></i></a>
+            </div>
+            <div class="mob-form-content mob-form-container scrollbar">
+                <div class="mob-form-body">
+                    <div class="field js-form-validate-field">
+                        <span class="field-input JS-FieldText" data-fieldtext="{'classActive':'field-input_active'}">
+                            <label class="field-label JS-FieldText-Label" for="phone">Номер телефона</label>
+                            <input class="input-text JS-FieldText-Input js-phone" type="text" placeholder="" id="phone" name="phone" required />
+                        </span>
+                    </div>
+                    <div class="field js-form-validate-field">
+                        <span class="field-input js-password JS-FieldText"
+                              data-fieldtext="{'classActive':'field-input_active'}"
+                              data-password="field-password-active"
+                        >
+                            <label class="field-label JS-FieldText-Label" for="password">Пароль</label>
+                            <input class="input-text js-password-input JS-FieldText-Input" type="password" placeholder="" id="password" name="password" required />
+                            <a class="js-password-link" href="javascript:;">
+                                <i class="eye-icon eye-icon_hide las la-eye-slash"></i>
+                                <i class="eye-icon eye-icon_show las la-eye"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="field-button">
+                        <button class="popup-button button">Войти</button>
+                    </div>
+                    <div class="mob-form-footer">
+                        <a class="mob-form-link js-forgot-password" href="javascript:;" data-src="./ajax/forgot-password.html">Забыли пароль?</a>
+                        <a class="mob-form-link button button_simple js-popup-reg" href="javascript:;" data-src="./ajax/registration.html">Зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mob-form-decor JS-MobileMenu-Close"></div>
+</div>

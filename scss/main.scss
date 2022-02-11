@@ -943,6 +943,36 @@ and (max-width: $tablet){
         &-actions {
             visibility: visible;
         }
+        &-block_simple {
+            width: 48%;
+            margin-right: 25px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-block_simple &-box {
+            display: block;
+            position: relative;
+        }
+        &-block_simple &-pic {
+            width: 100%;
+            padding-right: 0;
+        }
+        &-block_simple &-link {
+            margin-bottom: 23px;
+        }
+        &-block_simple &-detail {
+            width: 100%;
+        }
+        &-block_simple &-links {
+            position: absolute;
+            top: -5px;
+            right: 0;
+        }
+        &-block_simple &-button {
+            margin-right: 0;
+            width: 100%;
+        }
     }
     .price {
         margin-right: 10px;
@@ -1233,6 +1263,11 @@ and (max-width: $mobile){
 
 @media screen
 and (max-width: $large){
+    .subscribe {
+        &-layer-2 {
+            display: none;
+        }
+    }
     .new {
         &-item {
             width: auto;
@@ -1241,15 +1276,18 @@ and (max-width: $large){
             width: auto;
         }
     }
-    .subscribe {
-        &-layer-2 {
-            display: none;
-        }
-    }
 }
 
 @media screen
 and (max-width: $desktop){
+    .new {
+        &-item {
+            width: auto;
+        }
+        &-item_wide {
+            width: auto;
+        }
+    }
     .subscribe {
         &-info {
             font-size: 18px;
@@ -1265,6 +1303,15 @@ and (max-width: $desktop){
 
 @media screen
 and (max-width: $tablet){
+    .new {
+        &-item {
+            width: 403px;
+        }
+        &-item_wide {
+            width: 830px;
+            display: flex;
+        }
+    }
     .instagram {
         margin-bottom: 70px;
         &-list {
@@ -1354,7 +1401,27 @@ and (max-width: $tablet){
 }
 
 @media screen
+and (max-width: 800px){
+    .new {
+        &-item {
+            width: 290px;
+        }
+        &-item_wide {
+            width: 605px;
+        }
+    }
+}
+
+@media screen
 and (max-width: $mobile){
+    .new {
+        &-item {
+            width: 542px;
+        }
+        &-item_wide {
+            width: 1108px;
+        }
+    }
     .instagram {
         margin-bottom: 40px;
         &-list {
@@ -1438,6 +1505,18 @@ and (max-width: $mobile){
         &-panel {
             margin-bottom: 27px;
             justify-content: center;
+        }
+    }
+}
+
+@media screen
+and (max-width: 500px) {
+    .new {
+        &-item {
+            width: 250px;
+        }
+        &-item_wide {
+            width: 524px;
         }
     }
 }

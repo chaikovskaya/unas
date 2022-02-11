@@ -207,6 +207,10 @@ label.form-error {
         opacity: 0.8;
         cursor: not-allowed;
     }
+
+    &_simple {
+        background-color: #FF5800;
+    }
 }
 
 /*selectric*/

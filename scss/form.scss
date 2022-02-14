@@ -2,52 +2,33 @@
 $colorPlaceholder: #828282;
 
 .field {
-    margin-bottom: 17px;
-    &-input {
-        display: block;
-        position: relative;
-        padding-top: 23px;
-    }
+    margin-bottom: 30px;
     &-label {
-        position: absolute;
-        left: 0;
-        top: 29px;
-        font-size: 17px;
-        color: #a0bbc9;
-        white-space: nowrap;
-        transition: top 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-    &-input_active &-label {
-        top: 5px;
-    }
-    &-button {
-        text-align: center;
     }
 }
 
 .input {
     width: 100%;
-    height: 36px;
-    padding: 11px 0;
+    height: 50px;
+    padding: 14px 23px 16px;
     background-color: transparent;
-    color: #fff;
-    font-size: 17px;
-    border: solid #516b7b;
-    border-width: 0 0 1px;
-    font-family: 'PFDinDisplayPro', sans-serif;
+    color: #828282;
+    font-size: 15px;
+    border: 1px solid #E0E0E0;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 15px;
     &:focus {
-        color: #fff;
-        border-color: #9bb3c2;
+        color: #828282;
     }
-    &::-webkit-input-placeholder {font-size: 15px; color: $colorPlaceholder;}
-    &:-moz-placeholder {font-size: 15px; color: $colorPlaceholder;}
-    &::-moz-placeholder {font-size: 15px; color: $colorPlaceholder;}
-    &:-ms-input-placeholder {font-size: 15px; color: $colorPlaceholder;}
-    &::placeholder {font-size: 15px; color: $colorPlaceholder;}
+    &::-webkit-input-placeholder {color: $colorPlaceholder;}
+    &:-moz-placeholder {color: $colorPlaceholder;}
+    &::-moz-placeholder {color: $colorPlaceholder;}
+    &:-ms-input-placeholder {color: $colorPlaceholder;}
+    &::placeholder {color: $colorPlaceholder;}
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-        -webkit-text-fill-color: #fff;
+        -webkit-text-fill-color: $colorPlaceholder;
         transition: background-color 1s ease-in-out 0s;
     }
 
@@ -60,7 +41,7 @@ $colorPlaceholder: #828282;
         background-color: transparent;
         color: #fff;
         font-size: 15px;
-        font-family: 'PFDinDisplayPro', sans-serif;
+        font-family: 'Nunito', sans-serif;
         resize: none;
         border: solid #516b7b;
         border-width: 0 0 1px;
@@ -338,37 +319,37 @@ label.form-error {
     align-items: center;
     position: relative;
     &-field {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 12x;
+        margin-bottom: 12px;
     }
     &-decor {
         display: inline-block;
         vertical-align: middle;
         position: relative;
-        width: 36px;
-        min-width: 36px;
-        height: 18px;
+        width: 47px;
+        min-width: 47px;
+        height: 25px;
         margin-right: 15px;
         padding: 2px;
-        border-radius: 9px;
-        background-color: #527183;
+        border-radius: 13px;
+        background-color: #59A750;
         cursor: pointer;
     }
     &-icon {
         position: absolute;
-        top: 2px;
-        left: 2px;
-        width: 14px;
-        height: 14px;
+        top: 3px;
+        left: 3px;
+        width: 19px;
+        height: 19px;
         background-color: #fff;
         border-radius: 50%;
-        box-shadow: 0px 2px 5px 0px rgba( 97, 107, 120, 0.23 );
+        box-shadow: 0px 0px 2px rgba(244, 163, 42, 0.6);
         transition: left 0.1s ease-in-out 0s;
     }
     &-label {
         line-height: 21px;
-        color: #a0bbc9;
-        font-size: 18px;
+        font-size: 14px;
+        color: #828282;
     }
     &-label a {
         color: #a0bbc9;
@@ -385,10 +366,12 @@ label.form-error {
         opacity: 0;
     }
     &-checkbox:checked + &-decor {
-        background-color: #7c9caf;
     }
     &-checkbox:checked + &-decor &-icon {
-        left: 20px;
+        left: 24px;
+    }
+    &-checkbox:checked ~ &-label {
+        color: #333333;
     }
 
     &_simple &-label {
@@ -498,7 +481,82 @@ label.form-error {
 }
 /* /slider-range */
 
-.form {
+.profile-form {
+    &-field {
+        margin-right: 25px;
+    }
+    &-input {
+        width: 220px;
+    }
+    &-password {
+        margin-right: 18px;
+    }
+    &-button {
+        min-width: 160px;
+    }
+    &-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    width: 83px;
+    border-radius: 18px;
+    &-counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 15px;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+        }
+        &:active {
+        }
+    }
+    &-digit {
+        min-width: 48px;
+        width: 48px;
+        height: 37px;
+        padding: 2px;
+        text-align: center;
+        color: #2D2A1E;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 0;
+        background-color: transparent;
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    &-icon {
+        vertical-align: middle;
+        color: #242424;
+        font-size: 20px;
+    }
+
+    &_simple {}
+    &_simple &-counter {
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+    }
+    &_simple &-digit {
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+    }
+    &_simple &-icon {
+        font-size: 17px;
+    }
 }
 
 @media screen
@@ -507,6 +565,12 @@ and (min-width: $desktop){
 
 @media screen
 and (max-width: $tablet){
+    .input {
+        height: 38px;
+        padding: 11px 25px 11px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
     .button {
         height: 37px;
         line-height: 37px;
@@ -518,4 +582,22 @@ and (max-width: $tablet){
 
 @media screen
 and (max-width: $mobile){
+    .field {
+        margin-bottom: 25px;
+    }
+    .profile-form {
+        &-input {
+            width: 100%;
+        }
+        &-field {
+            margin-right: 0;
+        }
+        &-group {
+            margin-bottom: 25px;
+            flex-direction: column;
+        }
+        &-password {
+            margin-right: 0;
+        }
+    }
 }

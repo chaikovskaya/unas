@@ -1,53 +1,50 @@
 
-<div id="popup-registration" class="reg-form mob-form JS-PopupForm" data-popupform="{
-                'classActive': 'open',
-                'classShow': 'mob-form-show',
-                'classElementActive': 'mob-form_active'
-}">
-    <div class="reg-form-block mob-form-block JS-MobileMenu-Dropdown">
+<div id="popup-reg" class="profile-form mob-form JS-PopupForm" data-popupform="{
+        'classActive': 'open',
+        'classShow': 'mob-form-show',
+        'classElementActive': 'mob-form_active'
+    }">
+    <div class="profile-form-block mob-form-block JS-MobileMenu-Dropdown">
         <form class="mob-form-element js-form-validate" action="/">
-            <div class="mob-form-close-panel">
-                <span class="mob-form-close-title">Регистрация</span>
-                <a href="javascript:;" class="mob-form-close JS-MobileMenu-Close"><i class="mob-form-close-icon las la-times"></i></a>
+            <div class="mob-form-close-panel mob-form-container">
+                <a href="javascript:;" class="mob-form-close JS-MobileMenu-Close">Закрыть<i class="mob-form-close-icon icon icon_cross_light"></i></a>
+                <span class="mob-form-close-title">ДОБРО ПОЖАЛОВАТЬ!</span>
             </div>
-            <div class="mob-form-content scrollbar">
-                <div class="reg-form-body mob-form-body">
-                    <div class="field js-form-validate-field">
-                        <span class="field-input JS-FieldText" data-fieldtext="{'classActive':'field-input_active'}">
-                            <label class="field-label JS-FieldText-Label" for="phone">Номер телефона</label>
-                            <input class="input-text JS-FieldText-Input js-phone" type="text" placeholder="" id="phone" name="phone" required />
-                        </span>
+            <div class="mob-form-content mob-form-container scrollbar">
+                <div class="mob-form-body">
+                    <span class="mob-form-name">РЕГИСТРАЦИЯ</span>
+                    <div class="profile-form-group">
+                        <div class="profile-form-field field js-form-validate-field">
+                             <input class="profile-form-input input js-mask-phone" type="text" placeholder="Номер телефона" name="phone" required />
+                        </div>
+                        <div class="profile-form-password field js-form-validate-field">
+                             <input class="profile-form-input input" type="text" placeholder="Код из sms" name="code" required />
+                        </div>
+                        <div class="field-button">
+                            <button class="popup-button button">Войти</button>
+                        </div>
                     </div>
-                    <div class="field field_simple js-form-validate-field">
-                        <span class="field-input JS-FieldText" data-fieldtext="{'classActive':'field-input_active'}">
-                            <label class="field-label JS-FieldText-Label" for="code">Код из SMS</label>
-                            <input class="input-text JS-FieldText-Input" type="text" placeholder="" id="code" name="code" />
-                        </span>
+                    <div class="field">
+                        <div class="switch-field">
+                            <label class="switch">
+                                <input class="switch-checkbox" type="checkbox" name="notifications" checked="checked" />
+                                <span class="switch-decor">
+                                    <span class="switch-icon"></span>
+                                </span>
+                                <span class="switch-label">Согласен на получение уведомлений sms, е-mail</span>
+                            </label>
+                        </div>
+                        <div class="switch-field">
+                            <label class="switch">
+                                <input class="switch-checkbox" type="checkbox" name="agreement" />
+                                <span class="switch-decor">
+                                    <span class="switch-icon"></span>
+                                </span>
+                                <span class="switch-label">Согласен на обработку персональных данных</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="switch-field">
-                        <label class="switch">
-                            <input class="switch-checkbox" type="checkbox" name="notifications" checked="checked" />
-                            <span class="switch-decor">
-                                <span class="switch-icon"></span>
-                            </span>
-                            <span class="switch-label">Солгласен на получение уведомлений sms, е-mail</span>
-                        </label>
-                    </div>
-                    <div class="switch-field">
-                        <label class="switch">
-                            <input class="switch-checkbox" type="checkbox" name="agreement" />
-                            <span class="switch-decor">
-                                <span class="switch-icon"></span>
-                            </span>
-                            <span class="switch-label">Солгласен на обработку персональных данных</span>
-                        </label>
-                    </div>
-                    <div class="field-button">
-                        <button class="popup-button button button_dark submit">Получить код из SMS</button>
-                    </div>
-                    <div class="mob-form-footer mob-form-footer_simple">
-                        <a class="mob-form-link js-popup-profile" href="javascript:;" data-src="./ajax/profile.html">Я уже Зарегистрирован</a>
-                    </div>
+                    <a class="mob-form-link js-popup-profile" href="javascript:;" data-src="./ajax/profile.html">Я уже зарегистрован</a>
                 </div>
             </div>
         </form>

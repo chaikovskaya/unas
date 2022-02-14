@@ -242,7 +242,141 @@ function initPopupProfile() {
                     $('.js-form-popup').html(data);
                     initValidate();
                     initMask();
-                    //initPopupRegistration();
+                    initPopupForgot();
+                    initPopupRegistration();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
+    });
+}
+
+function initPopupRegistration() {
+    $('.js-popup-reg').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+                    initMask();
+                    initPopupProfile();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
+    });
+}
+
+function initPopupForgot() {
+    $('.js-forgot-password').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+                    initValidate();
+                    initMask();
+                    initPopupProfile();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
+    });
+}
+
+function initPopupBasket() {
+    $('.js-popup-basket').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+
+                    initScroll();
+                    initQuantity();
+                    initShowMoreBasket();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
+    });
+}
+
+function initPopupWishlist() {
+    $('.js-popup-wishlist').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+
+                    initScroll();
+                    initQuantity();
+                    initShowMoreBasket();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -354,6 +488,19 @@ function initShowMore(showmoreExtra) {
         showmoreExtra = showmoreExtra || {};
 
     $('.JS-ShowMore').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('showmore'));
+        new ShowMore(this, jQuery.extend({}, common, local, showmoreExtra));
+    });
+}
+
+function initShowMoreBasket(showmoreExtra) {
+    if (typeof(ShowMore) === 'undefined' || !jQuery.isFunction(ShowMore)) {
+        return false;
+    }
+    var common = { },
+        showmoreExtra = showmoreExtra || {};
+
+    $('.JS-ShowMore-Basket').each(function(){
         var local = GLOBAL.parseData(jQuery(this).data('showmore'));
         new ShowMore(this, jQuery.extend({}, common, local, showmoreExtra));
     });
@@ -1237,6 +1384,8 @@ $(document).ready(function () {
     initSwitch();
     initPopup();
     initPopupProfile();
+    initPopupRegistration();
+    initPopupBasket();
     initPassword();
     initTab();
     initSearch();
@@ -1257,4 +1406,5 @@ $(document).ready(function () {
     initSliderOwnProducts();
     initSliderVideo();
     initSliderAbout();
+    initPopupWishlist();
 });

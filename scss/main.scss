@@ -1899,6 +1899,12 @@ and (max-width: $mobile) {
     &-content {
         overflow-y: auto;
         height: calc(100% - 100px);
+        margin-left: -10px;
+    }
+    &-list {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
     }
     &-item {
         display: flex;

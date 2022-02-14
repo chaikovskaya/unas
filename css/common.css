@@ -1729,10 +1729,10 @@ label.form-error {
     text-decoration: none; }
 
 .mob-form .simplebar-content {
-  margin-right: 22px; }
+  margin-right: 10px; }
 
 .mob-form .simplebar-track {
-  right: 18px; }
+  right: 0px; }
 
 .mob-form-help {
   margin-top: 7px;
@@ -4516,7 +4516,13 @@ body.mob-form-show .wrapper {
 
 .products-popup-content {
   overflow-y: auto;
-  height: calc(100% - 100px); }
+  height: calc(100% - 100px);
+  margin-left: -10px; }
+
+.products-popup-list {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px; }
 
 .products-popup-item {
   display: flex;

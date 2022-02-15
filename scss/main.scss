@@ -24,7 +24,6 @@
     }
     &-img {
         width: 51%;
-        margin-top: auto;
         border-radius: 0 15px 15px 0;
     }
     &-item_modified {
@@ -44,7 +43,11 @@
     }
     &-pic {
         display: block;
+        max-height: 480px;
+    }
+    &-item_modified &-pic {
         margin-bottom: -76px;
+        max-height: 100%;
     }
     &-title {
         margin-bottom: 20px;
@@ -379,6 +382,17 @@ and (max-width: $desktop){
             line-height: 19px;
         }
     }
+    .catalog-gallery {
+        &-label {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+        &-name {
+            min-height: 66px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
 }
 
 @media screen
@@ -429,7 +443,7 @@ and (max-width: $tablet){
             width: 320px;
             margin-left: -20px;
         }
-        &-pic {
+        &-item_modified &-pic {
             margin-bottom: -37px;
         }
     }
@@ -473,10 +487,6 @@ and (max-width: $tablet){
         .owl-item.active + .owl-item.active &-pic {
             height: 250px;
         }
-        &-label {
-            margin-left: 24px;
-            margin-right: 24px;
-        }
         &-link {
             padding-top: 30px;
         }
@@ -504,6 +514,7 @@ and (max-width: $mobile){
         }
         &-img {
             width: 100%;
+            margin-top: auto;
             border-radius: 0 0 15px 15px;
         }
         &-item_modified &-img {
@@ -524,6 +535,7 @@ and (max-width: $mobile){
         &-item_modified &-pic {
             position: relative;
             right: -30px;
+            margin-bottom: 0;
         }
         &-list {
             margin-bottom: 15px;
@@ -1543,6 +1555,7 @@ and (max-width: 500px) {
     &-gallery-box {
         position: relative;
         display: inline-block;
+        transition: transform 0.4s ease-in-out;
     }
     &-container {
         display: flex;

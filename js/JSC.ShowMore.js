@@ -25,6 +25,7 @@
     this.$menu = this.$element.find('.JS-ShowMore-Menu').eq(0);
     this.$switcher = this.$element.find('.JS-ShowMore-Switcher').eq(0);
     this.$item = this.$element.find(this.elementItem);
+    this.$amount = this.$element.find('.JS-ShowMore-Amount').eq(0);
     this._init();
   };
 
@@ -43,6 +44,7 @@
       }
       _this._showItems.apply(_this, []);
       _this._hideItems.apply(_this, []);
+      _this._setAmount.apply(_this, []);
 
       this.$switcher.off().on('click.JS-ShowMore', function(e, data) {
         e.stopPropagation();
@@ -80,6 +82,11 @@
 
   ShowMore.prototype._showItems = function _showItems() {
     this.$item.removeClass(this.classHide);
+  };
+
+  ShowMore.prototype._setAmount = function _setAmount() {
+    var lengthItemHide = this.$item.filter('[class~="' + this.classHide + '"]').length;
+    this.$amount.html(lengthItemHide);
   };
 
   ShowMore.prototype._toggle = function _toggle() {

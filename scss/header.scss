@@ -1,5 +1,6 @@
 
 .header {
+    margin-bottom: 15px;
     &-top {
         min-height: 82px;
         padding-bottom: 22px;
@@ -261,6 +262,10 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
+}
+
+.main-page .header {
+    margin-bottom: 0;
 }
 
 .mob {
@@ -1253,6 +1258,10 @@ and (max-width: $tablet){
         &-phone_active &-phone-dropdown {
             display: none;
         }
+        &-main-menu {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
     }
     .sub-menu {
         &-item {
@@ -1337,6 +1346,9 @@ and (max-width: $mobile){
         &-main-menu {
             display: none;
         }
+    }
+    .main-page .header {
+        margin-bottom: 22px;
     }
     .mob {
         &-menu {

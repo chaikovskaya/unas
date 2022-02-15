@@ -12,6 +12,7 @@
     }
     &-item {
         display: flex;
+        height: 100%;
         border-radius: 15px;
         background-color: #F8F7F7;
     }
@@ -23,6 +24,7 @@
     }
     &-img {
         width: 51%;
+        margin-top: auto;
         border-radius: 0 15px 15px 0;
     }
     &-item_modified {
@@ -506,7 +508,7 @@ and (max-width: $mobile){
         }
         &-item_modified &-img {
             justify-content: flex-end;
-            background-position: calc(50% + 183px) 2px;
+            background-position: calc(50% + 110px) 2px;
             background-size: 536px auto;
         }
         &-pic-wrapper {
@@ -514,7 +516,12 @@ and (max-width: $mobile){
             border-radius: 0 0 15px 0;
         }
         &-pic {
+            max-height: 300px;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 0;
+        }
+        &-item_modified &-pic {
             position: relative;
             right: -30px;
         }
@@ -2047,6 +2054,7 @@ and (max-width: $mobile) {
         width: 32px;
     }
     &-slider-button {
+        visibility: hidden;
         width: 24px;
     }
     &-slider-button-icon {

@@ -14,6 +14,8 @@
     this.amount = this.params.amount || 1;
     this.speed = this.params.speed || 300;
     this.elementItem = this.params.elementItem || '.JS-ShowMore-Item';
+    this.start = this.params.start || {};
+    this.toggle = this.params.toggle || {};
 
     this.__construct();
   };
@@ -45,9 +47,11 @@
       this.$switcher.off().on('click.JS-ShowMore', function(e, data) {
         e.stopPropagation();
         _this._toggle.apply(_this, []);
+        _this.toggle();
       });
     }
 
+    this.start();
     this._ready();
   };
 

@@ -827,6 +827,8 @@
         display: block;
         position: relative;
         z-index: 1;
+        padding-top: 11px;
+        padding-bottom: 11px;
         text-decoration: none;
         white-space: nowrap;
         font-weight: 700;
@@ -858,7 +860,7 @@
     top: 100%;
     left: -40px;
     z-index: 2;
-    min-width: 461px;
+    width: 461px;
     max-height: 353px;
     margin-top: -1px;
     padding-top: 10px;
@@ -1144,6 +1146,18 @@
 /* /IE 11 */
 
 @media screen
+and (min-width: $desktop) {
+    .main-submenu {
+        &_col-2 {
+            width: 679px;
+        }
+        &_col-3 {
+            width: 920px;
+        }
+    }
+}
+
+@media screen
 and (max-width: $desktop) {
     .sub-menu {
         &-item {
@@ -1176,6 +1190,9 @@ and (max-width: $desktop) {
         &-icon {
             margin-top: 1px;
         }
+    }
+    .main-submenu {
+        max-height: none;
     }
 }
 
@@ -1282,9 +1299,6 @@ and (max-width: $tablet){
         &-basket {
             margin-top: -5px;
         }
-    }
-    .main-submenu {
-        max-height: none;
     }
 }
 

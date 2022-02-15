@@ -2534,6 +2534,8 @@ body.mob-form-show .wrapper {
     display: block;
     position: relative;
     z-index: 1;
+    padding-top: 11px;
+    padding-bottom: 11px;
     text-decoration: none;
     white-space: nowrap;
     font-weight: 700;
@@ -2560,7 +2562,7 @@ body.mob-form-show .wrapper {
   top: 100%;
   left: -40px;
   z-index: 2;
-  min-width: 461px;
+  width: 461px;
   max-height: 353px;
   margin-top: -1px;
   padding-top: 10px;
@@ -2786,6 +2788,12 @@ body.mob-form-show .wrapper {
 
 /* IE 11 */
 /* /IE 11 */
+@media screen and (min-width: 1200px) {
+  .main-submenu_col-2 {
+    width: 679px; }
+  .main-submenu_col-3 {
+    width: 920px; } }
+
 @media screen and (max-width: 1200px) {
   .sub-menu-item {
     width: 33.3%; }
@@ -2805,7 +2813,9 @@ body.mob-form-show .wrapper {
   .main-menu-link {
     font-size: 14px; }
   .main-menu-icon {
-    margin-top: 1px; } }
+    margin-top: 1px; }
+  .main-submenu {
+    max-height: none; } }
 
 @media screen and (max-width: 992px) {
   .header-top {
@@ -2872,9 +2882,7 @@ body.mob-form-show .wrapper {
   .user-links-informer_simple {
     top: -8px; }
   .user-links-basket {
-    margin-top: -5px; }
-  .main-submenu {
-    max-height: none; } }
+    margin-top: -5px; } }
 
 @media screen and (max-width: 720px) {
   .header {
@@ -3133,6 +3141,7 @@ body.mob-form-show .wrapper {
     padding-right: 45px; }
   .main-banner-item {
     display: flex;
+    height: 100%;
     border-radius: 15px;
     background-color: #F8F7F7; }
   .main-banner-description {
@@ -3142,6 +3151,7 @@ body.mob-form-show .wrapper {
     padding-bottom: 120px; }
   .main-banner-img {
     width: 51%;
+    margin-top: auto;
     border-radius: 0 15px 15px 0; }
   .main-banner-item_modified {
     position: relative; }
@@ -3505,13 +3515,17 @@ body.mob-form-show .wrapper {
     border-radius: 0 0 15px 15px; }
   .main-banner-item_modified .main-banner-img {
     justify-content: flex-end;
-    background-position: calc(50% + 183px) 2px;
+    background-position: calc(50% + 110px) 2px;
     background-size: 536px auto; }
   .main-banner-pic-wrapper {
     margin-left: auto;
     border-radius: 0 0 15px 0; }
   .main-banner-pic {
-    margin-bottom: 0;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0; }
+  .main-banner-item_modified .main-banner-pic {
     position: relative;
     right: -30px; }
   .main-banner-list {
@@ -4657,6 +4671,7 @@ body.mob-form-show .wrapper {
   width: 32px; }
 
 .products-popup-slider-button {
+  visibility: hidden;
   width: 24px; }
 
 .products-popup-slider-button-icon {

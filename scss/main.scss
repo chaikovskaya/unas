@@ -1102,7 +1102,12 @@ and (max-width: $mobile){
     }
     &-subtitle {
         display: block;
-
+    }
+    &-description-item {
+        display: none;
+    }
+    &-description-item_active {
+        display: block;
     }
 }
 

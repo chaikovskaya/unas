@@ -1327,6 +1327,7 @@ function initSliderAbout() {
             itemLength = $item.length,
             $currentPage = $element.find('.js-slider-current'),
             $amountPages = $element.find('.js-slider-amount'),
+            $description = $element.find('.js-slider-about-description'),
             angle = 0;
 
         var isStart = itemLength > 1 ? true : false;
@@ -1391,28 +1392,26 @@ function initSliderAbout() {
         $list.on('prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
             initIndicator(index, itemLength);
-            if (index < 10) {
-                index =  '0' + index;
-            }
-            $currentPage.html(index);
-            updateButtons();
 
             angle = angle - 110;
             $list.css('transform','rotate(' + angle + 'deg)');
             $list.find('.owl-item.active').css('transform','rotate(' + (-angle) + 'deg)');
+
+            var item = $description.filter('[data-slider-index="' + index + '"]');
+            $description.removeClass('about-description-item_active');
+            item.addClass('about-description-item_active');
         });
         $list.on('next.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
             initIndicator(index, itemLength);
-            if (index < 10) {
-                index =  '0' + index;
-            }
-            $currentPage.html(index);
-            updateButtons();
 
             angle = angle + 110;
             $list.css('transform','rotate(' + angle + 'deg)');
             $list.find('.owl-item.active').css('transform','rotate(-' + angle + 'deg)');
+
+            var item = $description.filter('[data-slider-index="' + index + '"]');
+            $description.removeClass('about-description-item_active');
+            item.addClass('about-description-item_active');
         });
     });
 }

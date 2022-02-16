@@ -3965,6 +3965,10 @@ body.mob-form-show .wrapper {
     margin-bottom: 28px; }
   .about-subtitle {
     display: block; }
+  .about-description-item {
+    display: none; }
+  .about-description-item_active {
+    display: block; }
 
 .instagram {
   margin-bottom: 112px;

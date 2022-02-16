@@ -151,7 +151,8 @@
     }
     &-phone-switcher {
         display: inline-block;
-        padding: 3px 5px;
+        padding: 3px 8px;
+        line-height: 0px;
     }
     &-arrow-icon {
     }
@@ -872,6 +873,7 @@
     padding-bottom: 30px;
     background-color: #fff;
     border-radius: 0 15px 15px 15px;
+    box-shadow: 0px 10px 20px rgba(206, 206, 206, 0.4);
     &-item {
     }
     &-link {

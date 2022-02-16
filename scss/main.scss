@@ -96,7 +96,7 @@
         right: 0;
         left: auto !important;
         margin-top: -15px;
-        margin-right: -160px;
+        margin-right: -157px;
         width: 437px;
         height: 436px;
         background: url(../images/main-banner/main-banner-layers-2.png) no-repeat 0 0;
@@ -329,10 +329,22 @@ and (max-width: $large){
             margin-left: -181px;
         }
         &-layers-2 {
-            width: 237px;
-            height: 236px;
+            width: 337px;
+            height: 336px;
+            margin-top: 20px;
+            margin-right: -130px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $notebook){
+    .main-banner {
+        &-layers-2 {
+            width: 200px;
+            height: 200px;
             margin-top: 45px;
-            margin-right: -168px;
+            margin-right: -120px;
         }
     }
 }
@@ -361,6 +373,7 @@ and (max-width: $desktop){
         }
         &-layers-2 {
             margin-top: 45px;
+            margin-right: -168px;
         }
     }
     .category {
@@ -432,6 +445,9 @@ and (max-width: $tablet){
             margin-top: 45px;
             margin-right: -60px;
             background-image: url(../images/main-banner/main-banner-layers-mob-2.png);
+        }
+        &-pic {
+            max-height: 300px;
         }
         &-img {
             width: 50%;
@@ -732,6 +748,9 @@ and (max-width: $mobile){
     &-label_hit {
         background-color: #A374A7;
     }
+    &-label_new {
+        background-color: #D5AD87;
+    }
 
     &-switcher {
         display: flex;
@@ -783,7 +802,7 @@ and (max-width: $mobile){
     }
     &-block {
         height: 100%;
-        padding: 30px 30px 40px;
+        padding: 20px 30px 40px;
         border-radius: 15px;
     }
     &-link {
@@ -829,7 +848,9 @@ and (max-width: $mobile){
         margin-top: -4px;
         margin-right: 15px;
     }
-    &-links {}
+    &-links {
+        visibility: hidden;
+    }
     &-links-item {}
     &-links-label {
         display: flex;
@@ -863,6 +884,9 @@ and (max-width: $mobile){
         box-shadow: 0px 0px 30px rgba(206, 206, 206, 0.4);
     }
     &-block:hover &-actions {
+        visibility: visible;
+    }
+    &-block:hover &-links {
         visibility: visible;
     }
 
@@ -1554,8 +1578,7 @@ and (max-width: 500px) {
     }
     &-gallery-box {
         position: relative;
-        display: inline-block;
-        transition: transform 0.4s ease-in-out;
+         display: inline-block;
     }
     &-container {
         display: flex;
@@ -1579,14 +1602,22 @@ and (max-width: 500px) {
         background: url("../images/about/about-bgr.png") no-repeat center center;
         background-size: 100% auto;
         border: 25px solid #fff;
-        outline: 1px solid rgba(89, 167, 80, 0.57);
     }
     &-logo {
         max-width: 359px;
         max-height: 74px;
         margin-top: 29px;
     }
-    &-gallery-list {}
+    &-gallery-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(89, 167, 80, 0.57);
+        border-radius: 50%;
+        transition: transform 0.4s ease-in-out;
+    }
     &-slider-panel {
         margin-left: 520px;
         margin-top: -76px;
@@ -1838,6 +1869,7 @@ and (max-width: $mobile) {
         .owl-item.active + .owl-item.active + .owl-item.active {
             top: auto;
             left: 27%;
+            right: auto;
             bottom: -33%;
         }
         & .owl-item.active + .owl-item.active &-gallery-item {

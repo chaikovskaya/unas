@@ -496,6 +496,21 @@ function initShowMore(showmoreExtra) {
     });
 }
 
+function initIndicator(parent, currentAmount, currentTotal) {
+    var $element = $(parent).find('.js-indicator'),
+        total = $element.data("indicator-total"),
+        $value = $element.find('.js-indicator-value');
+
+    if ((currentAmount > 0) && (currentTotal > 0)) {
+        var percent = (currentAmount * 100)/currentTotal;
+    }
+
+    var res = (total * percent)/100;
+    if (res) {
+        $value.attr('stroke-dasharray', res + ',' + total);
+    }
+}
+
 function initShowMoreBasket(showmoreExtra) {
     if (typeof(ShowMore) === 'undefined' || !jQuery.isFunction(ShowMore)) {
         return false;
@@ -504,7 +519,7 @@ function initShowMoreBasket(showmoreExtra) {
             start: function () {
                 var lengthItem = $('.JS-ShowMore-Basket').find('.JS-ShowMore-Item').length,
                     lengthItemCurrent = $('.JS-ShowMore-Basket').find('.JS-ShowMore-Item').not('.JS-ShowMore-Hide').length;
-                initIndicator(lengthItemCurrent, lengthItem);
+                initIndicator($('.JS-ShowMore-Basket'), lengthItemCurrent, lengthItem);
 
                 if (lengthItem < 10) {
                     lengthItem =  '0' + lengthItem;
@@ -512,13 +527,13 @@ function initShowMoreBasket(showmoreExtra) {
                 if (lengthItemCurrent < 10) {
                     lengthItemCurrent =  '0' + lengthItemCurrent;
                 }
-                $('.js-showMore-amount').html(lengthItem);
-                $('.js-showMore-current').html(lengthItemCurrent);
+                $('.JS-ShowMore-Basket .js-showMore-amount').html(lengthItem);
+                $('.JS-ShowMore-Basket .js-showMore-current').html(lengthItemCurrent);
             },
             toggle: function () {
                 var lengthItem = $('.JS-ShowMore-Basket').find('.JS-ShowMore-Item').length,
                     lengthItemCurrent = $('.JS-ShowMore-Basket').find('.JS-ShowMore-Item').not('.JS-ShowMore-Hide').length;
-                initIndicator(lengthItemCurrent, lengthItem);
+                initIndicator($('.JS-ShowMore-Basket'), lengthItemCurrent, lengthItem);
 
                 if (lengthItem < 10) {
                     lengthItem =  '0' + lengthItem;
@@ -623,23 +638,6 @@ function initParallaxHeader() {
     });
 }
 
-function initIndicator(currentAmount, currentTotal) {
-    $('.js-indicator').each(function() {
-        var $element = $(this),
-            total = $element.data("indicator-total"),
-            $value = $element.find('.js-indicator-value');
-
-        if ((currentAmount > 0) && (currentTotal > 0)) {
-            var percent = (currentAmount * 100)/currentTotal;
-        }
-
-        var res = (total * percent)/100;
-        if (res) {
-            $value.attr('stroke-dasharray', res + ',' + total);
-        }
-    });
-}
-
 function initSliderMainBanner() {
     $(".js-slider-main-banner").each(function(){
         var $element = $(this),
@@ -688,7 +686,7 @@ function initSliderMainBanner() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -707,7 +705,7 @@ function initSliderMainBanner() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -760,7 +758,7 @@ function initSliderCategory() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -778,7 +776,7 @@ function initSliderCategory() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -845,7 +843,7 @@ function initSliderCatalogGallery() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -864,7 +862,7 @@ function initSliderCatalogGallery() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -937,7 +935,7 @@ function initSliderProducts() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -957,7 +955,7 @@ function initSliderProducts() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -1036,7 +1034,7 @@ function initSliderNew() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -1056,7 +1054,7 @@ function initSliderNew() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -1126,7 +1124,7 @@ function initSliderOwnProducts() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -1146,7 +1144,7 @@ function initSliderOwnProducts() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -1200,7 +1198,7 @@ function initSliderInstagram() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -1218,7 +1216,7 @@ function initSliderInstagram() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -1284,7 +1282,7 @@ function initSliderVideo() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -1304,7 +1302,7 @@ function initSliderVideo() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
@@ -1371,7 +1369,7 @@ function initSliderAbout() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -1391,7 +1389,7 @@ function initSliderAbout() {
         });
         $list.on('prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
 
             angle = angle - 110;
             $list.css('transform','rotate(' + angle + 'deg)');
@@ -1403,7 +1401,7 @@ function initSliderAbout() {
         });
         $list.on('next.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
 
             angle = angle + 110;
             $list.css('transform','rotate(' + angle + 'deg)');
@@ -1470,7 +1468,7 @@ function initSliderCatalogSection() {
             },
             onInitialized : function(event) {
                 var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-                initIndicator(index, itemLength);
+                initIndicator($element, index, itemLength);
                 if (itemLength < 10) {
                     itemLength =  '0' + itemLength;
                 }
@@ -1489,7 +1487,7 @@ function initSliderCatalogSection() {
         });
         $list.on('translated.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator(index, itemLength);
+            initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }

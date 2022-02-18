@@ -645,6 +645,10 @@
     }
 }
 
+body.mob-menu-show {
+    overflow: hidden;
+}
+
 .catalog-menu {
     margin-right: 42px;
     &-switcher {

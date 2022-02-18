@@ -7,7 +7,8 @@
 
     this.onInit = this.params.onInit || null;
     this.classLoad = this.params.classLoad || 'ajaxmore-load';
-    this.success = this.params.success || {};
+    this.success = this.params.success || null;
+    this.beforeSend = this.params.beforeSend || null;
 
     this.__construct();
   };
@@ -40,6 +41,9 @@
     return $url;
   }
 
+  AjaxMore.prototype.beforeSend = function beforeSend() {
+  }
+
   AjaxMore.prototype._done = function _done(data, $url) {
     var className = $(this.$element).attr('class').split(' ').join('.'),
         $itemNew = $(data).find('.'+ className).find('.JS-AjaxMore-Content').html(),
@@ -69,6 +73,7 @@
     var _this = this,
         $url = _this._getUrl();
 
+    _this.beforeSend();
     _this.$more.addClass(_this.classLoad);
 
     var request = $.ajax({

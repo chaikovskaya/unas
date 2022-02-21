@@ -619,7 +619,7 @@ function initTooltip() {
             classElement = $(this).data('tooltip-class');
 
         Tipped.create($(this), $content, {
-            position: 'top',
+            position: 'bottom',
             size: 'x-small',
             skin: 'light',
             hideOthers: true,
@@ -627,7 +627,7 @@ function initTooltip() {
     });
 }
 
-function initParallaxHeader() {
+function initParallaxBanner() {
     $(".js-parallax-banner").each(function(){
         var scene = this;
         var parallaxInstance = new Parallax(scene, {
@@ -692,6 +692,8 @@ function initSliderMainBanner() {
                 }
                 $amountPages.html(itemLength);
                 updateButtons();
+
+                initParallaxBanner();
             },
         }));
         if (!isStart) {
@@ -1776,7 +1778,6 @@ $(document).ready(function () {
     initSliderRange();
     initQuantity();
     initTooltip();
-    initParallaxHeader();
     initSliderMainBanner();
     initSliderCategory();
     initSliderCatalogGallery();

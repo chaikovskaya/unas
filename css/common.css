@@ -739,10 +739,11 @@ blockquote {
     background-size: 100% auto; }
   .icon_wishlist-green {
     width: 28px;
-    height: 27px;
+    height: 26px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='25' viewBox='0 0 28 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.75 1C4.29875 1 1.5 3.85799 1.5 7.38404C1.5 10.2304 2.59375 16.9859 13.36 23.8149C13.5529 23.936 13.7743 24 14 24C14.2257 24 14.4471 23.936 14.64 23.8149C25.4062 16.9859 26.5 10.2304 26.5 7.38404C26.5 3.85799 23.7013 1 20.25 1C16.7987 1 14 4.86912 14 4.86912C14 4.86912 11.2013 1 7.75 1Z' stroke='%2359A750' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
     background-size: 100% auto; }
   .icon_wishlist-green_fill {
+    height: 27px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='26' viewBox='0 0 27 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.25 1.5C3.79875 1.5 1 4.35799 1 7.88404C1 10.7304 2.09375 17.4859 12.86 24.3149C13.0529 24.436 13.2743 24.5 13.5 24.5C13.7257 24.5 13.9471 24.436 14.14 24.3149C24.9062 17.4859 26 10.7304 26 7.88404C26 4.35799 23.2013 1.5 19.75 1.5C16.2987 1.5 13.5 5.36912 13.5 5.36912C13.5 5.36912 10.7013 1.5 7.25 1.5Z' fill='%2359A750' stroke='%2359A750' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e "); }
   .icon_youtube {
     width: 38px;
@@ -801,6 +802,10 @@ blockquote {
     width: 12px;
     height: 9px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.2564 0.752475C11.5836 1.0797 11.5836 1.61024 11.2564 1.93747L4.97592 8.21792C4.62688 8.56697 4.06097 8.56697 3.71193 8.21792L0.591453 5.09745C0.264226 4.77022 0.264226 4.23968 0.591452 3.91245C0.918679 3.58523 1.44922 3.58523 1.77644 3.91245L4.34393 6.47994L10.0714 0.752475C10.3986 0.425248 10.9292 0.425248 11.2564 0.752475Z' fill='%2359A750'/%3e%3c/svg%3e"); }
+  .icon_bag {
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 11L12 10.5C12 7.46243 14.4624 5 17.5 5V5C20.5376 5 23 7.46243 23 10.5L23 11' stroke='%23111111' stroke-width='1.5' stroke-linecap='round'/%3e%3cpath d='M30.0135 16.7257C29.6233 21.3185 29.4281 23.6149 28.2013 25.2316C27.696 25.8974 27.0756 26.4673 26.3694 26.9144C24.6546 28 22.3499 28 17.7406 28H17.2594C12.6501 28 10.3454 28 8.63061 26.9144C7.92441 26.4673 7.30398 25.8974 6.79871 25.2316C5.57185 23.6149 5.37673 21.3185 4.98649 16.7257V16.7257C4.79143 14.4299 4.69389 13.282 5.19879 12.4473C5.40547 12.1056 5.67829 11.8086 6.00126 11.5737C6.7902 11 7.94224 11 10.2463 11H24.7537C27.0578 11 28.2098 11 28.9987 11.5737C29.3217 11.8086 29.5945 12.1056 29.8012 12.4473C30.3061 13.282 30.2086 14.4299 30.0135 16.7257V16.7257Z' stroke='%23111111' stroke-width='1.5'/%3e%3cline x1='11.25' y1='18.25' x2='23.75' y2='18.25' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3e%3c/svg%3e "); }
 
 /* /icons */
 .title {
@@ -1079,7 +1084,11 @@ blockquote {
     margin-left: -12px; }
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
     padding-right: 12px;
-    padding-left: 12px; } }
+    padding-left: 12px; }
+  .indicator {
+    font-size: 15px; }
+  .pager-link {
+    font-size: 15px; } }
 
 @media screen and (max-width: 720px) {
   .title {
@@ -1092,15 +1101,12 @@ blockquote {
   .icon_catalog {
     width: 12px;
     height: 12px; }
-  .pager-link {
-    font-size: 15px; }
   .load-more {
     justify-content: center; }
   .indicator {
     width: 100%;
     margin-bottom: 15px;
-    text-align: center;
-    font-size: 15px; } }
+    text-align: center; } }
 
 .field {
   margin-bottom: 30px; }
@@ -1556,7 +1562,7 @@ label.form-error {
     min-width: 48px;
     width: 48px;
     height: 37px;
-    padding: 2px;
+    padding: 2px 6px;
     text-align: center;
     color: #2D2A1E;
     font-size: 15px;
@@ -1983,7 +1989,8 @@ body.mob-form-show .wrapper {
     padding-top: 17px;
     padding-bottom: 50px;
     background-color: #fff;
-    border-radius: 0 15px 15px 15px; }
+    border-radius: 0 15px 15px 15px;
+    box-shadow: 0px 10px 20px rgba(206, 206, 206, 0.3); }
   .header-city-link {
     text-decoration: none;
     position: relative; }
@@ -2049,7 +2056,8 @@ body.mob-form-show .wrapper {
     width: 370px;
     padding-bottom: 50px;
     background-color: #fff;
-    border-radius: 0 15px 15px 15px; }
+    border-radius: 0 15px 15px 15px;
+    box-shadow: 0px 10px 20px rgba(206, 206, 206, 0.3); }
   .header-phone-link {
     text-decoration: none;
     position: relative; }
@@ -3841,6 +3849,17 @@ body.mob-menu-show {
     float: left; }
   .marks_active .marks-item_element:nth-child(1) ~ .marks-item_element {
     display: block; }
+  .marks_line .marks-item_element {
+    float: left; }
+  .marks_line .marks-item_element:nth-child(1) ~ .marks-item_element {
+    display: block;
+    float: left; }
+  .marks_line .marks-item_element:nth-child(2) ~ .marks-item_element {
+    display: none; }
+  .marks_line.marks_active .marks-item_element:nth-child(2) ~ .marks-item_element {
+    display: block; }
+  .marks_line .marks-item_element:nth-child(2) + .marks-item_switcher {
+    display: none; }
 
 .products {
   margin-bottom: 90px; }
@@ -3901,6 +3920,8 @@ body.mob-menu-show {
     height: 50px;
     border: 1px solid #E0E0E0;
     border-radius: 50%; }
+  .products-links-label .icon {
+    margin-top: 1px; }
   .products-panel {
     display: flex;
     position: relative;
@@ -5771,7 +5792,7 @@ body.mob-menu-show {
     display: none; }
   .catalog-line-marks.marks_active .marks-item_element:nth-child(2) ~ .marks-item_element {
     display: block;
-    float: none; }
+    float: left; }
   .catalog-line-marks .marks-item_element:nth-child(2) + .marks-item_switcher {
     display: none; }
   .catalog-simple-marks .marks-item_element:nth-child(1) ~ .marks-item_element {
@@ -5898,6 +5919,8 @@ body.mob-menu-show {
     line-height: 19px; }
   .catalog-amount {
     margin-bottom: 25px; }
+  .catalog-line-links {
+    margin-top: -3px; }
   .catalog-line-col {
     padding-right: 24px; }
   .catalog-line-block {
@@ -6017,3 +6040,173 @@ body.mob-menu-show {
   .catalog-simple-links {
     margin-left: auto;
     padding-left: 20px; } }
+
+.card-content {
+  width: 50%;
+  margin-left: 50%; }
+
+.card-panel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px; }
+
+.card-title {
+  text-align: left;
+  font-size: 26px;
+  line-height: 39px;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  font-weight: 700; }
+
+.card-marks {
+  margin-right: auto; }
+
+.card-code {
+  margin-top: -4px;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  color: #59A750; }
+
+.card-price-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 37px; }
+
+.card-price-panel {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; }
+
+.card-price {
+  margin-right: 29px;
+  font-size: 35px;
+  line-height: 31px; }
+
+.card-price-currency {
+  font-size: 34px;
+  margin-left: 8px; }
+
+.card-price-old {
+  position: relative;
+  margin-right: 26px;
+  font-size: 20px;
+  letter-spacing: 0.085em;
+  color: #111111; }
+  .card-price-old:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #111111; }
+
+.card-price-old-currency {
+  font-size: 19px;
+  letter-spacing: 0.085em;
+  color: #111111; }
+
+.card-discount {
+  padding: 7px 17px 6px;
+  font-size: 12px;
+  border-radius: 5px; }
+
+.card-availability-item {
+  margin-bottom: 9px; }
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #E0E0E0; }
+
+.card-button {
+  margin-right: 30px;
+  padding-right: 44px;
+  padding-left: 44px; }
+
+.card-amount {
+  margin-right: 30px;
+  width: 91px;
+  border-radius: 25px; }
+
+.card-amount-digit {
+  height: 48px; }
+
+.card-delivery {
+  padding-bottom: 28px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #E0E0E0; }
+
+.card-delivery-item {
+  display: flex;
+  margin-bottom: 17px; }
+  .card-delivery-item:last-child {
+    margin-bottom: 0; }
+
+.card-delivery-label {
+  width: 50%;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #111111; }
+
+.card-delivery-value {
+  width: 50%;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #111111; }
+
+.card-delivery-icon {
+  margin-right: 20px;
+  vertical-align: middle; }
+
+.card-subtitle {
+  display: block;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000; }
+
+.card-more {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #59A750;
+  text-decoration: none; }
+  .card-more:hover {
+    color: #59A750; }
+
+.card-more-icon {
+  margin-left: 5px; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 22px; }
+  .tags-item {
+    margin-right: 30px;
+    margin-bottom: 10px; }
+    .tags-item:last-child {
+      margin-right: 0; }
+  .tags-link {
+    display: block;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none;
+    background-color: #DBF4DF;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 34px;
+    color: #59A750;
+    white-space: nowrap; }
+    .tags-link:hover {
+      color: #59A750; }

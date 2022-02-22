@@ -845,7 +845,7 @@ and (min-width: $large){
         }
         &-line-marks.marks_active .marks-item_element:nth-child(2) ~ .marks-item_element {
             display: block;
-            float: none;
+            float: left;
         }
         &-line-marks .marks-item_element:nth-child(2) + .marks-item_switcher {
             display: none;
@@ -1048,6 +1048,9 @@ and (max-width: $tablet){
         }
         &-amount {
             margin-bottom: 25px;
+        }
+        &-line-links {
+            margin-top: -3px;
         }
         &-line-col {
             padding-right: 24px;

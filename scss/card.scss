@@ -1,13 +1,18 @@
 
 .card {
     &-content {
-        width: 50%;
-        margin-left: 50%;
+        @include clearfix();
     }
     &-panel {
+        float: right;
+        width: 50%;
         display: flex;
         align-items: center;
         margin-bottom: 27px;
+    }
+    &-detail {
+        float: right;
+        width: 50%;
     }
     &-title {
         text-align: left;
@@ -147,7 +152,158 @@
         }
     }
     &-more-icon {
-        margin-left: 5px;
+        margin-top: -3px;
+        margin-left: 14px;
+        vertical-align: middle;
+    }
+    &-more-icon_active {
+        transform: scaleY(-1);
+    }
+
+    &-gallery {
+        float: left;
+        display: flex;
+        width: 50%;
+        padding-right: 90px;
+    }
+    &-gallery-thumbs {
+        position: relative;
+        overflow: hidden;
+        min-width: 105px;
+        width: 105px;
+        min-height: 100%;
+        margin-right: 15px;
+        .swiper-wrapper {
+            flex-direction: column;
+        }
+        .swiper-slide {
+            flex-flow: column nowrap;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+    &-gallery-main {
+        position: relative;
+        height: 540px;
+        width: calc(100% - 120px);
+        overflow: hidden;
+    }
+    &-gallery-main-item {
+    }
+    &-gallery-link {
+        display: block;
+        height: 100%;
+        cursor: url(../images/products/popup/zoom-icon.png), pointer;
+    }
+    &-gallery-thumbs-list {
+        margin-top: 29px;
+    }
+    &-gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-gallery-pagination {
+        display: none;
+    }
+    &-thumbs-img {
+        width: 100%;
+        display: block;
+    }
+    &-gallery-button {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        transform: translateY(-50%);
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+    &-gallery-button_left {}
+    &-gallery-button_right {
+        left: auto;
+        right: 20px;
+    }
+    &-gallery-icon {
+        margin-top: -3px;
+        font-size: 30px;
+        color: #1d1d1d;
+    }
+    &-thumbs-item {}
+    &-thumbs-item.swiper-slide-thumb-active {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+        }
+    }
+    &-gallery-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 142px;
+    }
+    &-video-icon {
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #1d1d1d;
+    }
+    &-video-label {
+        font-size: 14px;
+        font-weight: 700;
+        color: #1d1d1d;
+        text-transform: uppercase;
+    }
+    &-thumbs-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 27px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid transparent;
+        &:hover {
+            border-color: #dcdcdc;
+        }
+    }
+    &-thumbs-button_top {}
+    &-thumbs-button_bottom {
+        top: auto;
+        bottom: 0;
+    }
+    &-thumbs-icon {
+        font-size: 20px;
+        color: #1d1d1d;
     }
 }
 
@@ -161,6 +317,9 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+    &-item_hide {
+        display: none;
     }
     &-link {
         display: block;

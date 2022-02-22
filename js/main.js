@@ -1716,6 +1716,48 @@ function initAjaxMoreProducts() {
     });
 }
 
+function initGalleryCard() {
+    var galleryThumbs = new Swiper(".js-gallery-card-thumbs", {
+        loop: true,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        direction: "vertical",
+        spaceBetween: 10,
+        slidesPerView: "auto",
+        autoHeight: true,
+        freeMode: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        watchOverflow: true,
+        navigation: false,
+        breakpoints: {
+        }
+    });
+    var galleryTop = new Swiper(".js-gallery-card-main", {
+        loop: true,
+        direction: "horizontal",
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".js-slider-next",
+            prevEl: ".js-slider-prev",
+        },
+        pagination: {
+            el: '.js-slider-bullets',
+            type: 'bullets',
+            clickable: true,
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        },
+    });
+    $(".js-gallery-card-prev").on('click', function(e) {
+        galleryTop.slidePrev();
+    });
+    $(".js-gallery-card-next").on('click', function(e) {
+        galleryTop.slideNext();
+    });
+};
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1790,4 +1832,5 @@ $(document).ready(function () {
     initMainSubmenu();
     initAjaxMoreProducts();
     initProgressbar();
+    initGalleryCard();
 });

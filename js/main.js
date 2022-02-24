@@ -1722,7 +1722,7 @@ function initGalleryCard() {
         centeredSlides: false,
         centeredSlidesBounds: false,
         direction: "vertical",
-        spaceBetween: 10,
+        spaceBetween: 12,
         slidesPerView: "auto",
         autoHeight: true,
         freeMode: false,
@@ -1731,12 +1731,17 @@ function initGalleryCard() {
         watchOverflow: true,
         navigation: false,
         breakpoints: {
+            0: {
+            },
+            720: {
+                spaceBetween: 5,
+            },
         }
     });
     var galleryTop = new Swiper(".js-gallery-card-main", {
         loop: true,
         direction: "horizontal",
-        spaceBetween: 0,
+        spaceBetween: 40,
         navigation: {
             nextEl: ".js-slider-next",
             prevEl: ".js-slider-prev",

@@ -995,16 +995,17 @@ and (max-width: $tablet){
     .availability {
         &-label {
             width: 190px;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
     .quantity {
         &-link {
-            width: 13px;
-            height: 10px;
+            width: 9px;
+            height: 7px;
+            border-radius: 2px;
         }
         &-item {
-            margin-right: 4px;
+            margin-right: 3px;
         }
     }
     .catalog {

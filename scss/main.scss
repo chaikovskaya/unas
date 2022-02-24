@@ -798,7 +798,6 @@ and (max-width: $mobile){
         display: block;
     }
 
-    &_line {}
     &_line &-item_element {
         float: left;
     }
@@ -996,6 +995,12 @@ and (max-width: $tablet){
         &-switcher {
             width: 25px;
             height: 25px;
+        }
+        &_line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
         }
     }
     .products {
@@ -1870,6 +1875,15 @@ and (max-width: $tablet){
         & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item {
             width: 93px;
             height: 93px;
+        }
+    }
+    .marks {
+        &_line &-item_element {
+            float: none;
+        }
+        &_line &-item_element:nth-child(1) ~ &-item_element {
+            display: none;
+            float: none;
         }
     }
 }

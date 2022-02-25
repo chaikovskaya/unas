@@ -44,6 +44,10 @@
         margin-bottom: 30px;
         border-bottom: 1px solid #E0E0E0;
     }
+    &-price-wrapper_simple {
+        border-bottom-width: 0;
+        padding-bottom: 15px;
+    }
     &-price-panel {
         display: flex;
         align-items: center;
@@ -109,16 +113,15 @@
     }
     &-amount {
         margin-right: 30px;
-        width: 91px;
-        border-radius: 25px;
-    }
-    &-amount-digit {
-        height: 48px;
     }
     &-delivery {
         padding-bottom: 28px;
         margin-bottom: 25px;
         border-bottom: 1px solid #E0E0E0;
+    }
+    &-delivery_simple {
+        margin-bottom: 12px;
+        border-bottom-width: 0;
     }
     &-delivery-item {
         display: flex;
@@ -244,7 +247,10 @@
     &-gallery-main-item {
     }
     &-gallery-link {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
         height: 100%;
         cursor: url(../images/products/popup/zoom-icon.png), pointer;
     }
@@ -252,7 +258,6 @@
         margin-top: 29px;
     }
     &-gallery-img {
-        width: 100%;
     }
     &-gallery-pagination {
         display: none;
@@ -352,7 +357,7 @@
     &-marks {}
     &-wishlist {}
     &-description {
-        width: 50%;
+        width: 52%;
         margin-bottom: 160px;
     }
 
@@ -388,6 +393,14 @@
             font-weight: 600;
             margin-bottom: 10px;
         }
+    }
+    &-not-available {
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+        color: #2D2A1E;
     }
 }
 
@@ -429,6 +442,70 @@ and (max-width: $large){
 
 @media screen
 and (max-width: $desktop){
+    .card {
+        &-title {
+            margin-bottom: 20px;
+        }
+        &-marks {
+            top: -8px;
+        }
+        &-panel {
+            position: relative;
+        }
+        &-amount {
+            order: -1;
+            margin-right: 0;
+        }
+        &-price-panel {
+            order: -1;
+            margin-right: 20px;
+        }
+        &-price {
+            margin-right: 17px;
+        }
+        &-price-currency {
+            margin-left: 4px;
+        }
+        &-price-old {
+            margin-right: 17px;
+        }
+        &-discount {
+            padding: 4px 4px 3px;
+        }
+        &-availability {
+            display: flex;
+            width: 100%;
+            margin-bottom: 23px;
+        }
+        &-availability-item {
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+        &-availability-label {
+            display: block;
+            margin-bottom: 5px;
+            width: 100%;
+            padding-right: 0;
+        }
+        &-button {
+            margin-right: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        &-delivery-item {
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        &-gallery {
+            padding-right: 24px;
+        }
+        &-gallery-main {
+            height: 490px;
+        }
+        &-description {
+            width: 65%;
+        }
+    }
 }
 
 @media screen
@@ -440,7 +517,6 @@ and (max-width: $tablet){
             align-items: center;
         }
         &-panel {
-            position: relative;
             margin-bottom: 20px;
             width: 48%;
         }
@@ -462,78 +538,39 @@ and (max-width: $tablet){
         &-price {
             margin-right: 17px;
             font-size: 18px;
-            line-height: 26px;
         }
         &-price-currency {
             font-size: 17px;
-            margin-left: 4px;
         }
         &-price-old {
             font-size: 11px;
-            margin-right: 17px;
         }
         &-price-old-currency {
             font-size: 11px;
         }
         &-discount {
-            padding: 4px 4px 3px;
             font-size: 9px;
         }
-        &-availability {
-            display: flex;
-            width: 100%;
-            margin-bottom: 23px;
-        }
-        &-availability-item {
-            flex-wrap: wrap;
-            margin-bottom: 5px;
-        }
         &-availability-label {
-            display: block;
-            margin-bottom: 5px;
-            width: 100%;
-            padding-right: 0;
             font-size: 12px;
             line-height: 17px;
         }
-        &-price-panel {
-            order: -1;
-            margin-right: 30px;
-        }
         &-amount {
-            order: -1;
-            width: 59px;
             margin-bottom: 13px;
-        }
-        &-amount-digit {
-            height: 37px;
-            min-width: 32px;
-            width: 32px;
-        }
-        &-marks {
-            top: -8px;
         }
         &-content {
             position: relative;
             margin-bottom: 53px;
+            margin-top: 30px;
         }
         &-wishlist {
             position: absolute;
             top: -13px;
             right: 0;
         }
-        &-button {
-            margin-right: 25px;
-            padding-right: 23px;
-            padding-left: 23px;
-        }
         &-delivery {
             padding-bottom: 13px;
             margin-bottom: 13px;
-        }
-        &-delivery-item {
-            justify-content: space-between;
-            margin-bottom: 12px;
         }
         &-delivery-label {
             font-size: 12px;
@@ -558,6 +595,14 @@ and (max-width: $tablet){
         }
         &-more-icon {
             width: 7px;
+        }
+        &-button {
+            margin-right: 25px;
+            padding-right: 23px;
+            padding-left: 23px;
+        }
+        &-button_simple {
+            margin-right: 0;
         }
         &-gallery {
             width: 52%;

@@ -100,11 +100,15 @@ label.form-error {
         text-align: center;
         border-radius: 2px;
         &:before {
-
         }
         &:hover {
             cursor: pointer;
         }
+    }
+    &_simple {
+    }
+    &_simple &-check {
+        border-radius: 5px;
     }
     &-label {
         font-size: 18px;
@@ -570,19 +574,16 @@ label.form-error {
         font-size: 20px;
     }
 
-    &_simple {}
-    &_simple &-counter {
-        min-width: 36px;
-        width: 36px;
-        height: 36px;
+    &_simple {
+        width: 91px;
+        border-radius: 25px;
     }
     &_simple &-digit {
-        min-width: 36px;
-        width: 36px;
-        height: 36px;
+        width: 53px;
+        height: 48px;
     }
-    &_simple &-icon {
-        font-size: 17px;
+    &_simple &-counter {
+        height: 18px;
     }
 }
 
@@ -609,6 +610,26 @@ and (max-width: $tablet){
         height: 36px;
         font-size: 14px;
         line-height: 36px;
+    }
+    .checkbox {
+        &-check_simple &-check {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .amount {
+        &_simple {
+            width: 59px;
+        }
+        &_simple &-digit {
+            height: 37px;
+            min-width: 32px;
+            width: 32px;
+            font-size: 14px;
+        }
+        &_simple &-counter {
+            height: 15px;
+        }
     }
 }
 

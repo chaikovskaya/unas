@@ -1763,6 +1763,34 @@ function initGalleryCard() {
     });
 };
 
+function initSliderTabs() {
+    var sliderClass = ".js-slider-tabs";
+
+    var index = $(sliderClass).find('.tabs-menu-item_active').index();
+        index = index;
+
+    var swiper = new Swiper(sliderClass, {
+        loop: false,
+        pagination: false,
+        navigation: false,
+        slidesPerView: "auto",
+        resistance: true,
+        resistanceRatio: 0,
+        initialSlide: index,
+    });
+}
+
+function initSelectCheckbox() {
+    $('.js-selectCheckbox').each(function() {
+        var $input = jQuery(this).find('.js-selectCheckbox-input'),
+            $link = jQuery(this).find('.js-selectCheckbox-link');
+
+        $link.on("click", function() {
+            $input.prop("checked", true);
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1838,4 +1866,6 @@ $(document).ready(function () {
     initAjaxMoreProducts();
     initProgressbar();
     initGalleryCard();
+    initSliderTabs();
+    initSelectCheckbox();
 });

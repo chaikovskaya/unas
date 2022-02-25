@@ -1,0 +1,287 @@
+
+.basket {
+    &-content {}
+    &-table-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-table-col {
+        padding-right: 30px;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    &-table-col_check {
+        width: 5%;
+    }
+    &-table-col_name {
+        display: flex;
+        width: 68%;
+    }
+    &-table-col_quantity {
+        width: 14%;
+    }
+    &-table-col_price {
+        width: 10%;
+    }
+    &-table-col_actions {
+        width: 3%;
+        text-align: right;
+        line-height: 10px;
+    }
+    &-table-link-picture {
+        margin-right: 43px;
+        min-width: 105px;
+        width: 105px;
+    }
+    &-table-product-link {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+        color: #111111;
+        text-decoration: none;
+        &:hover {
+            color: #111111;
+        }
+    }
+    &-code {
+        display: block;
+        margin-bottom: 18px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+        letter-spacing: 0.04em;
+        color: #59A750;
+    }
+    &-actions {
+        display: flex;
+        margin-bottom: 40px;
+    }
+    &-actions-item {
+        margin-right: 30px;
+    }
+    &-actions-link {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        color: #828282;
+        text-decoration: none;
+    }
+    &-actions-icon {
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+    &-title {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+    &-checkbox-check {
+        margin-right: 0;
+    }
+    &-price {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 29px;
+        letter-spacing: 0.085em;
+        color: #2D2A1E;
+    }
+    &-currency {
+        font-size: 19px;
+        margin-left: 4px;
+    }
+
+    &-order {
+        margin-bottom: 30px;
+        padding: 45px 40px;
+        background-color: #F7F8F9;
+        border-radius: 15px;
+    }
+    &-order-sum {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+        font-size: 15px;
+        line-height: 20px;
+        color: #2D2A1E;
+    }
+    &-order-sum_total {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 26px;
+        color: #111111;
+    }
+    &-order-sum-name {
+        width: 60%;
+        padding-right: 20px;
+    }
+    &-order-sum-value {
+        width: 40%;
+        text-align: right;
+    }
+    &-button {
+        width: 100%;
+        margin-bottom: 29px;
+    }
+    &-order-info {
+        font-size: 14px;
+        line-height: 22px;
+        color: #828282;
+    }
+    &-delivery {
+        display: flex;
+        padding: 14px 30px 19px 33px;
+        background-color: rgba(219, 244, 223, 0.7);
+        border-radius: 15px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #333333;
+    }
+    &-delivery-icon {
+        margin-top: 3px;
+        margin-right: 15px;
+    }
+    &-side {}
+    &-table-del-link {
+        display: inline-block;
+    }
+}
+
+@media screen
+and (max-width: $large){
+}
+
+@media screen
+and (max-width: $desktop){
+    .basket {
+        &-content {
+            margin-bottom: 25px;
+        }
+        &-side {
+            margin-left: auto;
+        }
+    }
+}
+
+@media screen
+and (max-width: $tablet){
+    .basket {
+        &-table-col {
+            padding-right: 20px;
+        }
+        &-table-item {
+            margin-bottom: 25px;
+        }
+        &-order {
+            margin-bottom: 25px;
+            padding: 25px;
+        }
+        &-order-sum {
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+        &-order-sum_total {
+            margin-bottom: 24px;
+            font-size: 20px;
+        }
+        &-order-info {
+            font-size: 12px;
+            line-height: 22px;
+        }
+        &-button {
+            margin-bottom: 18px;
+        }
+        &-delivery {
+            padding: 17px 24px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &-delivery-icon {
+            margin-right: 10px;
+        }
+        &-title {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+        &-actions {
+            margin-bottom: 30px;
+        }
+        &-actions-link {
+            font-size: 11px;
+        }
+        &-actions-item {
+            margin-right: 24px;
+        }
+        &-actions-icon_cross {
+            width: 7px;
+            height: 7px;
+        }
+        &-table-product-link {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-code {
+            margin-bottom: 7px;
+            font-size: 11px;
+        }
+        &-price {
+            font-size: 18px;
+        }
+        &-currency {
+            font-size: 17px;
+        }
+        &-table-link-picture {
+            margin-right: 25px;
+            min-width: 77px;
+            width: 77px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+    .basket {
+        &-content {
+            margin-bottom: 40px;
+        }
+        &-table-product-link {
+            font-size: 12px;
+            line-height: 17px;
+        }
+        &-table-item {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+        &-table-col_name {
+            order: -1;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        &-table-link-picture {
+            margin-right: 14px;
+            min-width: 54px;
+            width: 54px;
+        }
+        &-table-col_check {
+            width: 41%;
+            padding-left: 70px;
+        }
+        &-table-col_quantity {
+            width: 26%;
+        }
+        &-table-col_price {
+            width: 26%;
+        }
+        &-table-col_actions {
+            width: 6%;
+        }
+    }
+}

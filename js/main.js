@@ -213,16 +213,53 @@ function initPopup() {
         smallBtn : true,
         btnTpl: {
             smallBtn:
-                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
-                '<i class="fancybox-close-icon las la-times"></i>' +
-                "</button>",
+                '<button type="button" data-fancybox-close class="fancybox-close">' +
+                'Закрыть<i class="fancybox-close-icon icon icon_cross_light"></i>' +
+                '</button>',
         },
         lang: "ru",
         i18n: {
             ru: {
                 CLOSE: "Закрыть",
             },
-        }
+        },
+    });
+}
+
+function initPopupGallery() {
+    $(".js-popup-gallery").fancybox({
+        loop: true,
+        infobar: false,
+        toolbar  : false,
+        smallBtn : true,
+        arrows : false,
+        animationEffect: "fade",
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close">' +
+                'Закрыть<i class="fancybox-close-icon icon icon_cross_light"></i>' +
+                '</button>',
+        },
+        beforeClose: function (instance) {
+        },
+        afterLoad: function(instance, current) {
+            if ( instance.group.length > 1 && current.$content ) {
+                current.$content.append('' +
+                    '<div class="fancybox-nav-block">' +
+                    '<button class="fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
+                    '<i class="fancybox-button-icon fancybox-button-icon_left icon icon_arrow-left"></i></button>' +
+                    '<button class="fancybox-button fancybox-button--arrow_right next" data-fancybox-next>' +
+                    '<i class="fancybox-button-icon fancybox-button-icon_right icon icon_arrow-right"></i></button>' +
+                    '</div>'
+                );
+            }
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
     });
 }
 
@@ -1791,6 +1828,133 @@ function initSelectCheckbox() {
     });
 }
 
+function initTextareaSize() {
+    $('.js-textarea-size').on('input', function (e) {
+        e.target.style.innerHeight = 'auto';
+        e.target.style.height = e.target.scrollHeight + "px";
+    });
+}
+
+function initSliderDelivery() {
+    $(".js-slider-delivery").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length;
+
+        var isStart = itemLength > 1 ? true : false;
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: false,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 150,
+            margin: 40,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 24,
+                },
+                720: {
+                    items: 1,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+            },
+            onInitialized : function(event) {
+            },
+        }));
+    });
+}
+function reInitSliderDelivery() {
+    $(".js-slider-delivery .js-slider-list").trigger('destroy.owl.carousel');
+}
+
+function initRadio() {
+    if (typeof(Radio) === 'undefined' || !jQuery.isFunction(Radio)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-Radio').not('.JS-Radio-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('radio'));
+        new Radio(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initRadioInner() {
+    if (typeof(RadioInner) === 'undefined' || !jQuery.isFunction(RadioInner)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-RadioInner').not('.JS-RadioInner-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('radio'));
+        new RadioInner(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initSliderShops() {
+    $(".js-slider-shops").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length;
+
+        var isStart = itemLength > 1 ? true : false;
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: false,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 150,
+            margin: 40,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 24,
+                },
+                720: {
+                    items: 1,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+            },
+            onInitialized : function(event) {
+            },
+        }));
+    });
+}
+function reInitSliderShops() {
+    $(".js-slider-shops .js-slider-list").trigger('destroy.owl.carousel');
+}
+
+function initRadioActive() {
+    $(".js-radio-active").each(function(){
+        var $element = $(this),
+            $item = $element.find('.js-radio-active-item'),
+            $input = $item.find('.js-radio-active-input'),
+            classActive = $element.data('radio-active-class');
+
+        if ($input.is(':checked') && !($item.hasClass(classActive))) {
+            $item.addClass(classActive);
+            console.log('!');
+        }
+        $input.on('change.JS-Radio', function(e){
+            e.stopPropagation();
+            if ($input.is(':checked') && !($input.hasClass(classActive))) {
+                $item.addClass(classActive);
+            }
+        });
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -1803,6 +1967,8 @@ function initResizeWindow() {
 
         reInitSliderCatalogCategory();
         initSliderCatalog();
+        initSliderDelivery();
+        initSliderShops();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         initSliderInstagram();
@@ -1813,6 +1979,8 @@ function initResizeWindow() {
 
         initSliderCatalogCategory();
         reInitSliderCatalog();
+        reInitSliderDelivery();
+        reInitSliderShops();
     } else {
         GLOBAL.widthWindow = '';
         initSliderInstagram();
@@ -1820,6 +1988,8 @@ function initResizeWindow() {
         initShowMoreCatalogSection();
         initSliderCatalogCategory();
         reInitSliderCatalog();
+        reInitSliderDelivery();
+        reInitSliderShops();
     }
 }
 
@@ -1868,4 +2038,10 @@ $(document).ready(function () {
     initGalleryCard();
     initSliderTabs();
     initSelectCheckbox();
+    initPopupGallery();
+    initTextareaSize();
+    ymaps.ready(initMap);
+    initRadio();
+    initRadioInner();
+    initRadioActive();
 });

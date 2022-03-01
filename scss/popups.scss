@@ -1,7 +1,7 @@
 
 /* Fancybox */
 .fancybox-bg {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
 }
 
 .fancybox-slide--html {
@@ -22,23 +22,22 @@
 }
 
 .fancybox-close {
-    width: 33px;
-    height: 33px;
     position: absolute;
-    top: 0;
+    top: -20px;
     right: 0;
     cursor: pointer;
-    border: 1px solid #dcdcdc;
     background-color: transparent;
+    color: #fff;
+    font-size: 12px;
 }
 .fancybox-close:hover {
-    background-color: #242424;
-    border-color: #242424;
 }
 
 .fancybox-close-icon {
+    margin-left: 5px;
     color: #afafaf;
     font-size: 20px;
+    vertical-align: middle;
 }
 .fancybox-close:hover .fancybox-close-icon {
     color: #fff;
@@ -84,12 +83,6 @@
 
 .fancybox-button-icon {
     display: block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    margin-top: -3px;
-    font-size: 30px;
-    color: #1d1d1d;
     transition: background-color 0.3s linear;
     &:hover {
         background-color: rgba(255, 255, 255, 0.5);

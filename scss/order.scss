@@ -1,0 +1,473 @@
+
+.order {
+    &-content {
+    }
+    &-content-block {
+        max-width: 995px;
+    }
+    &-info {
+        display: inline-block;
+        margin-bottom: 55px;
+        padding: 12px 105px 12px 32px;
+        background-color: rgba(219, 244, 223, 0.7);
+        border-radius: 15px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #333333;
+        a {
+            color: #333333;
+        }
+    }
+    &-info-icon {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    &-group {
+        border: 0;
+        margin-bottom: 80px;
+    }
+    &-group_simple {
+        margin-bottom: 70px;
+    }
+    &-group-item {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+    }
+    &-group-item_active {
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+    }
+    &-radio-field {
+        position: relative;
+        display: block;
+        height: 100%;
+        padding: 32px 25px 25px 32px;
+        border: 2px solid #E0E0E0;
+        border-radius: 15px;
+        opacity: 0.5;
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.4);
+            border-color: transparent;
+        }
+    }
+    &-radio-field_active {
+        opacity: 1;
+    }
+    &-radio {
+        margin-bottom: 17px;
+    }
+    &-radio-info {
+        font-size: 15px;
+    }
+    &-subtitle {
+        display: block;
+        margin-bottom: 33px;
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.085em;
+        color: #19191D;
+    }
+    &-delivery-img {
+        margin-bottom: 27px;
+    }
+    &-delivery-list {}
+    &-delivery-list-item {
+        margin-bottom: 26px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-composition {}
+    &-composition-panel {
+        display: flex;
+        margin-bottom: 35px;
+    }
+    &-composition-amount {
+        margin-right: 27px;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0.06em;
+        color: #111111;
+    }
+    &-composition-link {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: #59A750;
+        &:hover {
+            color: #59A750;
+        }
+    }
+    &-composition-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 920px;
+    }
+    &-composition-list-item {
+        width: 16.6%;
+        padding-right: 20px;
+        margin-bottom: 60px;
+    }
+    &-composition-list-item_hide {
+        display: none;
+    }
+    &-composition-list-link {}
+    &-composition-list-img {
+        display: block;
+    }
+
+    &-side {
+        margin-left: auto;
+    }
+    &-sum {
+        margin-bottom: 30px;
+        padding: 48px 40px 32px 40px;
+        background-color: #F7F8F9;
+        border-radius: 15px;
+    }
+    &-sum-info {
+        margin-bottom: 18px;
+    }
+    &-sum-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 14px;
+        font-size: 15px;
+        line-height: 20px;
+        color: #2D2A1E;
+    }
+    &-sum-item_total {
+        margin-bottom: 27px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 26px;
+        color: #111111;
+    }
+    &-sum-name {
+        width: 60%;
+        padding-right: 20px;
+        letter-spacing: 0.06em;
+    }
+    &-sum-value {
+        width: 40%;
+        text-align: right;
+        letter-spacing: 0.085em;
+    }
+    &-button {
+        width: 100%;
+        margin-top: 22px;
+        margin-bottom: 29px;
+    }
+    &-pay-systems {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &-pay-systems-item {
+        margin-right: 14px;
+        margin-bottom: 5px;
+    }
+    &-pay-systems-img {
+        max-width: 44px;
+        max-height: 14px;
+        filter: grayscale(100%);
+        opacity: 0.65;
+    }
+    &-map {
+        height: 388px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    &-map-values {
+        display: none;
+    }
+    &-obtain {
+        max-width: 850px;
+    }
+    &-delivery-services-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$gutter;
+        margin-right: -$gutter;
+    }
+    &-delivery-services-item {
+        width: 33.3%;
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+    &-delivery-list {
+    }
+    &-shops {}
+    &-shops-item {
+        margin-bottom: 40px;
+    }
+    &-shops-block {
+        display: flex;
+        border-radius: 15px;
+        overflow: hidden;
+        outline: 1px solid #E0E0E0;
+        &:hover {
+            box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.4);
+            outline: none;
+        }
+    }
+    &-shops-content {
+        width: 65%;
+        padding: 26px 30px 39px;
+    }
+    &-shops-map {
+        width: 35%;
+        min-height: 267px;
+    }
+    &-shops-logo {
+        display: block;
+        max-width: 106px;
+        margin-bottom: 24px;
+    }
+    &-shops-panel {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 23px;
+    }
+    &-shops-label {
+        display: inline-block;
+        margin-right: 37px;
+        padding: 6px 34px;
+        color: #59A750;
+        font-weight: 600;
+        line-height: 22px;
+        font-size: 15px;
+        background-color: #DBF4DF;
+        border-radius: 5px;
+    }
+    &-shops-date {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0.085em;
+        color: #333333;
+    }
+    &-shops-location {
+        display: block;
+        margin-bottom: 13px;
+        font-size: 15px;
+        line-height: 20px;
+        color: #2D2A1E;
+        font-weight: 700;
+    }
+    &-shops-location-icon {
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+    &-shops-address {
+        margin-bottom: 30px;
+        font-size: 15px;
+        letter-spacing: 0.085em;
+    }
+    &-shops-button {
+        padding-right: 45px;
+        padding-left: 45px;
+    }
+    &-address {
+        visibility: hidden;
+        height: 1px;
+        overflow: hidden;
+    }
+    &-address_active {
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+    }
+    &-address-item {
+        display: none;
+    }
+}
+
+.map {
+    &-popup {
+        max-width: 200px;
+    }
+    &-popup-button {
+        margin-left: auto;
+        margin-right: auto;
+        height: 30px;
+        line-height: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 11px;
+    }
+    &-popup-body {
+        margin-bottom: 10px;
+        line-height: 17px;
+        font-size: 12px;
+    }
+    &-popup-actions {
+    }
+}
+
+@media screen
+and (max-width: $large){
+    .order {
+        &-content-block {
+            max-width: none;
+        }
+    }
+}
+
+@media screen
+and (max-width: $desktop){
+    .order {
+        &-content {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $tablet){
+    .order {
+        &-info {
+            margin-bottom: 27px;
+            font-size: 12px;
+            padding: 7px 33px 7px 24px;
+        }
+        &-group {
+            margin-bottom: 32px;
+        }
+        &-radio-info {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-radio-field {
+            padding: 25px;
+            border-width: 1px;
+        }
+        &-radio {
+            margin-bottom: 8px;
+        }
+        &-subtitle {
+            margin-bottom: 23px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-sum {
+            margin-bottom: 25px;
+            padding: 25px;
+        }
+        &-sum-item {
+            margin-bottom: 7px;
+            font-size: 14px;
+        }
+        &-sum-item_total {
+            margin-bottom: 7px;
+            font-size: 20px;
+        }
+        &-sum-info {
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 22px;
+        }
+        &-button {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        &-composition-list-item {
+            margin-bottom: 30px;
+        }
+        &-obtain {
+            max-width: 625px;
+        }
+        &-map {
+            height: 267px;
+        }
+        &-shops-content {
+            padding: 25px;
+        }
+        &-shops-logo {
+            max-width: 100px;
+        }
+        &-shops-label {
+            padding: 5px 17px;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+        &-shops-date {
+            font-size: 14px;
+        }
+        &-shops-location {
+            font-size: 14px;
+        }
+        &-shops-location-icon {
+            width: 21px;
+            height: 21px;
+            margin-right: 8px;
+        }
+        &-shops-address {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+    .order {
+        &-info {
+            margin-bottom: 33px;
+        }
+        &-group {
+            margin-bottom: 41px;
+        }
+        &-delivery-services-list {
+            display: block;
+            margin-left: 0;
+            margin-right: 80px;
+            margin-bottom: 25px;
+        }
+        &-delivery-services-item {
+            width: auto;
+            height: 100%;
+            margin-bottom: 0;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        &-obtain {
+            max-width: none;
+            margin-bottom: 5px;
+        }
+        &-composition-list-item {
+            width: 33.3%;
+        }
+        &-shops-block {
+            flex-direction: column;
+        }
+        &-shops-content {
+            width: 100%;
+        }
+        &-shops-map {
+            width: 100%;
+            margin-top: auto;
+        }
+        &-shops {
+            margin-bottom: 30px;
+            margin-right: 40px;
+        }
+        &-shops-item {
+            height: 100%;
+            margin-bottom: 0;
+        }
+        &-shops-block {
+            height: 100%;
+        }
+        &-shops-button {
+            width: 100%;
+        }
+    }
+}

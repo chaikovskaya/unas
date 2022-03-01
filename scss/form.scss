@@ -5,6 +5,9 @@ $colorPlaceholder: #828282;
     margin-bottom: 30px;
     &-label {
     }
+    &_simple {
+        margin-bottom: 40px;
+    }
 }
 
 .input {
@@ -35,16 +38,16 @@ $colorPlaceholder: #828282;
     &_textarea {
         display: block;
         width: 100%;
-        height: 37px;
-        padding: 12px 0;
+        height: 50px;
+        padding: 15px 23px;
         overflow: hidden;
         background-color: transparent;
-        color: #fff;
+        color: #828282;
         font-size: 15px;
-        font-family: 'Nunito', sans-serif;
         resize: none;
-        border: solid #516b7b;
-        border-width: 0 0 1px;
+        border: 1px solid #E0E0E0;
+        font-family: 'Nunito', sans-serif;
+        border-radius: 15px;
         transition: height 0.3s ease-in-out 0s;
         &:-webkit-autofill,
         &:-webkit-autofill:hover,
@@ -132,8 +135,6 @@ label.form-error {
         margin-bottom: 14px;
     }
     &-field {
-        display: flex;
-        align-items: center;
         &:hover {
         }
     }
@@ -145,19 +146,21 @@ label.form-error {
         opacity: 0;
     }
     &-label {
+        color: #333333;
+        font-size: 15px;
     }
     &-check {
         display: inline-block;
-        width: 18px;
-        height: 18px;
-        margin-right: 7px;
-        border: 1px solid #dcdcdc;
+        width: 25px;
+        height: 25px;
+        margin-right: 11px;
+        border: 1px solid #BDBDBD;
         border-radius: 50%;
         text-align: center;
         background-color: #fff;
     }
     &-input:checked + &-check {
-        border: 5px solid #242424;
+        border: 6px solid #59A750;
     }
     &-input:checked ~ &-label {
     }
@@ -199,6 +202,10 @@ label.form-error {
 
     &_simple {
         background-color: #FF5800;
+    }
+    &_disabled {
+        background-color: #BDBDBD;
+        box-shadow: none;
     }
 }
 
@@ -593,6 +600,12 @@ and (min-width: $desktop){
 
 @media screen
 and (max-width: $tablet){
+    .field {
+        margin-bottom: 25px;
+        &_simple {
+            margin-bottom: 25px;
+        }
+    }
     .input {
         height: 38px;
         padding: 11px 25px 11px;
@@ -631,13 +644,43 @@ and (max-width: $tablet){
             height: 15px;
         }
     }
+    .switch {
+        &-decor {
+            min-width: 41px;
+            width: 41px;
+            height: 21px;
+            margin-right: 10px;
+        }
+        &-icon {
+            top: 2.4px;
+            width: 16px;
+            height: 16px;
+        }
+        &-checkbox:checked + &-decor &-icon {
+            left: 22px;
+        }
+        &-label {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .radio {
+        &-label {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-check {
+            width: 21px;
+            height: 21px;
+        }
+        &-input:checked + &-check {
+            border-width: 5px;
+        }
+    }
 }
 
 @media screen
 and (max-width: $mobile){
-    .field {
-        margin-bottom: 25px;
-    }
     .profile-form {
         &-input {
             width: 100%;

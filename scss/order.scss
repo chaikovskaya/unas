@@ -1,5 +1,6 @@
 
 .order {
+    &-form {}
     &-content {
     }
     &-content-block {
@@ -46,13 +47,15 @@
         padding: 32px 25px 25px 32px;
         border: 2px solid #E0E0E0;
         border-radius: 15px;
-        opacity: 0.5;
         &:hover {
             box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.4);
             border-color: transparent;
         }
     }
-    &-radio-field_active {
+    &-radio-field_simple {
+        opacity: 0.5;
+    }
+    &-radio-field_simple_active {
         opacity: 1;
     }
     &-radio {
@@ -79,6 +82,7 @@
             margin-bottom: 0;
         }
     }
+    &-delivery-list-item_active {}
 
     &-composition {}
     &-composition-panel {
@@ -163,6 +167,10 @@
         margin-top: 22px;
         margin-bottom: 29px;
     }
+    &-form[novalidate="novalidate"] &-button {
+        background-color: #BDBDBD;
+        box-shadow: none;
+    }
     &-pay-systems {
         display: flex;
         flex-wrap: wrap;
@@ -189,6 +197,8 @@
     &-obtain {
         max-width: 850px;
     }
+    &-obtain-item {}
+    &-obtain-item_active {}
     &-delivery-services-list {
         display: flex;
         flex-wrap: wrap;
@@ -443,7 +453,7 @@ and (max-width: $mobile){
             margin-bottom: 5px;
         }
         &-composition-list-item {
-            width: 33.3%;
+            width: 25%;
         }
         &-shops-block {
             flex-direction: column;

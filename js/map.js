@@ -7,11 +7,12 @@ function initMap() {
             idMap = element.data('map-id') || '',
             iconUrl = element.data('map-icon') || '',
             iconSize =  element.data('icon-size') || [0,0],
-            iconOffset =  element.data('icon-offset') || [0,0];
+            iconOffset =  element.data('icon-offset') || [0,0],
+            zoom =  element.data('map-zoom') || 10;
 
         var myMap = new ymaps.Map(idMap, {
             center: centerCoord,
-            zoom: 10,
+            zoom: zoom,
             controls: ['zoomControl', 'fullscreenControl'],
         }, {
                 autoFitToViewport: 'always'

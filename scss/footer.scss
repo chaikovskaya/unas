@@ -129,11 +129,24 @@
         line-height: 0;
         text-decoration: none;
         text-align: center;
+        opacity: 0.9;
     }
     &-icon {
         display: inline-block;
         font-size: 19px;
         color: #1d1d1d;
+        filter: grayscale(1);
+    }
+
+    &_modified {}
+    &_modified &-link {
+        opacity: 1;
+    }
+    &_modified &-icon {
+        filter: grayscale(0);
+    }
+    &_modified .icon_youtube {
+        opacity: 1;
     }
 }
 
@@ -241,6 +254,11 @@ and (max-width: $tablet){
         }
         &-item {
             margin-right: 10px;
+        }
+        &_modified {}
+        &_modified &-icon {
+            width: 32px;
+            height: 32px;
         }
     }
     .pay-systems {

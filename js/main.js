@@ -606,6 +606,22 @@ function initShowMoreCatalogSection(showmoreExtra) {
     });
 }
 
+function initShowMoreOrder(showmoreExtra) {
+    if (typeof(ShowMore) === 'undefined' || !jQuery.isFunction(ShowMore)) {
+        return false;
+    }
+    var common = {
+            start: function () {},
+            toggle: function () {}
+        },
+        showmoreExtra = showmoreExtra || {};
+
+    $('.JS-ShowMore-Order').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('showmore'));
+        new ShowMore(this, jQuery.extend({}, common, local, showmoreExtra));
+    });
+}
+
 function initSelect() {
     $('.js-select').selectric({
         disableOnMobile: false,
@@ -1942,15 +1958,14 @@ function initRadioActive() {
             $input = $item.find('.js-radio-active-input'),
             classActive = $element.data('radio-active-class');
 
-        if ($input.is(':checked') && !($item.hasClass(classActive))) {
-            $item.addClass(classActive);
-            console.log('!');
+        if ($input.is(':checked')) {
+            $item.removeClass(classActive);
+            $input.filter(':checked').closest('.js-radio-active-item').addClass(classActive);
         }
         $input.on('change.JS-Radio', function(e){
             e.stopPropagation();
-            if ($input.is(':checked') && !($input.hasClass(classActive))) {
-                $item.addClass(classActive);
-            }
+            $item.removeClass(classActive);
+            $input.filter(':checked').closest('.js-radio-active-item').addClass(classActive);
         });
     });
 }
@@ -1969,6 +1984,9 @@ function initResizeWindow() {
         initSliderCatalog();
         initSliderDelivery();
         initSliderShops();
+
+        var localExtraOrder = GLOBAL.parseData(jQuery('.JS-ShowMore-Order').data('showmore-extra'));
+        initShowMoreOrder(localExtraOrder);
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         initSliderInstagram();
@@ -1981,6 +1999,7 @@ function initResizeWindow() {
         reInitSliderCatalog();
         reInitSliderDelivery();
         reInitSliderShops();
+        initShowMoreOrder();
     } else {
         GLOBAL.widthWindow = '';
         initSliderInstagram();
@@ -1990,6 +2009,7 @@ function initResizeWindow() {
         reInitSliderCatalog();
         reInitSliderDelivery();
         reInitSliderShops();
+        initShowMoreOrder();
     }
 }
 

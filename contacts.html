@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Оформление заказа. Унас</title>
+    <title>Контакты. Унас</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
@@ -786,428 +786,151 @@
                             </a>
                         </li>
                         <li class="breadcrumbs-item">
-                            <a class="breadcrumbs-link" href="#">
-                                <i class="breadcrumbs-icon icon icon_arrow-simple-right"></i>Каталог
-                            </a>
-                        </li>
-                        <li class="breadcrumbs-item">
-                            <a class="breadcrumbs-link" href="#">
-                                <i class="breadcrumbs-icon icon icon_arrow-simple-right"></i>Товары для праздника
-                            </a>
-                        </li>
-                        <li class="breadcrumbs-item">
-                             <i class="breadcrumbs-icon icon icon_arrow-right-green"></i>Карточка товара
+                             <i class="breadcrumbs-icon icon icon_arrow-right-green"></i>Контакты
                         </li>
                         <li class="breadcrumbs-item breadcrumbs-item_more"><a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a></li>
                     </ul>
                 </div>
 
-                <h1>ОФОРМЛЕНИЕ ЗАКАЗА</h1>
-
-                <form class="order-form js-form-validate" action="/">
-                    <div class="row">
-                        <div class="order-content col-md-12 col-xl-8">
-                            <div class="order-content-block">
-                                <div class="order-info">
-                                    <span class="order-info-icon icon icon_warning"></span><a href="#"><b>Авторизуйтесь</b></a>, если у вас есть учётная запись.
+                <h1 class="contacts-main-title">Контакты</h1>
+                <div class="contacts-item row js-map"
+                     data-objectcoord="[53.121956,45.000215]"
+                     data-map-id="contacts-map"
+                     data-map-icon="./images/order/shop-baloon.png"
+                     data-icon-size="[77, 54]"
+                     data-icon-offset="[-35, -35]"
+                     data-map-zoom="17"
+                >
+                    <div class="contacts-content col-lg-4 js-map-item" data-objectid="1" data-objectcoord="[53.121956,45.000215]">
+                        <span class="contacts-title h3">ЦЕНТРАЛЬНЫЙ ОФИС</span>
+                        <ul class="contacts-list">
+                            <li class="contacts-list-item contacts-list-item_phone">
+                                <div class="contacts-list-name">
+                                    <i class="contacts-list-icon icon icon_phone" aria-hidden="true"></i>Телефон
                                 </div>
-                                <div class="order-group">
-                                    <h2>ПОЛУЧАТЕЛЬ</h2>
-                                    <div class="field js-form-validate-field">
-                                        <input class="input" type="text" placeholder="Фамилия и имя" name="name" required />
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="field js-form-validate-field">
-                                                <input class="input js-mask-email" type="text" placeholder="Почта" name="post" required />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="field js-form-validate-field">
-                                                <input class="input js-mask-phone" type="text" placeholder="Телефон" name="phone" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="switch">
-                                            <input class="switch-checkbox" type="checkbox" name="notifications" checked="checked" />
-                                            <span class="switch-decor">
-                                                <span class="switch-icon"></span>
-                                            </span>
-                                            <span class="switch-label">Я хочу получать рекламные сообщения и новости о товарах и услугах</span>
-                                        </label>
-                                    </div>
+                                <div class="contacts-list-info content">
+                                    +7(8412) 67-97-67
                                 </div>
-
-                                <div class="order-group order-group_simple JS-Radio" data-radio="{
-                                        'classSwitcherActive': 'order-obtain-item_active',
-                                        'classItemActive': 'order-group-item_active'
-                                    }">
-                                    <h2>Способ получения</h2>
-                                    <div class="order-obtain row">
-                                        <div class="order-obtain-item col-md-6 field field_simple JS-Radio-Switcher-Item">
-                                            <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-radio radio">
-                                                        <input class="radio-input JS-Radio-Switcher" type="radio" name="delivery-param1" checked="checked" />
-                                                        <i class="radio-check"></i>
-                                                        <span class="radio-label">Доставка</span>
-                                                    </span>
-                                                </span>
-                                                <span class="order-radio-info">Служба доставки привезёт заказ домой, в офис или на дачу</span>
-                                            </label>
-                                        </div>
-                                        <div class="order-obtain-item col-md-6 field field_simple JS-Radio-Switcher-Item">
-                                            <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-radio radio">
-                                                        <input class="radio-input JS-Radio-Switcher" type="radio" name="delivery-param1" />
-                                                        <i class="radio-check"></i>
-                                                        <span class="radio-label">Самовывоз</span>
-                                                    </span>
-                                                </span>
-                                                <span class="order-radio-info">Заберите заказ бесплатно из магазина УНАС или пункта самовывоза</span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="order-group-item order-group-item_active JS-Radio-Item">
-                                        <div class="JS-RadioInner" data-radio="{
-                                            'classSwitcherActive': 'order-delivery-list-item_active',
-                                            'classItemActive': 'order-address_active'
-                                        }">
-                                            <span class="order-subtitle">Выберите службу доставки:</span>
-                                            <div class="js-slider-delivery">
-                                                <div class="order-delivery-services-list js-slider-list js-radio-active" data-radio-active-class="order-radio-field_simple_active">
-                                                    <div class="order-delivery-services-item field field_simple js-slider-item">
-                                                        <div class="order-radio-field order-radio-field_simple js-radio-active-item">
-                                                            <img class="order-delivery-img" src="./images/order/cdek.png" alt="CDEK" />
-                                                            <ul class="order-delivery-list">
-                                                                <li class="order-delivery-list-item JS-RadioInner-Switcher-Item">
-                                                                    <label class="radio-field">
-                                                                        <span class="radio">
-                                                                            <input class="radio-input JS-RadioInner-Switcher js-radio-active-input" type="radio" name="delivery-1" />
-                                                                            <i class="radio-check"></i>
-                                                                            <span class="radio-label">Доставка курьером</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="order-delivery-list-item JS-RadioInner-Switcher-Item">
-                                                                    <label class="radio-field">
-                                                                        <span class="radio">
-                                                                            <input class="radio-input JS-RadioInner-Switcher js-radio-active-input" type="radio" name="delivery-1" checked="checked" />
-                                                                            <i class="radio-check"></i>
-                                                                            <span class="radio-label">Самовывоз</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="order-delivery-services-item field field_simple js-slider-item">
-                                                        <div class="order-radio-field order-radio-field_simple js-radio-active-item">
-                                                            <img class="order-delivery-img" src="./images/order/boxberry.png" alt="Boxberry" />
-                                                            <ul class="order-delivery-list">
-                                                                <li class="order-delivery-list-item JS-RadioInner-Switcher-Item">
-                                                                    <label class="radio-field">
-                                                                        <span class="radio">
-                                                                            <input class="radio-input JS-Radio-Switcher JS-RadioInner-Switcher js-radio-active-input" type="radio" name="delivery-1" />
-                                                                            <i class="radio-check"></i>
-                                                                            <span class="radio-label">Доставка курьером</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="order-delivery-list-item JS-RadioInner-Switcher-Item">
-                                                                    <label class="radio-field">
-                                                                        <span class="radio">
-                                                                            <input class="radio-input JS-Radio-Switcher JS-RadioInner-Switcher js-radio-active-input" type="radio" name="delivery-1" />
-                                                                            <i class="radio-check"></i>
-                                                                            <span class="radio-label">Самовывоз</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="order-delivery-services-item field field_simple js-slider-item">
-                                                        <div class="order-radio-field order-radio-field_simple js-radio-active-item">
-                                                            <img class="order-delivery-img" src="./images/order/post.png" alt="Почта России" />
-                                                            <ul class="order-delivery-list">
-                                                                <li class="order-delivery-list-item JS-RadioInner-Switcher-Item">
-                                                                    <label class="radio-field">
-                                                                        <span class="radio">
-                                                                            <input class="radio-input JS-Radio-Switcher JS-RadioInner-Switcher js-radio-active-input" type="radio" name="delivery-1" />
-                                                                            <i class="radio-check"></i>
-                                                                            <span class="radio-label">Доставка курьером</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="order-delivery-list-item JS-RadioInner-Switcher-Item">
-                                                                    <label class="radio-field">
-                                                                        <span class="radio">
-                                                                            <input class="radio-input JS-Radio-Switcher JS-RadioInner-Switcher js-radio-active-input" type="radio" name="delivery-1" />
-                                                                            <i class="radio-check"></i>
-                                                                            <span class="radio-label">Самовывоз</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="order-address JS-RadioInner-Item">
-                                                <span class="order-subtitle">Адрес доставки:</span>
-                                                <div class="field js-form-validate-field">
-                                                    <input class="input" type="text" placeholder="Индекс, населённый пункт, улица и дом" name="address1" required />
-                                                </div>
-                                                <div class="field js-form-validate-field">
-                                                    <input class="input" type="text" placeholder="Квартира или офис" name="flat" required />
-                                                </div>
-                                                <div class="field js-form-validate-field">
-                                                    <textarea class="input input_textarea js-textarea-size" placeholder="Комментарий к доставке (необязательно)" name="comments2"></textarea>
-                                                </div>
-                                                <div class="order-address-item js-map"
-                                                    data-objectcoord="[59.9193,30.4645]"
-                                                    data-map-id="map3"
-                                                    data-map-icon=""
-                                                    data-icon-size="[77, 54]"
-                                                    data-icon-offset="[-35, -35]"
-                                                >
-                                                    <div class="js-map-item" data-objectid="1" data-objectcoord="[59.9193,30.4645]">
-                                                        <div class="js-map-item-value">Пензенская область, г. Пенза ул.Перспективная 79, дом 29, кв 97</div>
-                                                    </div>
-                                                </div>
-                                                <div class="order-map" id="map3"></div>
-                                            </div>
-                                            <div class="order-address order-address_active JS-RadioInner-Item">
-                                                <div class="field field_simple js-form-validate-field">
-                                                    <input class="input" type="text" placeholder="Выберите адрес" name="address" required />
-                                                </div>
-                                                <div class="field field_simple">
-                                                    <div class="order-map-values js-map"
-                                                         data-objectcoord="[59.9193,30.4645]"
-                                                         data-map-id="map"
-                                                         data-map-icon="./images/order/cdek-baloon.png"
-                                                         data-icon-size="[77, 54]"
-                                                         data-icon-offset="[-35, -35]"
-                                                    >
-                                                        <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
-                                                            <span class="js-map-item-value">
-                                                                Адрес 1<br />
-                                                                1 000 <span class="currency">i</span>
-                                                            </span>
-                                                        </div>
-                                                        <div class="js-map-item" data-objectid="2" data-objectcoord="[59.8601,30.2487]">
-                                                            <span class="js-map-item-value">
-                                                                Адрес 2<br />
-                                                                1 000 <span class="currency">i</span>
-                                                            </span>
-                                                        </div>
-                                                        <div class="js-map-item" data-objectid="3" data-objectcoord="[59.8601,30.2787]">
-                                                            <span class="js-map-item-value">
-                                                                Адрес 3<br />
-                                                                1 000 <span class="currency">i</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="order-map" id="map"></div>
-                                                </div>
-                                                <div class="field field_simple js-form-validate-field">
-                                                    <textarea class="input input_textarea js-textarea-size" placeholder="Комментарии к доставке" name="comments"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="order-group-item JS-Radio-Item">
-                                        <span class="order-subtitle">Выберите магазин:</span>
-                                        <div class="js-slider-shops">
-                                            <div class="order-shops js-slider-list">
-                                                <div class="order-shops-item js-map js-slider-item"
-                                                     data-objectcoord="[59.9193,30.4645]"
-                                                     data-map-id="map1"
-                                                     data-map-icon="./images/order/shop-baloon.png"
-                                                     data-icon-size="[77, 54]"
-                                                     data-icon-offset="[-35, -35]"
-                                                >
-                                                    <div class="order-shops-block js-map-item" data-objectid="1" data-objectcoord="[59.9193,30.4645]">
-                                                        <div class="order-shops-content">
-                                                            <img class="order-shops-logo" src="./images/products/products-logo.png" alt="" />
-                                                            <div class="order-shops-panel">
-                                                                <span class="order-shops-label">Бесплатно</span>
-                                                                <span class="order-shops-date">20 декабря</span>
-                                                            </div>
-                                                            <span class="order-shops-location">
-                                                                <span class="order-shops-location-icon icon icon_location"></span>Пенза
-                                                            </span>
-                                                            <div class="order-shops-address js-map-item-value">Пензенская область, г. Пенза ул.Перспективная 79, дом 29, кв 97</div>
-                                                            <a class="order-shops-button button" href="#">ВЫБРАТЬ</a>
-                                                        </div>
-                                                        <div class="order-shops-map" id="map1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="order-shops-item js-map js-slider-item"
-                                                     data-objectcoord="[59.8601,30.2787]"
-                                                     data-map-id="map2"
-                                                     data-map-icon="./images/order/shop-baloon.png"
-                                                     data-icon-size="[77, 54]"
-                                                     data-icon-offset="[-35, -35]"
-                                                >
-                                                    <div class="order-shops-block js-map-item" data-objectid="1" data-objectcoord="[59.8601,30.2787]">
-                                                        <div class="order-shops-content">
-                                                            <img class="order-shops-logo" src="./images/products/products-logo.png" alt="" />
-                                                            <div class="order-shops-panel">
-                                                                <span class="order-shops-label">Бесплатно</span>
-                                                                <span class="order-shops-date">20 декабря</span>
-                                                            </div>
-                                                            <span class="order-shops-location">
-                                                                <span class="order-shops-location-icon icon icon_location"></span>Пенза
-                                                            </span>
-                                                            <div class="order-shops-address js-map-item-value">Пензенская область, г. Пенза ул.Перспективная 79, дом 29, кв 97</div>
-                                                            <a class="order-shops-button button" href="#">ВЫБРАТЬ</a>
-                                                        </div>
-                                                        <div class="order-shops-map" id="map2">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="field field_simple js-form-validate-field">
-                                            <textarea class="input input_textarea js-textarea-size" placeholder="Комментарии к доставке" name="comments1"></textarea>
-                                        </div>
-                                    </div>
-
+                            </li>
+                            <li class="contacts-list-item contacts-list-item_address">
+                                <div class="contacts-list-name">
+                                    <i class="contacts-list-icon icon icon_location" aria-hidden="true"></i>Адрес
                                 </div>
+                                <div class="contacts-list-info content js-map-item-value">
+                                    г. Пенза, ул. Перспективная, 9
+                                </div>
+                            </li>
+                            <li class="contacts-list-item contacts-list-item_wide">
+                                <div class="contacts-list-name">
+                                    <i class="contacts-list-icon icon icon_clock" aria-hidden="true"></i>ЧАСЫ РАБОТЫ
+                                </div>
+                                <div class="contacts-list-info content">
+                                    <b>Пн-пт</b> 9:00-20:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <b>Сб.</b>  8:00-15:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <b>Вс.</b>  Выходной
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="contacts-list-name">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</div>
+                        <ul class="socials socials_modified">
+                            <li class="socials-item">
+                                <a class="socials-link" target="_blank" rel="nofollow" href="#">
+                                    <i class="socials-icon icon icon_youtube"></i>
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a class="socials-link" target="_blank" rel="nofollow" href="#">
+                                    <i class="socials-icon icon icon_instagram"></i>
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a class="socials-link" target="_blank" rel="nofollow" href="#">
+                                    <i class="socials-icon icon icon_telegram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="contacts-map" id="contacts-map"></div>
+                    </div>
+                </div>
 
-                                <h2>CОСТАВ ЗАКАЗА</h2>
-                                <div class="order-composition-panel">
-                                    <span class="order-composition-amount">9 товара</span>
-                                    <a class="order-composition-link" href="#">Изменить</a>
-                                </div>
-                                <div class="JS-ShowMore-Order" data-showmore="{
-                                    'amount': 9,
-                                    'classHide': 'order-composition-list-item_hide'
-                                }" data-showmore-extra="{
-                                    'amount': 4
-                                }">
-                                    <ul class="order-composition-list">
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/catalog/catalog-img-2.jpg" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/catalog/catalog-img-1.jpg" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/products/products-img-17.png" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/catalog/catalog-img-4.jpg" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/products/products-img-5.png" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/products/products-img-18.png" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/products/products-img-6.png" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/products/products-img-14.jpg" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/products/products-img-16.png" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/catalog/catalog-img-2.jpg" alt="" />
-                                            </a>
-                                        </li>
-                                        <li class="order-composition-list-item JS-ShowMore-Item">
-                                            <a class="order-composition-list-link" href="#">
-                                                <img class="order-composition-list-img" src="./images/catalog/catalog-img-1.jpg" alt="" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <a class="show-switcher JS-ShowMore-Switcher" href="javascript:;">
-                                        <span class="show-more show-more_show">
-                                            <span class="card-more show-more-label">
-                                                Показать все<span class="card-more-icon icon icon_arrow-bottom-green"></span>
-                                            </span>
-                                        </span>
-                                            <span class="show-more show-more_hide">
-                                            <span class="card-more show-more-label">
-                                                Свернуть<span class="card-more-icon card-more-icon_active icon icon_arrow-bottom-green"></span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
+                <h2 class="h1 contacts-main-title">САМОВЫВОЗ</h2>
+                <div class="contacts-info">Забрать свой заказ вы можете из точек самовывоза</div>
+
+
+                <div class="JS-Tab" data-tab="{
+                     'classSwitcherActive': 'tabs-menu-item_active',
+                     'classItemActive': 'tabs-item_active'
+                }">
+                    <div class="contacts-tabs-panel">
+                        <div class="contacts-tabs-menu-wrapper tabs-menu-wrapper js-slider-tabs">
+                            <ul class="tabs-menu swiper-wrapper">
+                                <li class="tabs-menu-item swiper-slide JS-Tab-Switcher">
+                                    <a class="tabs-menu-link" href="javascript:;">ЦЕНТРАЛЬНЫЙ ОФИС</a>
+                                </li>
+                                <li class="tabs-menu-item swiper-slide JS-Tab-Switcher">
+                                    <a class="tabs-menu-link" href="javascript:;">САДОВИТА</a>
+                                </li>
+                                <li class="tabs-menu-item tabs-menu-item_active swiper-slide JS-Tab-Switcher">
+                                    <a class="tabs-menu-link" href="javascript:;">САДОВИТА</a>
+                                </li>
+                            </ul>
                         </div>
-                        <aside class="order-side col-md-6 col-xl-4">
-                            <div class="order-sum">
-                                <dl class="order-sum-item order-sum-item_total">
-                                    <dt class="order-sum-name">Ваш заказ</dt>
-                                    <dd class="order-sum-value">
-                                        <span class="order-sum-price">2 010 <span class="order-sum-price-currency currency">i</span></span>
-                                    </dd>
-                                </dl>
-                                <dl class="order-sum-item">
-                                    <dt class="order-sum-name">Товары (3)</dt>
-                                    <dd class="order-sum-value">
-                                        <span class="order-sum-price">1 660 <span class="order-sum-price-currency currency">i</span></span>
-                                    </dd>
-                                </dl>
-                                <dl class="order-sum-item">
-                                    <dt class="order-sum-name">Доставка</dt>
-                                    <dd class="order-sum-value">
-                                        <span class="order-sum-price">350 <span class="order-sum-price-currency currency">i</span></span>
-                                    </dd>
-                                </dl>
-                                <button class="order-button button">ОФОРМИТЬ ЗАКАЗ</button>
-                                <div class="order-sum-info">Способ оплаты: банковской картой онлайн</div>
-                                <ul class="order-pay-systems">
-                                    <li class="order-pay-systems-item">
-                                        <img class="order-pay-systems-img" src="./images/icons/pay-systems/mir.png" alt="" />
+                    </div>
+
+                    <div class="tabs-item JS-Tab-Item">
+                        Текстовое описание
+                    </div>
+                    <div class="tabs-item JS-Tab-Item">
+                        Текстовое описание
+                    </div>
+                    <div class="tabs-item tabs-item_active JS-Tab-Item">
+                        <div class="contacts-item row js-map"
+                             data-objectcoord="[53.121956,45.000215]"
+                             data-map-id="contacts-map-1"
+                             data-map-icon="./images/order/shop-baloon.png"
+                             data-icon-size="[77, 54]"
+                             data-icon-offset="[-35, -35]"
+                             data-map-zoom="17"
+                        >
+                            <div class="col-lg-5 js-map-item" data-objectid="1" data-objectcoord="[53.121956,45.000215]">
+                                <span class="contacts-title h3">Садовита</span>
+                                <ul class="contacts-list contacts-list_export">
+                                    <li class="contacts-list-item contacts-list-item_phone">
+                                        <div class="contacts-list-name">
+                                            <i class="contacts-list-icon icon icon_phone" aria-hidden="true"></i>Телефон
+                                        </div>
+                                        <div class="contacts-list-info content">
+                                            +7(8412) 67-97-67
+                                        </div>
                                     </li>
-                                    <li class="order-pay-systems-item">
-                                        <img class="order-pay-systems-img" src="./images/icons/pay-systems/visa.png" alt="" />
+                                    <li class="contacts-list-item contacts-list-item_address">
+                                        <div class="contacts-list-name">
+                                            <i class="contacts-list-icon icon icon_location" aria-hidden="true"></i>Адрес
+                                        </div>
+                                        <div class="contacts-list-info content js-map-item-value">
+                                            г. Пенза, ТЦ “Ладья”, г. Пенза, уд.Луначарского 6 Б
+                                        </div>
                                     </li>
-                                    <li class="order-pay-systems-item">
-                                        <img class="order-pay-systems-img" src="./images/icons/pay-systems/mastercard.png" alt="" />
-                                    </li>
-                                    <li class="order-pay-systems-item">
-                                        <img class="order-pay-systems-img" src="./images/icons/pay-systems/pay-keeper.png" alt="" />
+                                    <li class="contacts-list-item contacts-list-item_wide">
+                                        <div class="contacts-list-name">
+                                            <i class="contacts-list-icon icon icon_clock" aria-hidden="true"></i>ЧАСЫ РАБОТЫ
+                                        </div>
+                                        <div class="contacts-list-info content">
+                                            <b>Пн-пт</b> 9:00-20:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <b>Сб.</b>  8:00-15:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <b>Вс.</b>  Выходной
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="basket-delivery">
-                                <span class="basket-delivery-icon icon icon_warning"></span>Бесплатная доставка от 2000 тыс рублей, самовывоз без ограничений
+                            <div class="col-lg-7">
+                                <div class="contacts-map" id="contacts-map-1"></div>
                             </div>
-                        </aside>
+                        </div>
                     </div>
-                </form>
+                </div>
 
             </div>
 

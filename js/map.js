@@ -48,7 +48,6 @@ function initMap() {
                             '<div class="map-popup-body">' +
                             objectText +
                             '</div>' +
-                            '<div class="map-popup-actions"><a class="map-popup-button button" href="' + objectHref + '">выбрать</a></div>' +
                             '</div>',
                     }
                 };

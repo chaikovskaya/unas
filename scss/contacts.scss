@@ -5,9 +5,6 @@
     }
     &-item {
         margin-bottom: 110px;
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
     &-title {
         display: block;
@@ -85,8 +82,61 @@
         color: #000000;
         text-align: center;
     }
+    &-tabs-panel {
+        text-align: center;
+    }
     &-tabs-menu-wrapper {
         display: inline-block;
+    }
+}
+
+.feedback {
+    padding: 55px 38px 70px;
+    background: url("../images/img/feedback-img.png") no-repeat right top,
+                url("../images/img/feedback-img-1.png") repeat-x left bottom,
+                #F4F7F7;
+    background-size: cover;
+    border-radius: 15px;
+    &-title {
+        display: block;
+        margin-bottom: 34px;
+        text-align: left;
+        text-transform: none;
+        letter-spacing: normal;
+    }
+    &-form {
+        display: flex;
+    }
+    &-input {
+        border-color: transparent;
+    }
+    &-form-item {
+        padding-right: 30px;
+    }
+    &-form-item_fields {
+        width: 20%;
+    }
+    &-form-item_textarea {
+        width: 40%;
+    }
+    &-form-item_actions {
+        width: 25%;
+    }
+    &-textarea {
+        width: 100%;
+        height: 100%;
+        border-color: transparent;
+    }
+    &-field-textarea {
+        height: 100%;
+    }
+    &-field:last-child {
+        margin-bottom: 0;
+    }
+    &-button {
+        margin-bottom: 30px;
+    }
+    &-info {
     }
 }
 
@@ -97,6 +147,13 @@ and (max-width: $large){
 
 @media screen
 and (max-width: $desktop){
+    .feedback {
+        background-position: 0 0, left bottom;
+        background-size: auto;
+        &-form-item_actions {
+            width: 40%;
+        }
+    }
 }
 
 @media screen
@@ -139,8 +196,51 @@ and (max-width: $tablet){
             display: block;
         }
     }
+    .feedback {
+        padding: 25px 25px 37px;
+        &-title {
+            margin-bottom: 22px;
+        }
+        &-form {
+            flex-wrap: wrap;
+        }
+        &-form-item_fields {
+            width: 50%;
+        }
+        &-form-item_textarea {
+            width: 50%;
+            padding-right: 0;
+        }
+        &-form-item_actions {
+            margin-top: 25px;
+            padding-right: 0;
+            width: 100%;
+        }
+        &-button {
+            margin-bottom: 18px;
+        }
+        &-info {
+            font-size: 12px;
+        }
+    }
 }
 
 @media screen
 and (max-width: $mobile){
+    .feedback {
+        &-form-item_fields {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 25px;
+        }
+        &-form-item_textarea {
+            width: 100%;
+        }
+        &-textarea {
+            height: 100px;
+        }
+        &-button {
+            width: 100%;
+        }
+    }
 }

@@ -395,6 +395,15 @@
     &-list-item {
         border-bottom: 1px solid #eeeeee;
     }
+    &-is-levels &-list-item {
+        height: 0;
+        overflow: hidden;
+    }
+    &-child.mob-child-is-current &-list-item {
+        height: auto;
+        overflow: visible;
+    }
+
     &-list-link {
         display: flex;
         align-items: center;

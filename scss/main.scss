@@ -633,6 +633,9 @@ and (max-width: $mobile){
     &-item:nth-child(4) ~ &-item_switcher {
         display: block;
     }
+    &-item:nth-child(4) + &-item_switcher {
+        display: none;
+    }
     &-label {
         padding-bottom: 4px;
         font-weight: 600;
@@ -1125,6 +1128,9 @@ and (max-width: $mobile){
         &-item:nth-child(2) ~ &-item_switcher {
             display: block;
         }
+        &-item:nth-child(2) + &-item_switcher {
+            display: none;
+        }
         &_active &-item:nth-child(2) ~ &-item {
             display: block;
         }
@@ -1160,6 +1166,7 @@ and (max-width: $mobile){
     &-subtitle {
         display: block;
         text-transform: uppercase;
+        font-weight: 800;
     }
     &-description-item {
         display: none;
@@ -1340,6 +1347,7 @@ and (max-width: $mobile){
         align-items: center;
         letter-spacing: normal;
         margin-bottom: 24px;
+        font-weight: 800;
     }
     &-icon {
         margin-right: 25px;
@@ -1347,6 +1355,9 @@ and (max-width: $mobile){
     &-info {
         font-weight: 600;
         margin-bottom: 40px;
+        b {
+            font-weight: 700;
+        }
     }
     &-info-main {
         text-transform: uppercase;
@@ -1404,6 +1415,12 @@ and (max-width: $desktop){
         &-list {
             margin-right: 130px;
         }
+        &-link {
+            &:after {
+                width: 94px;
+                height: 94px;
+            }
+        }
     }
 }
 
@@ -1431,6 +1448,9 @@ and (max-width: $tablet){
         &-info-detail {
             font-size: 14px;
             line-height: 26px;
+        }
+        &-block {
+            border-radius: 10px;
         }
     }
     .subscribe {
@@ -1486,6 +1506,9 @@ and (max-width: $tablet){
             width: 58%;
             padding-right: 25px;
         }
+        &-img {
+            border-radius: 10px;
+        }
         &-description {
             width: 42%;
             max-width: none;
@@ -1496,12 +1519,6 @@ and (max-width: $tablet){
         }
         &-button {
             display: none;
-        }
-        &-link {
-            &:after {
-                width: 94px;
-                height: 94px;
-            }
         }
     }
 }

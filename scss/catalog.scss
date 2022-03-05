@@ -21,7 +21,7 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 5px 23px 5px 0;
+        overflow: hidden;
         background-color: #F4F7F7;
         border-radius: 10px;
         text-decoration: none;
@@ -37,9 +37,12 @@
         padding-right: 8px;
     }
     &-img {
+        display: block;
         max-height: 70px;
     }
     &-label {
+        flex-grow: 1;
+        padding: 5px 23px 5px 0;
         text-decoration: none;
         font-size: 15px;
         line-height: 24px;
@@ -76,6 +79,19 @@
     }
     &-button_next &-icon {
         margin-right: -2px;
+    }
+
+    &_main {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &_main &-pic {
+        margin-top: auto;
+        margin-right: auto;
+    }
+    &_main &-img {
+        transform: scaleX(-1);
     }
 }
 
@@ -986,6 +1002,10 @@ and (max-width: $tablet){
     .catalog-category {
         margin-left: 0;
         margin-right: 0;
+        &_main &-list {
+            margin-right: 35px;
+            overflow: visible;
+        }
     }
     .category-submenu {
         &-wrapper {
@@ -1154,6 +1174,9 @@ and (max-width: $mobile){
         }
     }
     .catalog {
+        &-category-link {
+            border-radius: 5px;
+        }
         &-actions-buttons {
             margin-left: 0;
         }
@@ -1224,6 +1247,11 @@ and (max-width: $mobile){
         &-simple-links {
             margin-left: auto;
             padding-left: 20px;
+        }
+    }
+    .catalog-category {
+        &_main &-list {
+            margin-right: -10px;
         }
     }
 }

@@ -86,7 +86,7 @@ ol {
 }
 
 b {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 *::before, *::after{
@@ -304,7 +304,7 @@ blockquote {
         margin-bottom: 20px;
     }
     ul li {
-        margin-bottom: 3px;
+        margin-bottom: 17px;
         &:before {
             content: '';
             display: inline-block;
@@ -325,15 +325,7 @@ blockquote {
 		margin-left: 19px;
 	}
 	ol li {
-		margin-bottom: 5px;
-		&::marker {
-			display: inline-block;
-			padding-right: 9px;
-			margin-right: 13px;
-			color: #00597d;
-			font-weight: 700;
-			border-right: 1px solid #e5e5e5;
-		}
+		margin-bottom: 21px;
 	}
 
     img {
@@ -818,6 +810,7 @@ blockquote {
 		width: 29px;
 		height: 26px;
 		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='26' viewBox='0 0 29 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse cx='13.4395' cy='11.5546' rx='9.24592' ry='9.46807' stroke='%2359A750' stroke-width='2'/%3e%3cpath d='M28.0002 24.0001L21.0002 18.0001' stroke='%2359A750' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+		background-size: 100% auto;
 	}
 	&_burger {
 		width: 18px;
@@ -1230,6 +1223,12 @@ and (max-width: $tablet){
 	.content {
 		font-size: 14px;
 		line-height: 20px;
+		ul li {
+			margin-bottom: 13px;
+		}
+		ol li {
+			margin-bottom: 13px;
+		}
 	}
 	.icon {
 		&_phone {
@@ -1363,6 +1362,10 @@ and (max-width: $tablet){
 		}
 		&_clock {
 			width: 20px;
+			height: 20px;
+		}
+		&_search-green {
+			width: 24px;
 			height: 20px;
 		}
 	}

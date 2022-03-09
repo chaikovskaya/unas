@@ -1162,6 +1162,9 @@ and (max-width: $mobile){
     }
     &-detail {
         margin-bottom: 28px;
+        ul li {
+            margin-bottom: 3px;
+        }
     }
     &-subtitle {
         display: block;

@@ -2165,6 +2165,92 @@ function reInitSliderBannerCooperation() {
     $(".js-slider-banner-cooperation .js-slider-list").trigger('destroy.owl.carousel');
 }
 
+function initSliderAlgorithm() {
+    $(".js-slider-algorithm").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: false,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 300,
+            margin: 40,
+            nav: true,
+            items: 1,
+            responsive: {
+                0: {
+                    margin: 24,
+                },
+                720: {
+                    mouseDrag: true,
+                    margin: 24,
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+            },
+            onInitialized : function(event) {
+                var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+                initIndicator($element, index, itemLength);
+                if (itemLength < 10) {
+                    itemLength =  '0' + itemLength;
+                }
+                $amountPages.html(itemLength);
+
+                updateButtons();
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('translated.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
+            initIndicator($element, index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
+
+            updateButtons();
+        });
+    });
+}
+function reInitSliderAlgorithm() {
+    $(".js-slider-algorithm .js-slider-list").trigger('destroy.owl.carousel');
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -2186,6 +2272,7 @@ function initResizeWindow() {
         initSliderBanner();
         initTabInner();
         initSliderBannerCooperation();
+        reInitSliderAlgorithm();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         initSliderInstagram();
@@ -2202,6 +2289,7 @@ function initResizeWindow() {
         initShowMoreOrder();
         reInitSliderBanner();
         reInitSliderBannerCooperation();
+        initSliderAlgorithm();
     } else {
         GLOBAL.widthWindow = '';
         initSliderInstagram();
@@ -2215,6 +2303,7 @@ function initResizeWindow() {
         initShowMoreOrder();
         reInitSliderBanner();
         reInitSliderBannerCooperation();
+        initSliderAlgorithm();
     }
 }
 

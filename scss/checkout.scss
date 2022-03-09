@@ -1,0 +1,298 @@
+
+.checkout {
+    &-video {
+        margin-bottom: 102px;
+        @include clearfix();
+    }
+    &-video-element {
+        width: 68.5%;
+        float: left;
+        padding-right: $gutters;
+    }
+    &-video-title {
+        width: 31.5%;
+        float: right;
+    }
+    &-video-detail {
+        width: 31.5%;
+        float: right;
+    }
+    &-video-link {
+        display: block;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 159px;
+            height: 159px;
+            background: url(../images/video/video-play-bgr.png) no-repeat 0 0;
+            background-size: 100% auto;
+        }
+    }
+    &-video-pic {
+        display: block;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    &-algorithm {
+        margin-bottom: 110px;
+    }
+    &-algorithm-list {
+        overflow: hidden;
+        margin-top: -30px;
+        margin-right: -30px;
+        margin-left: -30px;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    &-algorithm-list-item {
+        position: relative;
+        height: 100%;
+        padding-bottom: 49px;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: -207px;
+            width: 309px;
+            height: 49px;
+            background: url(../images/checkout/checkout-decor.png) no-repeat 0 0;
+            background-size: 100% auto;
+        }
+    }
+    .owl-item:last-child &-algorithm-list-item:after {
+        display: none;
+    }
+    &-algorithm-block {
+        height: 100%;
+    }
+    &-algorithm-img {
+        margin-bottom: 42px;
+        border-radius: 15px;
+        &:hover {
+            filter: drop-shadow(0px 0px 30px rgba(206, 206, 206, 0.4));
+        }
+    }
+    &-algorithm-description {
+        display: flex;
+        ul {
+            margin-top: 0;
+        }
+    }
+    &-algorithm-info {}
+    &-algorithm-number {
+        margin-right: 20px;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 50px;
+        letter-spacing: 0.085em;
+        color: #59A750;
+    }
+
+    &-phone {
+        display: flex;
+        background: #F4F7F7;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    &-phone-detail {
+        position: relative;
+        z-index: 1;
+        width: 54%;
+        padding: 63px 38px 35px 38px;
+    }
+    &-phone-info {
+        padding-right: 90px;
+        letter-spacing: normal;
+        font-size: 18px;
+    }
+    &-phone-title {
+        margin-bottom: 22px;
+        text-align: left;
+        text-transform: none;
+        letter-spacing: normal;
+    }
+    &-phone-img {
+        position: relative;
+        width: 46%;
+        min-height: 270px;
+    }
+    &-phone-pic {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    &-phone-pic_1 {
+        right: 70px;
+        width: 549px;
+        height: 376px;
+        background-image: url(../images/checkout/checkout-img-3.png);
+    }
+    &-phone-pic_2 {
+        right: -162px;
+        bottom: -126px;
+        width: 507px;
+        height: 487px;
+        background-image: url(../images/checkout/checkout-img-2.png);
+    }
+    &-phone-pic_3 {
+        right: 350px;
+        bottom: -133px;
+        width: 336px;
+        height: 417px;
+        background-image: url(../images/checkout/checkout-img-1.png);
+    }
+}
+
+@media screen
+and (max-width: $large){
+    .checkout {
+        &-phone-info {
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen
+and (max-width: $desktop){
+    .checkout {
+        &-video {
+            margin-bottom: 63px;
+        }
+        &-video-link {
+           &:after {
+                width: 94px;
+                height: 94px;
+            }
+        }
+        &-algorithm-list-item {
+            position: relative;
+            padding-bottom: 44px;
+            &:after {
+                right: -150px;
+                width: 180px;
+                height: 49px;
+            }
+        }
+        &-phone-pic_1 {
+            right: 0px;
+            width: 500px;
+            height: 326px;
+        }
+        &-phone-pic_2 {
+            width: 457px;
+            height: 437px;
+        }
+        &-phone-pic_3 {
+            right: 280px;
+            width: 286px;
+            height: 367px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $tablet){
+    .checkout {
+        &-video {
+            margin-bottom: 60px;
+        }
+        &-video-element {
+            width: 100%;
+            float: none;
+            padding-right: 0;
+            margin-bottom: 24px;
+        }
+        &-video-title {
+            width: 100%;
+            float: none;
+        }
+        &-video-detail {
+            width: 100%;
+            float: none;
+        }
+        &-video-pic {
+            border-radius: 10px;
+        }
+
+        &-algorithm {
+            margin-bottom: 50px;
+        }
+        &-algorithm-img {
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+        &-algorithm-number {
+            margin-right: 10px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &-phone-info {
+            font-size: 14px;
+        }
+        &-phone {
+            flex-direction: column;
+            border-radius: 10px;
+        }
+        &-phone-detail {
+            width: 100%;
+            padding: 30px 25px;
+        }
+        &-phone-img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+    .checkout {
+        &-algorithm-list-item {
+            &:after {
+                bottom: 20px;
+                right: -2px;
+                width: 18px;
+                height: 66px;
+                background: url(../images/checkout/checkout-decor-mob.png) no-repeat 0 0;
+            }
+            &:last-child:after {
+                display: none;
+            }
+        }
+
+        &-phone-detail {
+            padding-bottom: 0;
+        }
+        &-phone-img {
+            min-height: 230px;
+        }
+        &-phone-pic_1 {
+            right: 0;
+            width: 261px;
+            height: 196px;
+            background-image: url(../images/checkout/checkout-img-4.png);
+        }
+        &-phone-pic_2 {
+            left: -107px;
+            right: auto;
+            bottom: -38px;
+            width: 240px;
+            height: 231px;
+        }
+        &-phone-pic_3 {
+            right: -28px;
+            bottom: 0;
+            width: 200px;
+            height: 227px;
+        }
+    }
+}

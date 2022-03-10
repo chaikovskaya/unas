@@ -384,4 +384,9 @@ and (max-width: $mobile){
             width: 100%;
         }
     }
+    .mob-form {
+        &-block {
+            height: 100%;
+        }
+    }
 }

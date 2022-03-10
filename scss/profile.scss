@@ -1,0 +1,385 @@
+
+.sidebar {
+    &-menu-list {
+        padding: 28px 39px;
+        box-shadow: 0px 4px 30px rgba(206, 206, 206, 0.4);
+        border-radius: 15px;
+    }
+    &-menu-item {
+        border-bottom: 1px solid #F2F2F2;
+        &:last-child {
+            border-bottom-width: 0;
+        }
+    }
+    &-menu-link {
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 29px;
+        color: #333333;
+        letter-spacing: 0.085em;
+        text-transform: uppercase;
+        &:hover {
+            color: #59A750;
+        }
+    }
+    &-menu-item_active {}
+    &-menu-item_active &-menu-link {
+        color: #59A750;
+    }
+
+    &-menu-mob {
+        display: none;
+        margin-bottom: 35px;
+    }
+}
+
+.profile {
+    &-list {}
+    &-list-item {
+        margin-bottom: 40px;
+    }
+    &-list-block {
+        display: block;
+        height: 100%;
+        background-color: #F8F7F7;
+        border-radius: 15px;
+        overflow: hidden;
+        text-decoration: none;
+    }
+    &-list-name {
+        display: flex;
+        align-items: center;
+        padding: 23px 39px;
+        background-color: #59A750;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 29px;
+        letter-spacing: 0.08em;
+        color: #FFFFFF
+    }
+    &-list-info {
+        display: block;
+        padding: 53px 39px 43px;
+    }
+    &-list-description {
+        display: block;
+        margin-bottom: 48px;
+        font-size: 16px;
+        line-height:  25px;
+        letter-spacing: 0.085em;
+        color: #333333;
+    }
+    &-list-icon {
+        margin-top: -5px;
+        margin-right: 17px;
+    }
+    &-list-icon_active {
+        display: none;
+    }
+    &-list-block:hover {
+        background-color: #fff;
+        filter: drop-shadow(0px 0px 30px rgba(206, 206, 206, 0.4));
+    }
+    &-list-block:hover &-list-icon {
+        display: none;
+    }
+    &-list-block:hover &-list-icon_active {
+        display: block;
+    }
+    &-list-block:hover &-list-name {
+        background-color: #fff;
+        color: #59A750;
+    }
+}
+
+@media screen
+and (max-width: $large){
+}
+
+@media screen
+and (max-width: $desktop){
+    .sidebar {
+        &-menu-list {
+            padding: 28px 39px;
+        }
+        &-menu-link {
+            font-size: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .profile {
+        &-list-item {
+            margin-bottom: 25px;
+        }
+        &-list-name {
+            padding: 23px 25px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &-list-info {
+            padding: 35px 25px 36px;
+        }
+        &-list-icon {
+            margin-right: 10px;
+        }
+        &-list-description {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $tablet){
+    .sidebar {
+        &-menu {
+            display: none;
+        }
+        &-menu-mob {
+            display: block;
+        }
+    }
+    .profile {
+        &-list-description {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &-list-name {
+            padding-top: 15px;
+            padding-bottom: 13px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+}
+
+
+.profile-address {
+    &-list {}
+    &-list-item {
+        margin-bottom: 50px;
+    }
+    &-value {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: 0.06em;
+        color: #111111;
+    }
+    &-links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-link {
+        margin-right: 25px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    &-link_edit {
+        color: #59A750;
+        text-decoration: underline;
+        &:hover {
+            color: #59A750;
+            text-decoration: none;
+        }
+    }
+    &-icon {
+        vertical-align: middle;
+        margin-left: 7px;
+    }
+    &-label {
+        display: block;
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: 0.06em;
+        color: #111111;
+    }
+    &-button {
+        min-width: 250px;
+    }
+}
+
+.profile-form {
+    max-width: 933px;
+    &-block {
+        margin-bottom: 10px;
+    }
+    &-gender {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 50px;
+        padding-left: 32px;
+    }
+    &-gender-label {
+        font-size: 15px;
+        margin-right: 22px;
+    }
+    &-checkbox {}
+    &-gender-name {
+        color: #333333;
+    }
+    &-gender-name_man {
+        display: none;
+    }
+    &-checkbox:checked ~ &-gender-name {
+        display: none;
+    }
+    &-checkbox:checked ~ &-gender-name_man {
+        display: block;
+    }
+
+    &-personal {
+        display: flex;
+    }
+    &-photo {
+        min-width: 110px;
+        width: 110px;
+        margin-right: $gutters;
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 25px;
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
+        border: 1.5px solid #E0E0E0;
+        border-radius: 5px;
+    }
+    &-img {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        margin-bottom: 18px;
+        height: 110px;
+        border-radius: 15px;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(69, 69, 69, 0.6);
+        }
+        .MultiFile-preview {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-img-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.file-input {
+    display: none;
+}
+
+@media screen
+and (max-width: $tablet){
+    .profile-address {
+        &-list-item {
+            margin-bottom: 33px;
+        }
+        &-value {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &-link {
+            margin-right: 22px;
+            font-size: 14px;
+        }
+        &-label {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    }
+    .profile-form {
+        &-photo {
+            min-width: 81px;
+            width: 81px;
+            margin-right: 25px;
+        }
+        &-img {
+            width: 81px;
+            height: 81px;
+            border-radius: 10px;
+        }
+        &-gender {
+            height: 38px;
+            padding-left: 23px;
+        }
+        &-gender-label {
+            font-size: 14px;
+            margin-right: 13px;
+        }
+        &-gender-name {
+            font-size: 12px;
+        }
+        &-link {
+            font-size: 13px;
+        }
+        &-icon {
+            min-width: 20px;
+            width: 21px;
+            height: 21px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+    .profile-address {
+        &-button {
+            min-width: auto;
+            width: 100%;
+        }
+    }
+    .profile-form {
+        &-personal {
+            flex-direction: column;
+        }
+        &-photo {
+            display: flex;
+            align-items: center;
+            min-width: auto;
+            width: auto;
+            margin-bottom: 30px;
+        }
+        &-img {
+           margin-right: 25px;
+            margin-bottom: 0;
+        }
+    }
+}

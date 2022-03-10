@@ -71,8 +71,12 @@
         border-radius: 15px;
         overflow: hidden;
     }
+    &-map [class*="-inner-panes"] {
+        background-color: grey;
+    }
     &-map [class*="-ground-pane"] {
         filter: grayscale(1);
+        opacity: 0.9;
     }
     &-info {
         margin-bottom: 35px;

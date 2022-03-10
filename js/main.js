@@ -294,6 +294,7 @@ function initPopupProfile() {
                     initMask();
                     initPopupForgot();
                     initPopupRegistration();
+                    initScroll();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -324,8 +325,10 @@ function initPopupRegistration() {
                 dataType: "html",
                 success: function (data) {
                     $('.js-form-popup').html(data);
+                    initValidate();
                     initMask();
                     initPopupProfile();
+                    initScroll();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -359,6 +362,7 @@ function initPopupForgot() {
                     initValidate();
                     initMask();
                     initPopupProfile();
+                    initScroll();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -1458,6 +1462,10 @@ function initSliderAbout() {
         $list.on('prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
             initIndicator($element, index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
 
             angle = angle - 110;
             $list.css('transform','rotate(' + angle + 'deg)');
@@ -1466,10 +1474,16 @@ function initSliderAbout() {
             var item = $description.filter('[data-slider-index="' + index + '"]');
             $description.removeClass('about-description-item_active');
             item.addClass('about-description-item_active');
+
+            updateButtons();
         });
         $list.on('next.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
             initIndicator($element, index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
 
             angle = angle + 110;
             $list.css('transform','rotate(' + angle + 'deg)');
@@ -1478,6 +1492,8 @@ function initSliderAbout() {
             var item = $description.filter('[data-slider-index="' + index + '"]');
             $description.removeClass('about-description-item_active');
             item.addClass('about-description-item_active');
+
+            updateButtons();
         });
     });
 }
@@ -2251,6 +2267,14 @@ function reInitSliderAlgorithm() {
     $(".js-slider-algorithm .js-slider-list").trigger('destroy.owl.carousel');
 }
 
+function initFiles() {
+    $('.js-file-input').MultiFile({
+        STRING: {
+            remove: '<i class="file-name-close las la-times"></i>'
+        }
+    });
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -2359,4 +2383,5 @@ $(document).ready(function () {
     initRadioInner();
     initRadioActive();
     initSliderTabsDelivery();
+    initFiles();
 });

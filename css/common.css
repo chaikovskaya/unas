@@ -523,6 +523,12 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  .load-more-label_simple {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #59A750; }
   .load-more-icon {
     display: none;
     vertical-align: middle;
@@ -550,9 +556,14 @@ blockquote {
   .load-more-pages {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-left: auto; }
   .load-more-slider-nav {
     margin-left: 43px; }
+  .load-more-pic {
+    vertical-align: middle;
+    margin-left: 7px;
+    margin-top: -5px; }
 
 .indicator {
   font-weight: 600;
@@ -696,7 +707,7 @@ blockquote {
     background-size: 100% auto; }
   .icon_delivery {
     width: 34px;
-    height: 25px;
+    height: 26px;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='33' height='25' viewBox='0 0 33 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.98364 24C7.79982 24 8.58257 23.6702 9.15969 23.0832C9.73681 22.4962 10.061 21.7001 10.061 20.8699C10.061 20.0398 9.73681 19.2436 9.15969 18.6566C8.58257 18.0696 7.79982 17.7399 6.98364 17.7399C6.16747 17.7399 5.38472 18.0696 4.8076 18.6566C4.23047 19.2436 3.90625 20.0398 3.90625 20.8699C3.90625 21.7001 4.23047 22.4962 4.8076 23.0832C5.38472 23.6702 6.16747 24 6.98364 24V24Z' stroke='%230D0C0B' stroke-width='2' stroke-linejoin='round'/%3e%3cpath d='M24.4211 24C25.2373 24 26.0201 23.6702 26.5972 23.0832C27.1743 22.4962 27.4985 21.7001 27.4985 20.8699C27.4985 20.0398 27.1743 19.2436 26.5972 18.6566C26.0201 18.0696 25.2373 17.7399 24.4211 17.7399C23.605 17.7399 22.8222 18.0696 22.2451 18.6566C21.668 19.2436 21.3438 20.0398 21.3438 20.8699C21.3438 21.7001 21.668 22.4962 22.2451 23.0832C22.8222 23.6702 23.605 24 24.4211 24V24Z' stroke='%230D0C0B' stroke-width='2' stroke-linejoin='round'/%3e%3cpath d='M4.29093 21.0706V21.0706C2.4734 21.0706 1 19.5972 1 17.7797V5C1 2.79086 2.79086 1 5 1H17.6858C19.895 1 21.6858 2.79086 21.6858 5V17.0706C21.6858 19.2798 19.895 21.0706 17.6858 21.0706H10.9863' stroke='%230D0C0B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M21.8281 6.9082H22.0628C25.4163 6.9082 28.5465 8.58914 30.3989 11.3847L31.168 12.5455C31.7106 13.3644 32 14.325 32 15.3073V18.694C32 19.7985 31.1046 20.694 30 20.694H27.6032' stroke='%230D0C0B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
     background-size: 100% auto; }
   .icon_delivery-light {
@@ -1238,7 +1249,12 @@ blockquote {
     height: 37px;
     line-height: 37px;
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px; }
+  .load-more-label_simple {
+    font-size: 12px; }
+  .load-more-pic {
+    margin-top: -3px;
+    margin-left: 5px; } }
 
 @media screen and (max-width: 720px) {
   .title {
@@ -1253,6 +1269,8 @@ blockquote {
     height: 12px; }
   .load-more {
     justify-content: center; }
+    .load-more-pages {
+      margin-left: 0; }
   .indicator {
     width: 100%;
     margin-bottom: 15px;
@@ -8650,13 +8668,15 @@ body.mob-menu-show {
   background-color: #fff;
   color: #59A750; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1640px) {
   .sidebar-menu-list {
-    padding: 28px 39px; }
+    padding: 28px 25px; }
   .sidebar-menu-link {
     font-size: 15px;
     padding-top: 10px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px; } }
+
+@media screen and (max-width: 1200px) {
   .profile-list-item {
     margin-bottom: 25px; }
   .profile-list-name {
@@ -8727,80 +8747,125 @@ body.mob-menu-show {
 .profile-address-button {
   min-width: 250px; }
 
-.profile-form {
+.profile-form-item {
   max-width: 933px; }
-  .profile-form-block {
-    margin-bottom: 10px; }
-  .profile-form-gender {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 50px;
-    padding-left: 32px; }
-  .profile-form-gender-label {
-    font-size: 15px;
-    margin-right: 22px; }
-  .profile-form-gender-name {
-    color: #333333; }
-  .profile-form-gender-name_man {
-    display: none; }
-  .profile-form-checkbox:checked ~ .profile-form-gender-name {
-    display: none; }
-  .profile-form-checkbox:checked ~ .profile-form-gender-name_man {
-    display: block; }
-  .profile-form-personal {
-    display: flex; }
-  .profile-form-photo {
-    min-width: 110px;
-    width: 110px;
-    margin-right: 40px; }
-  .profile-form-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 15px; }
-  .profile-form-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 25px;
-    width: 25px;
-    height: 25px;
-    margin-left: 15px;
-    border: 1.5px solid #E0E0E0;
-    border-radius: 5px; }
-  .profile-form-img {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin-bottom: 18px;
-    height: 110px;
-    border-radius: 15px; }
-    .profile-form-img:before {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(69, 69, 69, 0.6); }
-    .profile-form-img .MultiFile-preview {
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: contain;
-      width: 100%;
-      height: 100%; }
-  .profile-form-img-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%); }
 
-.file-input {
+.profile-form-item_data {
+  max-width: 1082px; }
+
+.profile-form-block {
+  margin-bottom: 10px; }
+
+.profile-form-gender {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50px;
+  padding-left: 32px; }
+
+.profile-form-gender-label {
+  font-size: 15px;
+  margin-right: 22px; }
+
+.profile-form-gender-name {
+  color: #333333; }
+
+.profile-form-gender-name_man {
   display: none; }
+
+.profile-form-checkbox:checked ~ .profile-form-gender-name {
+  display: none; }
+
+.profile-form-checkbox:checked ~ .profile-form-gender-name_man {
+  display: block; }
+
+.profile-form-personal {
+  display: flex; }
+
+.profile-form-photo-inner {
+  position: relative; }
+
+.profile-form-photo {
+  min-width: 110px;
+  width: 110px;
+  margin-right: 40px; }
+
+.profile-form-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  z-index: 1;
+  opacity: 0; }
+
+.profile-form-img {
+  position: relative;
+  display: block;
+  margin-bottom: 18px;
+  height: 110px;
+  border-radius: 15px; }
+  .profile-form-img:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(69, 69, 69, 0.6);
+    border-radius: 15px; }
+
+.profile-form-img-icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%); }
+
+.profile-form-photo-inner:hover .profile-form-img-icon {
+  display: block; }
+
+.profile-form-photo-inner_active:hover .profile-form-img-icon {
+  display: none; }
+
+.profile-form-photo-inner_active .profile-form-img:before {
+  display: none; }
+
+.profile-form .MultiFile-remove {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 15px; }
+
+.profile-form .MultiFile-title {
+  display: none; }
+
+.profile-form .MultiFile-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  width: 110px;
+  height: 110px;
+  border-radius: 15px; }
+
+.profile-form-radio {
+  margin-right: 25px; }
+  .profile-form-radio:last-child {
+    margin-right: 0; }
+
+.file-name-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 25px;
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  border: 1.5px solid #E0E0E0;
+  border-radius: 5px; }
 
 @media screen and (max-width: 992px) {
   .profile-address-list-item {
@@ -8823,17 +8888,26 @@ body.mob-menu-show {
     width: 81px;
     height: 81px;
     border-radius: 10px; }
+  .profile-form-img-icon {
+    display: block; }
   .profile-form-gender {
     height: 38px;
     padding-left: 23px; }
   .profile-form-gender-label {
     font-size: 14px;
     margin-right: 13px; }
+  .profile-form-file {
+    width: 81px;
+    height: 81px; }
   .profile-form-gender-name {
     font-size: 12px; }
-  .profile-form-link {
+  .profile-form .MultiFile-remove {
     font-size: 13px; }
-  .profile-form-icon {
+  .profile-form .MultiFile-preview {
+    min-width: 81px;
+    width: 81px;
+    height: 81px; }
+  .file-name-close {
     min-width: 20px;
     width: 21px;
     height: 21px;
@@ -8843,14 +8917,227 @@ body.mob-menu-show {
   .profile-address-button {
     min-width: auto;
     width: 100%; }
+  .profile-form-photo-inner {
+    display: flex;
+    align-items: center; }
   .profile-form-personal {
     flex-direction: column; }
   .profile-form-photo {
-    display: flex;
-    align-items: center;
     min-width: auto;
     width: auto;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-right: 0; }
   .profile-form-img {
     margin-right: 25px;
     margin-bottom: 0; } }
+
+.profile-orders {
+  margin-bottom: 45px; }
+  .profile-orders-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-top: -1px;
+    margin-bottom: -1px; }
+    .profile-orders-item:last-child {
+      border-bottom-width: 0; }
+    .profile-orders-item:hover {
+      box-shadow: 0px 0px 30px rgba(206, 206, 206, 0.4);
+      border-radius: 15px;
+      border-bottom-color: transparent;
+      background-color: #fff; }
+  .profile-orders-col {
+    padding-left: 34px;
+    padding-right: 34px; }
+  .profile-orders-col_name {
+    width: 30%; }
+  .profile-orders-col_status {
+    width: 36%; }
+  .profile-orders-col_price {
+    width: 16%;
+    text-align: right; }
+  .profile-orders-col_link {
+    width: 18%;
+    text-align: right; }
+  .profile-orders-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.085em;
+    color: #333333; }
+  .profile-orders-status {
+    padding: 13px 20px;
+    display: block;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgba(255, 230, 138, 0.5);
+    color: #C1AB5A;
+    font-size: 15px;
+    font-weight: 700; }
+  .profile-orders-status_taken {
+    background-color: rgba(255, 184, 196, 0.6);
+    color: #BC818B; }
+  .profile-orders-status_ready {
+    background-color: #DBF4DF;
+    color: #59A750; }
+  .profile-orders-status_received {
+    background-color: #E4E4F2;
+    color: #5E5E8D;
+    opacity: 0.7; }
+  .profile-orders-price {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.085em;
+    color: #2D2A1E;
+    white-space: nowrap; }
+  .profile-orders-currency {
+    font-size: 19px; }
+  .profile-orders-link {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.085em;
+    text-decoration-line: underline;
+    color: #59A750; }
+    .profile-orders-link:hover {
+      color: #59A750;
+      text-decoration: none; }
+  .profile-orders-indicator {
+    display: none; }
+
+@media screen and (max-width: 1200px) {
+  .profile-orders-item {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .profile-orders-col {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .profile-orders-name {
+    font-size: 14px;
+    line-height: 21px; }
+  .profile-orders-status {
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 21px; }
+  .profile-orders-price {
+    font-size: 17px; }
+  .profile-orders-currency {
+    font-size: 16px; }
+  .profile-orders-link {
+    font-size: 13px; } }
+
+@media screen and (max-width: 720px) {
+  .profile-orders-item {
+    flex-wrap: wrap; }
+  .profile-orders-col_name {
+    width: 100%;
+    margin-bottom: 10px; }
+  .profile-orders-col_status {
+    width: 100%;
+    margin-bottom: 10px; }
+  .profile-orders-col_price {
+    width: 50%;
+    text-align: left; }
+  .profile-orders-col_link {
+    width: 50%; } }
+
+.profile-wishlist-panel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; }
+
+.profile-wishlist-title {
+  margin-bottom: 0;
+  margin-right: auto; }
+
+.profile-wishlist-link-wrapper {
+  margin-left: auto; }
+
+.profile-wishlist-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  color: #828282; }
+
+.profile-wishlist-link-icon {
+  margin-left: 5px; }
+
+.profile-wishlist-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.profile-wishlist-products {
+  margin-bottom: 44px; }
+
+.profile-wishlist-sum {
+  margin-left: 78px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #111111;
+  white-space: nowrap; }
+
+.profile-wishlist-sum-price {
+  margin-left: 24px;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: 0.085em;
+  color: #2D2A1E; }
+
+.profile-wishlist-sum-currency {
+  margin-left: 6px;
+  font-size: 25px; }
+
+.profile-wishlist-button {
+  margin-left: 30px; }
+  .profile-wishlist-button:first-child {
+    margin-left: 0; }
+
+.profile-wishlist-products .products-links {
+  visibility: visible; }
+
+@media screen and (max-width: 1200px) {
+  .profile-wishlist-products {
+    margin-bottom: 25px; }
+  .profile-wishlist-sum {
+    margin-left: 20px;
+    font-size: 20px; }
+  .profile-wishlist-sum-price {
+    margin-left: 2px;
+    font-size: 22px; }
+  .profile-wishlist-button {
+    margin-left: 14px; }
+  .profile-wishlist-sum-currency {
+    margin-left: 4px;
+    font-size: 21px; } }
+
+@media screen and (max-width: 992px) {
+  .profile-wishlist-link {
+    font-size: 14px; } }
+
+@media screen and (max-width: 720px) {
+  .profile-wishlist-panel {
+    flex-wrap: wrap;
+    margin-bottom: 25px; }
+  .profile-wishlist-link-wrapper {
+    width: 100%;
+    order: 1;
+    text-align: right;
+    margin-top: 10px; }
+  .profile-wishlist-link {
+    font-size: 13px; }
+  .profile-wishlist-actions {
+    justify-content: flex-start; }
+  .profile-wishlist-sum {
+    order: -1;
+    margin-left: 0;
+    margin-bottom: 15px; }
+  .profile-wishlist-button {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 20px; } }

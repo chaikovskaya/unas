@@ -379,6 +379,39 @@ function initPopupForgot() {
     });
 }
 
+function initPopupBuy() {
+    $('.js-popup-buy').each(function() {
+        $(this).on('click',function(e) {
+            e.preventDefault();
+            var url = $(this).data('src');
+
+            $('.js-preloader').removeClass('g-hidden');
+
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "html",
+                success: function (data) {
+                    $('.js-form-popup').html(data);
+                    initValidate();
+                    initMask();
+                    initScroll();
+
+                    function initSetDelay() {
+                        var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
+                        new MobileMenu('.JS-PopupForm', local)._open();
+                    }
+                    setTimeout(initSetDelay, 10);
+
+                    $('.js-preloader').addClass('g-hidden');
+                },
+                error: function(data) {
+                }
+            });
+        });
+    });
+}
+
 function initPopupBasket() {
     $('.js-popup-basket').each(function() {
         $(this).on('click',function(e) {
@@ -397,6 +430,7 @@ function initPopupBasket() {
                     initScroll();
                     initQuantity();
                     initShowMoreBasket();
+                    initPopupBuy();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -1873,15 +1907,15 @@ function initAjaxMoreProducts() {
     var common = {
         beforeSend: function () {
             lastElement = $(".js-slider-catalog .js-slider-item").length;
-            console.log(lastElement);
         },
         success: function () {
             if ( GLOBAL.widthWindow == 'isMobile') {
                 reInitSliderCatalog();
                 initSliderCatalog();
                 $(".js-slider-catalog .js-slider-list").trigger('to.owl.carousel', lastElement);
-                initProgressbar();
             }
+            initProgressbar();
+            initDropdownMarks();
         }
     };
 
@@ -2270,8 +2304,36 @@ function reInitSliderAlgorithm() {
 function initFiles() {
     $('.js-file-input').MultiFile({
         STRING: {
-            remove: '<i class="file-name-close las la-times"></i>'
+            remove: 'Удалить<i class="file-name-close"><span class="icon icon_cross_gray"></span></i>',
+            toomany: 'Выбрано слишком много файлов (максимум: $max)',
+        },
+        previewCss: 'max-height:100%; max-width:100%;',
+        afterFileAppend: function () {
+            $('.profile-form-photo-inner').removeClass('profile-form-photo-inner_active')
+                                          .addClass('profile-form-photo-inner_active');
+        },
+        FileRemove: function () {
+            $('.profile-form-photo-inner').removeClass('profile-form-photo-inner_active');
+        },
+    });
+}
+
+function initAjaxMoreOrders() {
+    if (typeof(AjaxMore) === 'undefined' || !jQuery.isFunction(AjaxMore)) {
+        return false;
+    }
+
+    var common = {
+        beforeSend: function () {
+        },
+        success: function () {
+            initProgressbar();
         }
+    };
+
+    $('.JS-AjaxMore-Orders').not('.JS-AjaxMore-ready').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('ajaxmore'));
+        new AjaxMore(this, jQuery.extend({}, common, local));
     });
 }
 
@@ -2350,6 +2412,7 @@ $(document).ready(function () {
     initPopupProfile();
     initPopupRegistration();
     initPopupBasket();
+    initPopupBuy();
     initPassword();
     initTab();
     initSearch();
@@ -2384,4 +2447,5 @@ $(document).ready(function () {
     initRadioActive();
     initSliderTabsDelivery();
     initFiles();
+    initAjaxMoreOrders();
 });

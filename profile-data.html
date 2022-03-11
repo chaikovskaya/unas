@@ -789,17 +789,16 @@
                                 </ul>
                             </div>
 
-                            <div class="tabs-item tabs-item_active JS-Tab-Item">
+                            <div class="profile-form-item profile-form-item_data tabs-item tabs-item_active JS-Tab-Item">
                                 <form class="js-form-validate">
                                     <div class="profile-form-personal">
                                         <div class="profile-form-photo">
-                                            <label class="profile-form-img">
-                                                <input type="file" class="file-input with-preview max-1 js-file-input" accept="jpg|jpeg|png" size="5242880" name="myfile" />
-                                                <span class="profile-form-img-icon icon icon_plus"></span>
-                                            </label>
-                                            <a class="profile-form-link" href="#">
-                                                Удалить<span class="profile-form-icon"><span class="icon icon_cross_gray"></span></span>
-                                            </a>
+                                            <div class="profile-form-photo-inner">
+                                                <label class="profile-form-img">
+                                                    <span class="profile-form-img-icon icon icon_plus"></span>
+                                                </label>
+                                                <input type="file" class="profile-form-file file-input with-preview max-1 js-file-input" accept="jpg|jpeg|png" size="5242880" name="myfile" title="" />
+                                            </div>
                                         </div>
                                         <div class="profile-form-block row">
                                         <div class="col-md-6">
@@ -828,6 +827,18 @@
                                                     <span class="profile-form-gender-name profile-form-gender-name_man switch-label">Мужской</span>
                                                     <span class="profile-form-gender-name switch-label">Женский</span>
                                                 </label>
+                                                <!--
+                                                <label class="profile-form-radio radio">
+                                                    <input class="radio-input" type="radio" name="param1" checked="checked" />
+                                                    <i class="radio-check"></i>
+                                                    <span class="radio-label">Мужской</span>
+                                                </label>
+                                                <label class="profile-form-radio radio">
+                                                    <input class="radio-input" type="radio" name="param1" />
+                                                    <i class="radio-check"></i>
+                                                    <span class="radio-label">Женский</span>
+                                                </label>
+                                                -->
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -847,7 +858,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="tabs-item JS-Tab-Item">
+                            <div class="profile-form-item tabs-item JS-Tab-Item">
                                 <div class="profile-address-list row">
                                     <div class="profile-address-list-item col-md-6">
                                         <div class="profile-address-value">440064, г. Пенза, ул. Перспективная, 9-158</div>
@@ -896,7 +907,7 @@
                                     <button class="profile-address-button button">ДОБАВИТЬ АДРЕС</button>
                                 </form>
                             </div>
-                            <div class="tabs-item JS-Tab-Item">
+                            <div class="profile-form-item tabs-item JS-Tab-Item">
                                 <form class="js-form-validate">
                                     <div class="profile-form-block row">
                                         <div class="col-12">

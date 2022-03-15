@@ -220,6 +220,10 @@ label.form-error {
         background-color: #BDBDBD;
         box-shadow: none;
     }
+    &_modified {
+        height: 43px;
+        line-height: 43px;
+    }
 }
 
 /*selectric*/
@@ -615,6 +619,7 @@ label.form-error {
     background-color: rgba(219, 244, 223, 0.7);
     border-radius: 15px;
     color: #333333;
+    letter-spacing: normal;
 }
 
 @media screen

@@ -329,6 +329,7 @@ function initPopupRegistration() {
                     initMask();
                     initPopupProfile();
                     initScroll();
+                    initForm();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -396,6 +397,7 @@ function initPopupBuy() {
                     initValidate();
                     initMask();
                     initScroll();
+                    initForm();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -2337,6 +2339,75 @@ function initAjaxMoreOrders() {
     });
 }
 
+function initSliderManufacture() {
+    $(".js-slider-manufacture").each(function(){
+        var $element = $(this),
+            $list = $element.find('.js-slider-list'),
+            $buttons = $element.find('.js-slider-buttons'),
+            $prev = $element.find('.js-slider-prev'),
+            $next = $element.find('.js-slider-next'),
+            $item = $list.find('.js-slider-item'),
+            itemLength = $item.length,
+            $currentPage = $element.find('.js-slider-current'),
+            $amountPages = $element.find('.js-slider-amount');
+
+        var isStart = itemLength > 1 ? true : false;
+
+        function updateButtons() {
+            $prev.removeClass('slider-button_disabled');
+            $next.removeClass('slider-button_disabled');
+            var prevOwl = $list.find('.owl-prev');
+            if (prevOwl.hasClass('disabled') && !$prev.hasClass('slider-button_disabled')) {
+                $prev.addClass('slider-button_disabled');
+            }
+
+            var nextOwl = $list.find('.owl-next');
+            if (nextOwl.hasClass('disabled') && !$next.hasClass('slider-button_disabled')) {
+                $next.addClass('slider-button_disabled');
+            }
+        }
+
+        $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
+            loop: isStart,
+            mouseDrag: isStart,
+            touchDrag: isStart,
+            autoHeight: false,
+            smartSpeed: 150,
+            margin: 40,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 24,
+                },
+                720: {
+                    items: 2,
+                    mouseDrag: true,
+                    margin: 24,
+                },
+            },
+            onInitialized : function(event) {
+                updateButtons();
+            },
+        }));
+        if (!isStart) {
+            $buttons.remove();
+        }
+        $prev.click(function(){
+            $list.trigger("prev.owl.carousel");
+        });
+        $next.click(function(){
+            $list.trigger("next.owl.carousel");
+        });
+        $list.on('translated.owl.carousel', function(event) {
+            updateButtons();
+        });
+    });
+}
+function reInitSliderManufacture() {
+    $(".js-slider-manufacture .js-slider-list").trigger('destroy.owl.carousel');
+}
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -2359,6 +2430,7 @@ function initResizeWindow() {
         initTabInner();
         initSliderBannerCooperation();
         reInitSliderAlgorithm();
+        initSliderManufacture();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         initSliderInstagram();
@@ -2376,6 +2448,7 @@ function initResizeWindow() {
         reInitSliderBanner();
         reInitSliderBannerCooperation();
         initSliderAlgorithm();
+        initSliderManufacture();
     } else {
         GLOBAL.widthWindow = '';
         initSliderInstagram();
@@ -2390,6 +2463,7 @@ function initResizeWindow() {
         reInitSliderBanner();
         reInitSliderBannerCooperation();
         initSliderAlgorithm();
+        reInitSliderManufacture();
     }
 }
 

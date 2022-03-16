@@ -54,6 +54,10 @@
         margin-right: 50px;
         margin-bottom: 37px;
     }
+    &-price-panel_wide {
+        width: 100%;
+        margin-right: 0;
+    }
     &-availability {
         margin-bottom: 37px;
     }
@@ -114,6 +118,7 @@
     &-amount {
         margin-right: 30px;
     }
+    &-amount_simple {}
     &-delivery {
         padding-bottom: 28px;
         margin-bottom: 25px;
@@ -390,8 +395,12 @@
     &-description-content {
         .h2, h2 {
             display: block;
+            margin-bottom: 22px;
             font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 22px;
+            line-height: 26px;
+            letter-spacing: 0.06em;
+            text-transform: none;
         }
     }
     &-not-available {
@@ -456,6 +465,9 @@ and (max-width: $desktop){
             order: -1;
             margin-right: 0;
         }
+        &-amount_simple {
+            margin-right: 20px;
+        }
         &-price-panel {
             order: -1;
             margin-right: 20px;
@@ -509,6 +521,13 @@ and (max-width: $desktop){
 }
 
 @media screen
+and (min-width: $tablet){
+    .card {
+
+    }
+}
+
+@media screen
 and (max-width: $tablet){
     .card {
         &-price-wrapper {
@@ -557,6 +576,9 @@ and (max-width: $tablet){
         }
         &-amount {
             margin-bottom: 13px;
+        }
+        &-amount_simple {
+            margin-bottom: 0;
         }
         &-content {
             position: relative;
@@ -646,6 +668,7 @@ and (max-width: $tablet){
         }
         &-description-content {
             .h2, h2 {
+                margin-bottom: 18px;
                 font-size: 18px;
             }
         }
@@ -715,6 +738,9 @@ and (max-width: $mobile){
         &-amount {
             margin-right: 0;
         }
+        &-amount_simple {
+            margin-bottom: 13px;
+        }
         &-button {
             width: 100%;
             margin-right: 0;
@@ -728,6 +754,10 @@ and (max-width: $mobile){
         }
         &-props-value {
             text-align: right;
+        }
+        &-price-panel_wide {
+            width: auto;
+            margin-right: 20px;
         }
     }
 }

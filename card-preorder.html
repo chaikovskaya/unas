@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Карточка. Категория. Унас</title>
+    <title>Карточка предзаказа. Унас</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
@@ -775,9 +775,6 @@
                             <li class="marks-item marks-item_element">
                                 <a href="javascript:;" class="marks-label marks-label_new">Новинка</a>
                             </li>
-                            <li class="marks-item marks-item_element">
-                                <a href="javascript:;" class="marks-label">Новинка</a>
-                            </li>
                             <li class="marks-item marks-item_switcher">
                                 <a href="javascript:;" class="marks-switcher JS-Dropdown-Switcher">
                                     <span class="marks-icon icon icon_arrow-bottom-gray"></span>
@@ -791,97 +788,29 @@
                         <h1 class="card-title">Набор елочных украшений G007 12шт 3см Микс(шарики, барабаны, подарки) Сиреневый(540)</h1>
 
                         <div class="card-price-wrapper">
-                            <div class="card-price-panel">
+                            <!-- Добавлен класс card-price-panel_wide только для страницы Картоки предзаказа -->
+                            <div class="card-price-panel card-price-panel_wide">
                                 <span class="card-price price">900<span class="card-price-currency price-currency currency">i</span></span>
                                 <span class="card-price-old">1 090&nbsp;<span class="card-price-old-currency price-old-currency currency">i</span></span>
                                 <span class="card-discount discount">-35%</span>
                             </div>
-                            <ul class="card-availability">
-                                <li class="card-availability-item">
-                                    <span class="card-availability-label">Доступно на сайте</span>
-                                    <div class="quantity js-tooltip">
-                                        <ul class="quantity-list quantity-active-3">
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                        </ul>
-                                        <div class="tooltip-info js-tooltip-content">Доступно в магазине по адресу, г.Пенза, Перспективная 9</div>
-                                    </div>
-                                </li>
-                                <li class="card-availability-item">
-                                    <span class="card-availability-label">Доступно в магазине</span>
-                                    <div class="quantity js-tooltip">
-                                        <ul class="quantity-list quantity-active-4">
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                            <li class="quantity-item">
-                                                <a class="quantity-link" href="javascript:;"></a>
-                                            </li>
-                                        </ul>
-                                        <div class="tooltip-info js-tooltip-content">Доступно в магазине по адресу, г.Пенза, Перспективная 9</div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="card-amount amount amount_simple JS-Quantity" data-quantity="{'maxNumber': '1000'}">
-                                <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
+                            <div class="card-amount card-amount_simple amount amount_simple amount_disabled JS-Quantity" data-quantity="{
+                                'minNumber': '0',
+                                'maxNumber': '1000',
+                                'classDisabled': 'amount_disabled'
+                            }">
+                                <input class="amount-digit JS-Quantity-Number" type="number" value="0" />
                                 <span>
-                                    <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon icon icon_arrow-simple-top"></i></a>
-                                    <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon icon icon_arrow-simple-bottom"></i></a>
+                                    <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon amount-icon_top icon icon_arrow-simple-top"></i></a>
+                                    <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon amount-icon_bottom icon icon_arrow-simple-bottom"></i></a>
                                 </span>
                             </div>
-                            <a class="card-button button" href="#"><span class="products-icon icon icon_basket-light"></span>В КОРЗИНУ</a>
-                            <a class="card-button card-button_simple button button_simple js-popup-buy" href="javascript:;" data-src="./ajax/buy.html">КУПИТЬ В 1 КЛИК</a>
+                            <a class="card-button card-button_simple button button_simple" href="javascript:;">СДЕЛАТЬ ПРЕДЗАКАЗ</a>
                             <a class="card-wishlist products-links-label" href="javascript:;">
-                                <span class="icon icon_wishlist-green icon_wishlist-green_fill"></span>
+                                <span class="icon icon_wishlist-green"></span>
                             </a>
                         </div>
-                        <ul class="card-delivery">
-                            <li class="card-delivery-item">
-                                <span class="card-delivery-label">
-                                    <span class="card-delivery-icon icon icon_delivery"></span>Доставим 15 декабря
-                                </span>
-                                <span class="card-delivery-value">от 290 руб.</span>
-                            </li>
-                            <li class="card-delivery-item">
-                                <span class="card-delivery-label">
-                                    <span class="card-delivery-icon icon icon_bag"></span>Самовывоз в магазине 14 декабря
-                                </span>
-                                <div class="card-dropdown JS-Dropdown" data-dropdown="{'classActive': 'card-dropdown_active'}">
-                                    <span class="card-delivery-value JS-Dropdown-Switcher">
-                                        бесплатно<i class="card-dropdown-icon icon icon_arrow-bottom"></i>
-                                    </span>
-                                    <div class="card-dropdown-menu JS-Dropdown-Menu">
-                                        <ul class="card-dropdown-list">
-                                            <li class="card-dropdown-list-item">
-                                                <a class="card-dropdown-link" href="#">Параметр 1</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+
                         <span class="card-subtitle">В КАТЕГОРИИ ТОВАРОВ</span>
                         <div class="JS-ShowMore"  data-showmore="{
                             'amount': 2,
@@ -990,9 +919,9 @@
                             </a>
                         </div>
                         <div class="card-description-content content">
-                            <h2>Украшение</h2>
+                            <span class="h2">Украшение</span>
                             <p>Viverra nec consectetur viverra elit id nibh et rhoncus tellus amet mattisid nibh et rhoncus tellus amet mattisra nec consectetur viverra elit id nibh et rhoncus tellus amet mattisid nibh et rhoncus tellus amet mattis</p>
-                            <h2>Защищены от снега</h2>
+                            <span class="h2">Защищены от снега</span>
                         </div>
                     </div>
                 </div>

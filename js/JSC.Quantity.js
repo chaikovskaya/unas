@@ -7,8 +7,9 @@
 
     this.onInit = this.params.onInit || null;
     this.classReady = this.params.classReady || 'JS-Quantity-ready';
-    this.minNumber = this.params.minNumber || 0;
+    this.minNumber = this.params.minNumber || 1;
     this.maxNumber = this.params.maxNumber || 1000;
+    this.classDisabled = this.params.classDisabled || 'JS-Quantity-disabled';
 
     this.__construct();
   };
@@ -39,6 +40,11 @@
       _this._increase.apply(_this, []);
     });
 
+    this.$number.on('change.JS-Quantity', function(e, data) {
+      e.stopPropagation();
+      _this._edit.apply(_this, []);
+    });
+
     this._ready();
   };
 
@@ -52,8 +58,11 @@
     var $numberValue = this.$number.val();
 
     $numberValue --;
-    if ($numberValue > this.minNumber) {
+    if ($numberValue >= this.minNumber) {
       this.$number.val($numberValue);
+      if ($numberValue == this.minNumber && !this.$element.hasClass(this.classDisabled)) {
+        this.$element.addClass(this.classDisabled);
+      }
     }
   };
 
@@ -64,7 +73,23 @@
     if ($numberValue <= this.maxNumber) {
       this.$number.val($numberValue);
     }
+    if ($numberValue > this.minNumber) {
+      this.$element.removeClass(this.classDisabled);
+    }
   };
+
+  Quantity.prototype._edit = function _edit() {
+    var $numberValue = this.$number.val();
+
+    if ($numberValue <= this.minNumber) {
+      if (!this.$element.hasClass(this.classDisabled)) {
+        this.$element.addClass(this.classDisabled);
+      }
+    } else {
+      this.$element.removeClass(this.classDisabled);
+    }
+  };
+
   /*--/Quantity--*/
 
   global.Quantity = Quantity;

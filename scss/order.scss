@@ -7,9 +7,10 @@
         max-width: 995px;
     }
     &-info {
-        display: inline-block;
+        display: flex;
+        max-width: 506px;
         margin-bottom: 55px;
-        padding: 12px 105px 12px 32px;
+        padding: 12px 32px;
         background-color: rgba(219, 244, 223, 0.7);
         border-radius: 15px;
         font-size: 15px;

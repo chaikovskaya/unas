@@ -4,29 +4,34 @@
     &-list {
         display: -ms-grid;
         display: grid;
-        -ms-grid-columns: 1fr 1fr 1fr;
+        -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
+        -ms-grid-rows: 1fr 40px 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        -ms-grid-gap: 40px;
         grid-gap: 40px;
-        -ms-grid-auto-rows: minmax(334px, auto);
         grid-auto-rows: minmax(334px, auto);
     }
     &-list-item {
         width: 100%;
     }
     &-list-item_1 {
-        -ms-grid-column: 1/3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         grid-column: 1/3;
-        -ms-grid-row: 1/2;
         grid-row: 1/2;
     }
     &-list-item_2 {
-        -ms-grid-row: 1/3;
+        -ms-grid-column: 5;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
         grid-row: 1/3;
     }
     &-list-item_3 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
     }
     &-list-item_4 {
+        -ms-grid-column: 3;
+        -ms-grid-row: 3;
     }
     &-list-block {
         position: relative;

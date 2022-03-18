@@ -153,6 +153,7 @@
         cursor: pointer;
     }
     &-delivery-icon {
+        margin-top: -2px;
         margin-right: 20px;
         vertical-align: middle;
     }
@@ -243,7 +244,7 @@
     }
     &-gallery-main {
         position: relative;
-        height: 700px;
+        height: 615px;
         width: 100%;
         overflow: hidden;
         padding-right: 40px;
@@ -342,7 +343,7 @@
         text-align: center;
         cursor: pointer;
         background-color: #fff;
-        border: 1px solid transparent;
+        border: 1px solid #fff;
     }
     &-thumbs-button_top {}
     &-thumbs-button_bottom {
@@ -447,6 +448,22 @@
 
 @media screen
 and (max-width: $large){
+    .card {
+        &-availability {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $notebook){
+    .card {
+        &-button {
+            margin-right: 20px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    }
 }
 
 @media screen
@@ -500,8 +517,7 @@ and (max-width: $desktop){
             padding-right: 0;
         }
         &-button {
-            margin-right: 20px;
-            padding-right: 20px;
+             padding-right: 20px;
             padding-left: 20px;
         }
         &-delivery-item {
@@ -517,15 +533,13 @@ and (max-width: $desktop){
         &-description {
             width: 65%;
         }
+        &-dropdown-menu {
+            left: auto;
+            right: 0;
+        }
     }
 }
 
-@media screen
-and (min-width: $tablet){
-    .card {
-
-    }
-}
 
 @media screen
 and (max-width: $tablet){
@@ -557,6 +571,7 @@ and (max-width: $tablet){
         &-price {
             margin-right: 17px;
             font-size: 18px;
+            line-height: 20px;
         }
         &-price-currency {
             font-size: 17px;
@@ -601,6 +616,7 @@ and (max-width: $tablet){
             font-size: 12px;
         }
         &-delivery-icon {
+            margin-top: 2px;
             margin-right: 10px;
         }
         &-subtitle {
@@ -638,7 +654,7 @@ and (max-width: $tablet){
         &-gallery-thumbs {
             width: 44px;
             min-width: 44px;
-            height: 270px;
+            height: 280px;
             margin-right: 10px;
         }
         &-gallery-video {
@@ -651,10 +667,6 @@ and (max-width: $tablet){
         &-thumbs-item {
             padding: 3px;
             border-width: 1px;
-        }
-        &-dropdown-menu {
-            left: auto;
-            right: 0;
         }
         &-video-icon-play {
             margin-right: -4px;
@@ -671,6 +683,9 @@ and (max-width: $tablet){
                 margin-bottom: 18px;
                 font-size: 18px;
             }
+        }
+        &-dropdown-link {
+            font-size: 13px;
         }
         &-props {
             margin-bottom: 30px;

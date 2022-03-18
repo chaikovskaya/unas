@@ -15,7 +15,8 @@ function initMap() {
             zoom: zoom,
             controls: ['zoomControl', 'fullscreenControl'],
         }, {
-                autoFitToViewport: 'always'
+                autoFitToViewport: 'always',
+                balloonPanelMaxMapArea: 0,
             }),
         objectManager = new ymaps.ObjectManager(),
         masObjects =[];

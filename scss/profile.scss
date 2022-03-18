@@ -53,7 +53,7 @@
     &-list-name {
         display: flex;
         align-items: center;
-        padding: 23px 39px;
+        padding: 23px 20px 23px 39px;
         background-color: #59A750;
         font-weight: 700;
         font-size: 18px;
@@ -219,6 +219,7 @@ and (max-width: $mobile){
         max-width: 1082px;
     }
     &-block {
+        flex-grow: 1;
         margin-bottom: 10px;
     }
     &-gender {
@@ -1325,6 +1326,10 @@ and (max-width: $tablet) {
         }
         &-progressbar-track {
             height: 37px;
+            border-radius: 10px;
+        }
+        &-progressbar-value {
+            border-radius: 10px;
         }
         &-progressbar-info {
             margin-bottom: 19px;

@@ -544,7 +544,7 @@ function initExpand() {
             local = GLOBAL.parseData(jQuery(this).data('expand')),
             classActive = local.classActive || 'active',
             classShow = local.classShow || 'show',
-            heightParent = parseInt($block.css('min-height'),10) || 26,
+            heightParent = parseInt($block.css('min-height'),10) || 24,
             heightChild = $block.height();
 
         if (heightChild > heightParent) {
@@ -1497,11 +1497,6 @@ function initSliderAbout() {
         });
         $list.on('prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
-            initIndicator($element, index, itemLength);
-            if (index < 10) {
-                index =  '0' + index;
-            }
-            $currentPage.html(index);
 
             angle = angle - 110;
             $list.css('transform','rotate(' + angle + 'deg)');
@@ -1511,15 +1506,15 @@ function initSliderAbout() {
             $description.removeClass('about-description-item_active');
             item.addClass('about-description-item_active');
 
-            updateButtons();
-        });
-        $list.on('next.owl.carousel', function(event) {
-            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
             initIndicator($element, index, itemLength);
             if (index < 10) {
                 index =  '0' + index;
             }
             $currentPage.html(index);
+            updateButtons();
+        });
+        $list.on('next.owl.carousel', function(event) {
+            var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
 
             angle = angle + 110;
             $list.css('transform','rotate(' + angle + 'deg)');
@@ -1529,6 +1524,11 @@ function initSliderAbout() {
             $description.removeClass('about-description-item_active');
             item.addClass('about-description-item_active');
 
+            initIndicator($element, index, itemLength);
+            if (index < 10) {
+                index =  '0' + index;
+            }
+            $currentPage.html(index);
             updateButtons();
         });
     });
@@ -1945,7 +1945,7 @@ function initGalleryCard() {
             0: {
             },
             720: {
-                spaceBetween: 5,
+                spaceBetween: 7,
             },
         }
     });

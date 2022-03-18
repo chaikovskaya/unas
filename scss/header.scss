@@ -9,7 +9,7 @@
     &-top-item {
         display: flex;
         align-items: center;
-        padding-top: 20px;
+        padding-top: 22px;
     }
     &-top-icon {
         display: inline-block;
@@ -42,7 +42,7 @@
     &-city {
         position: relative;
         padding-right: 38px;
-        padding-left: 38px;
+        padding-left: 41px;
     }
     &-city-dropdown {
         display: none;
@@ -63,7 +63,7 @@
     }
     &-city-icon {
         vertical-align: middle;
-        margin-right: 14px;
+        margin-right: 12px;
     }
     &-city-switcher {
         display: inline-block;
@@ -128,7 +128,7 @@
 
     &-phone {
         position: relative;
-        padding-right: 38px;
+        padding-right: 41px;
         padding-left: 38px;
     }
     &-phone-dropdown {
@@ -242,7 +242,7 @@
     &-top-basket {
         display: none;
         position: relative;
-        top: 3px;
+        top: 4px;
     }
     &-top-help {
         display: none;
@@ -252,7 +252,7 @@
     &-top-delivery {
         display: none;
         position: relative;
-        top: 3px;
+        top: 4px;
     }
     &-top-search {
         display: none;
@@ -1066,7 +1066,7 @@ body.mob-menu-show {
     display: flex;
     align-items: center;
     &-item {
-        margin-right: 26px;
+        margin-right: 27px;
         line-height: 16px;
         &:last-child {
             margin-right: 0;

@@ -9938,7 +9938,7 @@ body.mob-menu-show {
       font-size: 12px;
       line-height: 19px; }
     .manufacture-list-description {
-      padding: 39px 25px;
+      padding: 25px 25px;
       font-size: 14px; }
     .manufacture-list-img {
       max-height: 250px; }
@@ -9976,3 +9976,9 @@ body.mob-menu-show {
       right: 24px;
       width: 65px;
       height: 81px; } }
+
+@media screen and (max-width: 720px) {
+  .manufacture-list-block {
+    min-height: 450px; }
+  .manufacture-list-description {
+    font-size: 13px; } }

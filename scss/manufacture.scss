@@ -203,7 +203,7 @@ and (max-width: $tablet){
             line-height: 19px;
         }
         &-list-description {
-            padding: 39px 25px;
+            padding: 25px 25px;
             font-size: 14px;
         }
         &-list-img {
@@ -262,4 +262,12 @@ and (max-width: $tablet){
 
 @media screen
 and (max-width: $mobile){
+    .manufacture {
+        &-list-block {
+            min-height: 450px;
+        }
+        &-list-description {
+            font-size: 13px;
+        }
+    }
 }

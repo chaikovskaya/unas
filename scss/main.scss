@@ -193,7 +193,7 @@
 }
 
 .catalog-gallery {
-    margin-bottom: 113px;
+    margin-bottom: 106px;
     &-list {
         width: 1600px;
         margin-left: 50%;
@@ -265,6 +265,7 @@
         position: absolute;
         left: 0;
         bottom: 43px;
+        z-index: 1;
         font-weight: 600;
         font-size: 16px;
         line-height: 25px;
@@ -276,10 +277,12 @@
         text-transform: uppercase;
     }
     &-pic {
+        position: absolute;
+        right: 0;
+        bottom: 0;
         display: flex;
+        width: 100%;
         height: 238px;
-        margin-top: auto;
-        margin-left: auto;
     }
     &-img {
         display: block;
@@ -309,10 +312,7 @@
     .owl-item.active &-pic {
         height: 328px;
     }
-    .owl-item.active +.owl-item.active &-pic {
-        height: 430px;
-    }
-    .owl-item.active + .owl-item.active + .owl-item.active &-pic {
+    .owl-item.active ~ .owl-item.active &-pic {
         height: 430px;
     }
     .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active &-pic {
@@ -511,6 +511,7 @@ and (max-width: $tablet){
         &-item {
             width: 230px;
             height: 330px;
+            padding-top: calc(330px - 293px);
         }
         .owl-item.active &-item {
             padding-top: calc(330px - 293px);
@@ -525,10 +526,13 @@ and (max-width: $tablet){
             padding-top: calc(330px - 293px);
         }
         .owl-item.active &-pic {
+            height: 224px;
+        }
+        .owl-item.active ~ .owl-item.active &-pic {
             height: 250px;
         }
-        .owl-item.active + .owl-item.active &-pic {
-            height: 250px;
+        .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active &-pic {
+            height: 224px;
         }
         &-link {
             padding-top: 30px;
@@ -636,6 +640,9 @@ and (max-width: $mobile){
             padding-top: 0;
         }
         &-pic {
+            height: 250px;
+        }
+        .owl-item.active &-pic {
             height: 250px;
         }
     }
@@ -961,7 +968,7 @@ and (max-width: $mobile){
     &-block_simple {
         height: auto;
         padding-top: 36px;
-        margin-bottom: 30px;
+        margin-bottom: 8px;
     }
     &-box {
         display: flex;
@@ -1012,6 +1019,36 @@ and (max-width: $large){
 and (max-width: $desktop){
     .products {
         margin-bottom: 42px;
+        &-block_simple {
+            width: 48%;
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-block_simple &-box {
+            display: block;
+            position: relative;
+        }
+        &-block_simple &-pic {
+            width: 100%;
+            padding-right: 0;
+        }
+        &-block_simple &-link {
+            margin-bottom: 23px;
+        }
+        &-block_simple &-detail {
+            width: 100%;
+        }
+        &-block_simple &-links {
+            position: absolute;
+            top: -5px;
+            right: 0;
+        }
+        &-block_simple &-button {
+            margin-right: 0;
+            width: 100%;
+        }
     }
     .marks {
         &_line {
@@ -1076,36 +1113,6 @@ and (max-width: $tablet){
         &-actions {
             visibility: visible;
         }
-        &-block_simple {
-            width: 48%;
-            margin-right: 25px;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-        &-block_simple &-box {
-            display: block;
-            position: relative;
-        }
-        &-block_simple &-pic {
-            width: 100%;
-            padding-right: 0;
-        }
-        &-block_simple &-link {
-            margin-bottom: 23px;
-        }
-        &-block_simple &-detail {
-            width: 100%;
-        }
-        &-block_simple &-links {
-            position: absolute;
-            top: -5px;
-            right: 0;
-        }
-        &-block_simple &-button {
-            margin-right: 0;
-            width: 100%;
-        }
         &-links {
             visibility: visible;
         }
@@ -1114,6 +1121,9 @@ and (max-width: $tablet){
         }
         &-code {
             margin-bottom: 12px;
+        }
+        &-block_simple {
+            margin-right: 25px;
         }
     }
     .price {
@@ -1183,7 +1193,7 @@ and (max-width: $mobile){
 
 
 .new {
-    margin-bottom: 28px;
+    margin-bottom: 76px;
     &-title {
         margin-bottom: 61px;
     }
@@ -1194,39 +1204,13 @@ and (max-width: $mobile){
         width: 640px;
     }
     .products-img {
-        height: 297px;
+        height: 260px;
     }
     .products-block_simple .products-img {
          height: 197px;
     }
 }
 
-
-.about {
-    margin-bottom: 108px;
-    &-img {
-        padding-right: $gutters;
-    }
-    &-description {
-    }
-    &-detail {
-        margin-bottom: 28px;
-        ul li {
-            margin-bottom: 3px;
-        }
-    }
-    &-subtitle {
-        display: block;
-        text-transform: uppercase;
-        font-weight: 800;
-    }
-    &-description-item {
-        display: none;
-    }
-    &-description-item_active {
-        display: block;
-    }
-}
 
 .instagram {
     margin-bottom: 112px;
@@ -1451,10 +1435,11 @@ and (max-width: $large){
 and (max-width: $desktop){
     .new {
         &-item {
-            width: auto;
+            width: 294px;
         }
         &-item_wide {
-            width: auto;
+            width: 618px;
+            display: flex;
         }
     }
     .subscribe {
@@ -1738,10 +1723,28 @@ and (max-width: 500px) {
     &-img {
         width: 52%;
         padding-left: 60px;
+        padding-right: $gutters;
+    }
+    &-detail {
+        margin-bottom: 28px;
+        ul li {
+            margin-bottom: 3px;
+        }
+    }
+    &-subtitle {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 800;
     }
     &-description {
         width: 48%;
         padding-top: 10px;
+    }
+    &-description-item {
+        display: none;
+    }
+    &-description-item_active {
+        display: block;
     }
     &-block {
         display: flex;
@@ -1877,7 +1880,8 @@ and (max-width: $large){
             height: 173px;
             border-width: 13px;
             &:hover {
-                border-width: 8px;
+                border-width: 11px;
+                transform: scale(1.16);
             }
         }
         & .owl-item.active + .owl-item.active &-gallery-item {
@@ -1891,15 +1895,24 @@ and (max-width: $large){
 
         & .owl-item.active + .owl-item.active &-gallery-item:hover {
             &:hover {
-                border-width: 8px;
-                transform: scale(1.9);
+                border-width: 11px;
+                transform: scale(1.3);
             }
         }
         & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item:hover {
             &:hover {
-                border-width: 8px;
-                transform: scale(1.65);
+                border-width: 11px;
+                transform: scale(1.16);
             }
+        }
+    }
+}
+
+@media screen
+and (max-width: $notebook){
+    .about {
+        &-slider-panel {
+            margin-left: 345px;
         }
     }
 }
@@ -1919,6 +1932,24 @@ and (max-width: $desktop){
             width: 380px;
             height: 380px;
             border-width: 15px;
+        }
+        &-gallery-item {
+            &:hover {
+                border-width: 9px;
+                transform: scale(1.18);
+            }
+        }
+        & .owl-item.active + .owl-item.active &-gallery-item:hover {
+            &:hover {
+                border-width: 9px;
+                transform: scale(1.3);
+            }
+        }
+        & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item:hover {
+            &:hover {
+                border-width: 9px;
+                transform: scale(1.18);
+            }
         }
     }
     .marks {
@@ -1967,6 +1998,10 @@ and (max-width: $tablet){
             width: 93px;
             height: 93px;
             border-width: 9px;
+            &:hover {
+                border-width: 6px;
+                transform: scale(1.42);
+            }
         }
         & .owl-item.active + .owl-item.active &-gallery-item {
             width: 77px;
@@ -1975,6 +2010,19 @@ and (max-width: $tablet){
         & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item {
             width: 93px;
             height: 93px;
+        }
+
+        & .owl-item.active + .owl-item.active &-gallery-item:hover {
+            &:hover {
+                border-width: 6px;
+                transform: scale(1.75);
+            }
+        }
+        & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item:hover {
+            &:hover {
+                border-width: 6px;
+                transform: scale(1.42);
+            }
         }
     }
 }
@@ -2018,6 +2066,10 @@ and (max-width: $mobile) {
         &-gallery-item {
             width: 106px;
             height: 106px;
+            &:hover {
+                border-width: 6px;
+                transform: scale(1.2);
+            }
         }
         .owl-item.active {
             bottom: auto;
@@ -2043,6 +2095,19 @@ and (max-width: $mobile) {
         & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item {
             width: 106px;
             height: 106px;
+        }
+
+        & .owl-item.active + .owl-item.active &-gallery-item:hover {
+            &:hover {
+                border-width: 6px;
+                transform: scale(1.37);
+            }
+        }
+        & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item:hover {
+            &:hover {
+                border-width: 6px;
+                transform: scale(1.2);
+            }
         }
     }
 }

@@ -1127,7 +1127,7 @@ function initSliderNew() {
                     margin: 24,
                 },
                 992: {
-                    autoWidth: false,
+                    autoWidth: true,
                     items: 2,
                     loop: itemLength > 2 ? true : false,
                 },
@@ -1500,7 +1500,7 @@ function initSliderAbout() {
         $list.on('prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
 
-            angle = angle - 110;
+            angle = angle - 120;
             $list.css('transform','rotate(' + angle + 'deg)');
             $list.find('.owl-item.active').css('transform','rotate(' + (-angle) + 'deg)');
 
@@ -1518,7 +1518,7 @@ function initSliderAbout() {
         $list.on('next.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
 
-            angle = angle + 110;
+            angle = angle + 120;
             $list.css('transform','rotate(' + angle + 'deg)');
             $list.find('.owl-item.active').css('transform','rotate(-' + angle + 'deg)');
 

@@ -194,9 +194,16 @@
 
 .catalog-gallery {
     margin-bottom: 113px;
+    &-list {
+        width: 1600px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
     &-item {
         width: 370px;
-        height: 265px;
+        height: 550px;
+        padding-top: calc(550px - 359px);
+        transition: padding-top 0.3s linear;
     }
     .owl-item {
         margin-top: auto;
@@ -280,13 +287,13 @@
         margin-left: auto;
     }
     .owl-item.active &-item {
-        height: 473px;
+        padding-top: calc(550px - 432px);
     }
     .owl-item.active ~ .owl-item.active &-item {
-        height: 550px;
+        padding-top: 0;
     }
     .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active &-item {
-        height: calc(100% - 116px);
+        padding-top: calc(550px - 432px);
     }
 
     .owl-item.active +.owl-item.active {
@@ -498,18 +505,24 @@ and (max-width: $tablet){
     .catalog-gallery {
         margin-bottom: 62px;
         &-list {
-            margin-left: 100px;
-            margin-right: 100px;
             overflow: visible;
+            width: 980px;
         }
         &-item {
-            height: calc(100% - 36px);
+            width: 230px;
+            height: 330px;
         }
         .owl-item.active &-item {
-            height: 100%;
+            padding-top: calc(330px - 293px);
         }
         &-pic {
             height: 224px;
+        }
+        .owl-item.active ~ .owl-item.active .catalog-gallery-item {
+            padding-top: 0;
+        }
+        .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active &-item {
+            padding-top: calc(330px - 293px);
         }
         .owl-item.active &-pic {
             height: 250px;
@@ -600,15 +613,27 @@ and (max-width: $mobile){
     }
     .catalog-gallery {
         &-list {
+            width: auto;
             margin-left: 0;
-            margin-right: 103px;
+            transform: none;
             overflow: visible;
         }
         &-item {
-            height: 100%;
+            width: 187px;
+            height: 330px;
+            padding-top: 0;
         }
         .owl-item {
             margin-top: 0;
+        }
+        .owl-item.active &-item {
+            padding-top: 0;
+        }
+        .owl-item.active ~ .owl-item.active .catalog-gallery-item {
+            padding-top: 0;
+        }
+        .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active &-item {
+            padding-top: 0;
         }
         &-pic {
             height: 250px;

@@ -3733,9 +3733,15 @@ body.mob-menu-show {
 
 .catalog-gallery {
   margin-bottom: 113px; }
+  .catalog-gallery-list {
+    width: 1600px;
+    margin-left: 50%;
+    transform: translateX(-50%); }
   .catalog-gallery-item {
     width: 370px;
-    height: 265px; }
+    height: 550px;
+    padding-top: calc(550px - 359px);
+    transition: padding-top 0.3s linear; }
   .catalog-gallery .owl-item {
     margin-top: auto; }
   .catalog-gallery-link {
@@ -3802,11 +3808,11 @@ body.mob-menu-show {
     margin-top: auto;
     margin-left: auto; }
   .owl-item.active .catalog-gallery-item {
-    height: 473px; }
+    padding-top: calc(550px - 432px); }
   .owl-item.active ~ .owl-item.active .catalog-gallery-item {
-    height: 550px; }
+    padding-top: 0; }
   .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active .catalog-gallery-item {
-    height: calc(100% - 116px); }
+    padding-top: calc(550px - 432px); }
   .catalog-gallery .owl-item.active + .owl-item.active {
     margin-top: 0; }
   .catalog-gallery .owl-item.active + .owl-item.active + .owl-item.active {
@@ -3947,15 +3953,19 @@ body.mob-menu-show {
   .catalog-gallery {
     margin-bottom: 62px; }
     .catalog-gallery-list {
-      margin-left: 100px;
-      margin-right: 100px;
-      overflow: visible; }
+      overflow: visible;
+      width: 980px; }
     .catalog-gallery-item {
-      height: calc(100% - 36px); }
+      width: 230px;
+      height: 330px; }
     .owl-item.active .catalog-gallery-item {
-      height: 100%; }
+      padding-top: calc(330px - 293px); }
     .catalog-gallery-pic {
       height: 224px; }
+    .catalog-gallery .owl-item.active ~ .owl-item.active .catalog-gallery-item {
+      padding-top: 0; }
+    .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active .catalog-gallery-item {
+      padding-top: calc(330px - 293px); }
     .owl-item.active .catalog-gallery-pic {
       height: 250px; }
     .owl-item.active + .owl-item.active .catalog-gallery-pic {
@@ -4019,13 +4029,22 @@ body.mob-menu-show {
   .category-list {
     margin-right: 30px; }
   .catalog-gallery-list {
+    width: auto;
     margin-left: 0;
-    margin-right: 103px;
+    transform: none;
     overflow: visible; }
   .catalog-gallery-item {
-    height: 100%; }
+    width: 187px;
+    height: 330px;
+    padding-top: 0; }
   .catalog-gallery .owl-item {
     margin-top: 0; }
+  .owl-item.active .catalog-gallery-item {
+    padding-top: 0; }
+  .catalog-gallery .owl-item.active ~ .owl-item.active .catalog-gallery-item {
+    padding-top: 0; }
+  .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active .catalog-gallery-item {
+    padding-top: 0; }
   .catalog-gallery-pic {
     height: 250px; } }
 

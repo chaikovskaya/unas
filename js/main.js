@@ -925,10 +925,12 @@ function initSliderCatalogGallery() {
             loop: isStart,
             mouseDrag: isStart,
             touchDrag: isStart,
+            autoWidth: true,
             autoHeight: false,
             smartSpeed: 300,
             margin: 40,
             nav: true,
+            center: false,
             responsive: {
                 0: {
                     items: 1,

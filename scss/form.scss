@@ -184,6 +184,7 @@ label.form-error {
 }
 
 .button {
+    @include bgrcolor();
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -204,6 +205,7 @@ label.form-error {
     -webkit-appearance: none;
     &:hover {
         color: #fff;
+        background-color: #FF5800;
     }
     &:active {
         color: #fff;

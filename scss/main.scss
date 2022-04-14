@@ -119,14 +119,18 @@
         font-weight: 700;
         text-transform: uppercase;
         vertical-align: middle;
-        padding-right: 3px;
+        padding-right: 1px;
+        line-height: 32px;
+        letter-spacing: 0.205em;
     }
     &-total-number {
         color: #2D2A1E;
         font-size: 18px;
+        letter-spacing: 0.205em;
+        line-height: 26px;
     }
     &-number-value {
-        padding-right: 3px;
+        padding-right: 1px;
     }
 }
 
@@ -191,7 +195,8 @@
 .catalog-gallery {
     margin-bottom: 113px;
     &-item {
-        height: calc(100% - 190px);
+        width: 370px;
+        height: 265px;
     }
     .owl-item {
         margin-top: auto;
@@ -275,10 +280,10 @@
         margin-left: auto;
     }
     .owl-item.active &-item {
-        height: calc(100% - 116px);
+        height: 473px;
     }
     .owl-item.active ~ .owl-item.active &-item {
-        height: 100%;
+        height: 550px;
     }
     .owl-item.active + .owl-item.active + .owl-item.active + .owl-item.active &-item {
         height: calc(100% - 116px);
@@ -834,16 +839,19 @@ and (max-width: $mobile){
     }
     &-block {
         height: 100%;
-        padding: 20px 30px 40px;
+        padding: 22px 30px 41px;
         border-radius: 15px;
     }
     &-link {
         display: block;
-        margin-bottom: 18px;
+        margin-bottom: 23px;
     }
     &-img {
         display: block;
-        width: 100%;
+        object-fit: contain;
+        height: 208px;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 15px;
     }
     &-logo {
@@ -853,7 +861,7 @@ and (max-width: $mobile){
     }
     &-name {
         display: inline-block;
-        margin-bottom: 23px;
+        margin-bottom: 25px;
         min-height: 62px;
         font-weight: 700;
         font-size: 18px;
@@ -894,7 +902,7 @@ and (max-width: $mobile){
         border-radius: 50%;
     }
     &-links-label .icon {
-        margin-top: 1px;
+        margin-top: 3px;
     }
     &-panel {
         display: flex;
@@ -1028,6 +1036,9 @@ and (max-width: $tablet){
             width: 37px;
             height: 37px;
         }
+        &-img {
+            height: 160px;
+        }
         &-name {
             margin-bottom: 18px;
             min-height: 44px;
@@ -1072,6 +1083,9 @@ and (max-width: $tablet){
         }
         &-links {
             visibility: visible;
+        }
+        &-links-label .icon {
+            margin-top: 2px;
         }
         &-code {
             margin-bottom: 12px;
@@ -1144,11 +1158,21 @@ and (max-width: $mobile){
 
 
 .new {
+    margin-bottom: 28px;
+    &-title {
+        margin-bottom: 61px;
+    }
     &-item {
         width: 436px;
     }
     &-item_wide {
         width: 640px;
+    }
+    .products-img {
+        height: 297px;
+    }
+    .products-block_simple .products-img {
+         height: 197px;
     }
 }
 
@@ -1430,12 +1454,22 @@ and (max-width: $desktop){
 @media screen
 and (max-width: $tablet){
     .new {
+        margin-bottom: 13px;
+        &-title {
+            margin-bottom: 39px;
+        }
         &-item {
             width: 403px;
         }
         &-item_wide {
             width: 830px;
             display: flex;
+        }
+        .products-img {
+            height: 210px;
+        }
+        .products-block_simple .products-img {
+            height: 210px;
         }
     }
     .instagram {
@@ -1541,11 +1575,21 @@ and (max-width: 800px){
 @media screen
 and (max-width: $mobile){
     .new {
+        margin-bottom: 28px;
+        &-title {
+            margin-bottom: 38px;
+        }
         &-item {
             width: 542px;
         }
         &-item_wide {
             width: 1108px;
+        }
+        .products-img {
+            height: 187px;
+        }
+        .products-block_simple .products-img {
+            height: 187px;
         }
     }
     .instagram {
@@ -1653,7 +1697,7 @@ and (max-width: 500px) {
 
 
 .about {
-    margin-bottom: 220px;
+    margin-bottom: 214px;
     &-title {
         margin-bottom: 75px;
     }

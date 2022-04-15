@@ -155,6 +155,7 @@
         display: inline-block;
         padding: 0 8px;
         line-height: 0px;
+        margin-top: -1px;
     }
     &-arrow-icon {
     }
@@ -235,6 +236,9 @@
         font-size: 15px;
         color: #0D0C0B;
         letter-spacing: 0.05em;
+    }
+    &-login-link {
+        margin-top: 3px;
     }
     &-login-icon {
         margin-right: 13px;
@@ -1238,6 +1242,9 @@ and (max-width: $tablet){
         }
         &-phone-icon {
             margin-right: 0;
+        }
+        &-login-link {
+            margin-top: 0;
         }
         &-login-label {
             font-size: 14px;

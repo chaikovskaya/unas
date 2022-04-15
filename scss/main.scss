@@ -5,6 +5,7 @@
     .owl-stage {
         display: flex;
     }
+    .owl-item.active {}
     &-list {
         overflow: hidden;
         margin-right: -45px;
@@ -12,9 +13,13 @@
     }
     &-item {
         display: flex;
+        overflow: hidden;
         height: 100%;
         border-radius: 15px;
         background-color: #F8F7F7;
+    }
+    .owl-item.active &-item {
+        overflow: visible;
     }
     &-description {
         width: 48%;
@@ -23,6 +28,7 @@
         padding-bottom: 120px;
     }
     &-img {
+        display: flex;
         width: 52%;
         border-radius: 0 15px 15px 0;
     }
@@ -43,11 +49,13 @@
     }
     &-pic {
         display: block;
+        margin-top: auto;
         max-height: 480px;
     }
     &-item_modified &-pic {
-        margin-bottom: -76px;
+        margin-bottom: -88px;
         max-height: 100%;
+        margin-top: 0;
     }
     &-title {
         margin-bottom: 20px;
@@ -337,6 +345,13 @@
 @media screen
 and (max-width: $large){
     .main-banner {
+        &-description {
+            padding-left: 50px;
+        }
+        &-panel {
+            left: 50px;
+            bottom: 40px;
+        }
         &-layers-1 {
             width: 199px;
             height: 217px;
@@ -436,6 +451,9 @@ and (max-width: $desktop){
 and (max-width: $tablet){
     .main-banner {
         margin-bottom: 25px;
+        &-list {
+            overflow: visible;
+        }
         &-description {
             width: 50%;
             padding-top: 35px;
@@ -448,6 +466,7 @@ and (max-width: $tablet){
             line-height: 28px;
         }
         &-info {
+            max-width: 340px;
             margin-bottom: 25px;
             font-size: 14px;
             line-height: 20px;
@@ -471,7 +490,7 @@ and (max-width: $tablet){
             background-image: url(../images/main-banner/main-banner-layers-mob-2.png);
         }
         &-pic {
-            max-height: 300px;
+            max-height: 233px;
         }
         &-img {
             width: 50%;
@@ -484,7 +503,7 @@ and (max-width: $tablet){
             margin-left: -20px;
         }
         &-item_modified &-pic {
-            margin-bottom: -37px;
+            margin-bottom: -41px;
         }
     }
     .counter {
@@ -967,8 +986,11 @@ and (max-width: $mobile){
 
     &-block_simple {
         height: auto;
-        padding-top: 36px;
-        margin-bottom: 8px;
+        padding-top: 32px;
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     &-box {
         display: flex;
@@ -1022,6 +1044,7 @@ and (max-width: $desktop){
         &-block_simple {
             width: 48%;
             margin-right: 40px;
+            margin-bottom: 0;
             &:last-child {
                 margin-right: 0;
             }
@@ -1435,11 +1458,14 @@ and (max-width: $large){
 and (max-width: $desktop){
     .new {
         &-item {
-            width: 294px;
+            width: 352px;
         }
         &-item_wide {
-            width: 618px;
+            width: 734px;
             display: flex;
+        }
+        .products-block_simple .products-img {
+            height: 260px;
         }
     }
     .subscribe {
@@ -1457,6 +1483,19 @@ and (max-width: $desktop){
                 width: 94px;
                 height: 94px;
             }
+        }
+    }
+}
+
+@media screen
+and (max-width: 1100px){
+    .new {
+        &-item {
+            width: 294px;
+        }
+        &-item_wide {
+            width: 618px;
+            display: flex;
         }
     }
 }
@@ -1689,6 +1728,18 @@ and (max-width: $mobile){
         &-panel {
             margin-bottom: 27px;
             justify-content: center;
+        }
+    }
+}
+
+@media screen
+and (max-width: 600px){
+    .new {
+        &-item {
+            width: 460px;
+        }
+        &-item_wide {
+            width: 953px;
         }
     }
 }

@@ -51,7 +51,8 @@
     &-price-panel {
         display: flex;
         align-items: center;
-        margin-right: 50px;
+        width: 53%;
+        padding-right: 50px;
         margin-bottom: 37px;
     }
     &-price-panel_wide {
@@ -488,7 +489,8 @@ and (max-width: $desktop){
         }
         &-price-panel {
             order: -1;
-            margin-right: 20px;
+            width: auto;
+            padding-right: 20px;
         }
         &-price {
             margin-right: 17px;
@@ -518,7 +520,8 @@ and (max-width: $desktop){
             padding-right: 0;
         }
         &-button {
-             padding-right: 20px;
+            margin-right: 16px;
+            padding-right: 20px;
             padding-left: 20px;
         }
         &-delivery-item {
@@ -770,6 +773,9 @@ and (max-width: $mobile){
         }
         &-props-value {
             text-align: right;
+        }
+        &-price-panel {
+            width: auto;
         }
         &-price-panel_wide {
             width: auto;

@@ -1456,8 +1456,8 @@ function initSliderAbout() {
 
         $list.owlCarousel(jQuery.extend({}, GLOBAL.owl.common, {
             loop: isStart,
-            mouseDrag: isStart,
-            touchDrag: isStart,
+            mouseDrag: false,
+            touchDrag: false,
             autoWidth: true,
             autoHeight: false,
             smartSpeed: 300,
@@ -1468,7 +1468,6 @@ function initSliderAbout() {
                 0: {
                 },
                 720: {
-                    mouseDrag: true,
                 },
                 992: {
                 },
@@ -1500,9 +1499,8 @@ function initSliderAbout() {
         $list.on('prev.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
 
-            angle = angle - 120;
+            angle = angle - 360;
             $list.css('transform','rotate(' + angle + 'deg)');
-            $list.find('.owl-item.active').css('transform','rotate(' + (-angle) + 'deg)');
 
             var item = $description.filter('[data-slider-index="' + index + '"]');
             $description.removeClass('about-description-item_active');
@@ -1518,9 +1516,8 @@ function initSliderAbout() {
         $list.on('next.owl.carousel', function(event) {
             var index = $list.find('.owl-item.active .js-slider-item').data('slider-index');
 
-            angle = angle + 120;
+            angle = angle + 360;
             $list.css('transform','rotate(' + angle + 'deg)');
-            $list.find('.owl-item.active').css('transform','rotate(-' + angle + 'deg)');
 
             var item = $description.filter('[data-slider-index="' + index + '"]');
             $description.removeClass('about-description-item_active');

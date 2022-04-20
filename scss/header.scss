@@ -692,6 +692,9 @@ body.mob-menu-show {
         margin-right: 8px;
     }
 }
+body.catalog-menu-show {
+    overflow: hidden;
+}
 
 .sub-menu {
     position: fixed;

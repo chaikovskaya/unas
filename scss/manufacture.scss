@@ -109,6 +109,7 @@
     }
     &-list-item_1 &-list-img {
         max-width: 40%;
+        max-height: 307px;
     }
     &-list-item_2 &-list-img {
         max-height: 420px;
@@ -212,8 +213,9 @@ and (max-width: $tablet){
         &-list-item_1 &-list-inner {
             width: auto;
         }
-        .manufacture-list-item_1 .manufacture-list-img {
+        &-list-item_1 &-list-img {
             max-width: 100%;
+            max-height: 250px;
         }
         &-list-item_2 &-list-img {
             max-height: 250px;

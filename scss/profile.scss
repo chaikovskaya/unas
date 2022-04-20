@@ -875,8 +875,9 @@ and (max-width: $mobile){
     }
     &-link-picture {
         margin-right: 43px;
-        min-width: 105px;
-        width: 105px;
+        min-width: 115px;
+        width: 115px;
+        height: 115px;
     }
     &-code {
         display: block;
@@ -1050,6 +1051,7 @@ and (max-width: $tablet){
             margin-right: 25px;
             min-width: 77px;
             width: 77px;
+            height: 77px;
         }
         &-code {
             margin-bottom: 7px;
@@ -1144,6 +1146,7 @@ and (max-width: $mobile){
             margin-right: 10px;
             min-width: 58px;
             width: 58px;
+            height: 58px;
         }
         &-list-item {
             flex-wrap: wrap;

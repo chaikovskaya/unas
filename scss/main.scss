@@ -1216,7 +1216,7 @@ and (max-width: $mobile){
 
 
 .new {
-    margin-bottom: 76px;
+    margin-bottom: 85px;
     &-title {
         margin-bottom: 61px;
     }
@@ -1758,7 +1758,7 @@ and (max-width: 500px) {
 
 
 .about {
-    margin-bottom: 214px;
+    margin-bottom: 234px;
     &-title {
         margin-bottom: 75px;
     }
@@ -1772,7 +1772,7 @@ and (max-width: 500px) {
         display: flex;
     }
     &-img {
-        width: 52%;
+        width: 60%;
         padding-left: 60px;
         padding-right: $gutters;
     }
@@ -1784,12 +1784,13 @@ and (max-width: 500px) {
     }
     &-subtitle {
         display: block;
+        margin-bottom: 38px;
         text-transform: uppercase;
         font-weight: 800;
     }
     &-description {
-        width: 48%;
-        padding-top: 10px;
+        width: 37.5%;
+        padding-top: 13px;
     }
     &-description-item {
         display: none;
@@ -1823,11 +1824,11 @@ and (max-width: 500px) {
         height: 100%;
         border: 1px solid rgba(89, 167, 80, 0.57);
         border-radius: 50%;
-        transition: transform 0.4s ease-in-out;
+        transition: transform 0.8s ease-in-out;
     }
     &-slider-panel {
         margin-left: 520px;
-        margin-top: -76px;
+        margin-top: -96px;
     }
     & .owl-stage {
         width: auto!important;
@@ -1857,23 +1858,32 @@ and (max-width: 500px) {
     }
     .owl-item.active {
         position: absolute;
-        left: 15%;
-        bottom: -16%;
         z-index: 1;
+
+        bottom: auto;
+        top: 10%;
+        right: -39%;
     }
     .owl-item.active + .owl-item.active {
         bottom: auto;
         top: 9%;
         left: -11%;
+        right: auto;
     }
     .owl-item.active + .owl-item.active + .owl-item.active {
-        bottom: auto;
-        left: auto;
-        top: 1%;
-        right: -22%;
+        left: 15%;
+        right: auto;
+        top: auto;
+        bottom: -16%;
     }
     & .owl-item.active &-gallery-item {
-        background-color: #FFE68A;
+        background-color: #DBF4DF;
+        border-width: 14px;
+        transform: scale(1.65);
+    }
+    & .owl-item.active ~ .owl-item.active &-gallery-item {
+        border-width: 20px;
+        transform: none;
     }
     & .owl-item.active + .owl-item.active &-gallery-item {
         background-color: #FFB8C4;
@@ -1881,7 +1891,7 @@ and (max-width: 500px) {
         height: 187px;
     }
     & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item {
-        background-color: #DBF4DF;
+        background-color: #FFE68A;
         width: 226px;
         height: 226px;
     }
@@ -1902,11 +1912,8 @@ and (max-width: 500px) {
 @media screen
 and (min-width: $desktop) and (max-width: $large) {
     .about {
-        &-img {
-            width: 50%;
-        }
-        &-description {
-            width: 50%;
+        & .owl-item.active {
+            right: -33%;
         }
     }
 }
@@ -1934,6 +1941,12 @@ and (max-width: $large){
                 border-width: 11px;
                 transform: scale(1.16);
             }
+        }
+        & .owl-item.active &-gallery-item {
+            border-width: 11px;
+        }
+        & .owl-item.active ~ .owl-item.active &-gallery-item {
+            border-width: 13px;
         }
         & .owl-item.active + .owl-item.active &-gallery-item {
             width: 157px;
@@ -1990,6 +2003,9 @@ and (max-width: $desktop){
                 transform: scale(1.18);
             }
         }
+        & .owl-item.active .about-gallery-item {
+            transform: scale(1.3);
+        }
         & .owl-item.active + .owl-item.active &-gallery-item:hover {
             &:hover {
                 border-width: 9px;
@@ -2022,10 +2038,12 @@ and (max-width: $tablet){
             margin-bottom: 30px;
         }
         &-img {
+            width: 57%;
             margin-top: 30px;
             padding-right: 25px;
         }
         &-description {
+            width: 43%;
             padding-top: 0;
         }
         &-subtitle {
@@ -2041,7 +2059,7 @@ and (max-width: $tablet){
             margin-top: 14px;
         }
         &-slider-panel {
-            width: 120px;
+            width: 125px;
             margin-left: 200px;
             margin-top: -15px;
         }
@@ -2054,6 +2072,13 @@ and (max-width: $tablet){
                 transform: scale(1.42);
             }
         }
+        & .owl-item.active {
+            right: -36%;
+        }
+        & .owl-item.active &-gallery-item {
+            border-width: 6px;
+            transform: scale(1.43);
+        }
         & .owl-item.active + .owl-item.active &-gallery-item {
             width: 77px;
             height: 77px;
@@ -2061,6 +2086,9 @@ and (max-width: $tablet){
         & .owl-item.active + .owl-item.active + .owl-item.active &-gallery-item {
             width: 93px;
             height: 93px;
+        }
+        & .owl-item.active ~ .owl-item.active &-gallery-item {
+            border-width: 9px;
         }
 
         & .owl-item.active + .owl-item.active &-gallery-item:hover {
@@ -2108,7 +2136,7 @@ and (max-width: $mobile) {
             align-items: center;
         }
         &-gallery-box {
-            margin-bottom: 90px;
+            margin-bottom: 112px;
         }
         &-slider-panel {
             margin-top: 0;
@@ -2123,9 +2151,13 @@ and (max-width: $mobile) {
             }
         }
         .owl-item.active {
-            bottom: auto;
-            top: -10%;
-            left: -18%;
+            top: auto;
+            left: 27%;
+            right: auto;
+            bottom: -39%;
+        }
+        & .owl-item.active .about-gallery-item {
+            transform: scale(1.2);
         }
         .owl-item.active + .owl-item.active {
             bottom: auto;
@@ -2134,10 +2166,10 @@ and (max-width: $mobile) {
             right: -15%;
         }
         .owl-item.active + .owl-item.active + .owl-item.active {
-            top: auto;
-            left: 27%;
+            bottom: auto;
+            top: -10%;
+            left: -18%;
             right: auto;
-            bottom: -33%;
         }
         & .owl-item.active + .owl-item.active &-gallery-item {
             width: 92px;

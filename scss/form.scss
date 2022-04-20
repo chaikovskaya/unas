@@ -179,10 +179,6 @@ label.form-error {
     }
 }
 
-@mixin bgrcolor() {
-    transition: background-color 0.3s ease-in-out;
-}
-
 .button {
     @include bgrcolor();
     display: inline-block;

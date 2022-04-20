@@ -234,9 +234,10 @@
     &-banner {
         position: relative;
         display: block;
+        max-width: 327px;
         height: 386px;
         background-color: #f8f7f5;
-        padding: 40px 32px 40px 38px;
+        padding: 40px 25px 40px 38px;
         border-radius: 15px;
         overflow: hidden;
         text-decoration: none;
@@ -311,6 +312,9 @@
     &-line-img {
         width: 25.5%;
     }
+    &-line-img .products-img {
+        height: 218px;
+    }
     &-line-description {
         width: 47%;
         padding-top: 6px;
@@ -363,6 +367,9 @@
     }
     &-simple-img {
         width: 14%;
+    }
+    &-simple-img .products-img {
+       height: 115px;
     }
     &-simple-description {
         width: 59%;
@@ -1053,7 +1060,12 @@ and (max-width: $tablet){
             margin-bottom: 35px;
         }
         &-banner {
+            max-width: 291px;
             height: 343px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 25px;
+            padding-right: 25px;
         }
         &-banner-title {
             margin-bottom: 25px;
@@ -1083,6 +1095,9 @@ and (max-width: $tablet){
         &-line-name {
             margin-bottom: 18px;
         }
+        &-line-img .products-img {
+            height: 160px;
+        }
         &-simple-description {
             width: 59%;
         }
@@ -1094,6 +1109,9 @@ and (max-width: $tablet){
         }
         &-simple-marks {
             margin-right: 15px;
+        }
+        &-simple-img .products-img {
+            height: 60px;
         }
     }
     .view {
@@ -1243,6 +1261,9 @@ and (max-width: $mobile){
         &-simple-img {
             width: 100%;
             margin-bottom: 23px;
+        }
+        &-simple-img .products-img {
+            height: 160px;
         }
         &-simple-description {
             width: 100%;

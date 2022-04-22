@@ -34,9 +34,13 @@
         line-height: 10px;
     }
     &-table-link-picture {
-        margin-right: 43px;
-        min-width: 105px;
-        width: 105px;
+        margin-right: 28px;
+        min-width: 118px;
+        width: 118px;
+        height: 118px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
     }
     &-table-product-link {
         display: inline-block;
@@ -240,6 +244,7 @@ and (max-width: $tablet){
             margin-right: 25px;
             min-width: 77px;
             width: 77px;
+            height: 77px;
         }
     }
 }
@@ -268,6 +273,7 @@ and (max-width: $mobile){
             margin-right: 10px;
             min-width: 58px;
             width: 58px;
+            height: 58px;
         }
         &-table-col_check {
             width: 41%;

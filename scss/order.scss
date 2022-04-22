@@ -120,7 +120,12 @@
     &-composition-list-item_hide {
         display: none;
     }
-    &-composition-list-link {}
+    &-composition-list-link {
+        height: 114px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     &-composition-list-img {
         display: block;
     }
@@ -455,6 +460,9 @@ and (max-width: $mobile){
         }
         &-composition-list-item {
             width: 25%;
+        }
+        &-composition-list-link {
+            height: 100px;
         }
         &-shops-block {
             flex-direction: column;
